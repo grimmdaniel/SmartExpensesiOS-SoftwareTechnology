@@ -20,6 +20,12 @@ class WelcomeViewController: UIViewController, StoryboardAble {
     @IBOutlet weak var welcomeCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    let textsToShow = [
+        ("Follow expenses","from anywhere"),
+        ("Find cheap places","in seconds"),
+        ("Share expenses","with anyone")
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -58,5 +64,16 @@ extension WelcomeViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let index = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+        changeUI(for: index)
+    }
+    
+    private func changeUI(for index: Int) {
+        pageControl.currentPage = index
+        nameLabel1.text = textsToShow[index].0
+        nameLabel2.text = textsToShow[index].1
     }
 }

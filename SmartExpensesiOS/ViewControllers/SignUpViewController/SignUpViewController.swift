@@ -1,5 +1,5 @@
 //
-//  SignInViewController.swift
+//  SignUpViewController.swift
 //  SmartExpensesiOS
 //
 //  Created by Grimm Dániel on 09/10/2019.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class SignInViewController: UIViewController, StoryboardAble {
-    
+class SignUpViewController: UIViewController, StoryboardAble {
+
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var closeScreenButton: UIButton!
     
@@ -24,5 +24,4 @@ class SignInViewController: UIViewController, StoryboardAble {
     @IBAction func closeScreenButtonPressed(_ sender: UIButton) {
         closeScreenClosure?()
     }
-   
 }

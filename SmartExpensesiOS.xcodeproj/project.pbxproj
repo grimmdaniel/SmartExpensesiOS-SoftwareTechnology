@@ -19,6 +19,7 @@
 		085C609B23477E3000BA038C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 085C609923477E3000BA038C /* LaunchScreen.storyboard */; };
 		085C60A623477E3000BA038C /* SmartExpensesiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085C60A523477E3000BA038C /* SmartExpensesiOSTests.swift */; };
 		0889DDC7234E7F2400E34AF2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889DDC6234E7F2400E34AF2 /* SignInViewController.swift */; };
+		0889DDCA234E87C600E34AF2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889DDC9234E87C600E34AF2 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		085C60A523477E3000BA038C /* SmartExpensesiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartExpensesiOSTests.swift; sourceTree = "<group>"; };
 		085C60A723477E3000BA038C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0889DDC6234E7F2400E34AF2 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		0889DDC9234E87C600E34AF2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		084E3686234DEAF1008B7801 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0889DDC8234E864100E34AF2 /* SignUpViewController */,
 				0889DDC4234E7EF900E34AF2 /* SignInViewController */,
 				084E3687234DEAF9008B7801 /* WelcomeViewController */,
 			);
@@ -193,6 +196,14 @@
 				0889DDC6234E7F2400E34AF2 /* SignInViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0889DDC8234E864100E34AF2 /* SignUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0889DDC9234E87C600E34AF2 /* SignUpViewController.swift */,
+			);
+			path = SignUpViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +335,7 @@
 				084E3689234DEB10008B7801 /* WelcomeViewController.swift in Sources */,
 				0889DDC7234E7F2400E34AF2 /* SignInViewController.swift in Sources */,
 				084E368D234E1769008B7801 /* WelcomeImageCell.swift in Sources */,
+				0889DDCA234E87C600E34AF2 /* SignUpViewController.swift in Sources */,
 				083A5024234DE1ED00F352B8 /* ColorTheme.swift in Sources */,
 				084E367F234DE731008B7801 /* Coordinator.swift in Sources */,
 			);

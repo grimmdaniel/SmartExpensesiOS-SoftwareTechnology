@@ -41,11 +41,23 @@ class WelcomeCoordiator: Coordinator {
         welcomeVC.signInClosure = { [weak self] in
             let signInVC = SignInViewController.instantiate()
             signInVC.modalPresentationStyle = .fullScreen
+            
+            signInVC.closeScreenClosure = { [weak self] in
+                self?.welcomeVC.dismiss(animated: true)
+            }
+            
             self?.welcomeVC.present(signInVC, animated: true)
         }
         
-        welcomeVC.signUpClosure = {
+        welcomeVC.signUpClosure = { [weak self] in
+            let signUpVC = SignUpViewController.instantiate()
+            signUpVC.modalPresentationStyle = .fullScreen
             
+            signUpVC.closeScreenClosure = { [weak self] in
+                self?.welcomeVC.dismiss(animated: true)
+            }
+            
+            self?.welcomeVC.present(signUpVC, animated: true)
         }
 //        welcomeVC.viewModel = smth
 //        let welcomeVC = WelcomeViewController.instantiate()

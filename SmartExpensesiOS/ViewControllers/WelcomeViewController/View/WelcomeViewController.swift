@@ -26,6 +26,9 @@ class WelcomeViewController: UIViewController, StoryboardAble {
         ("Share expenses","with anyone")
     ]
     
+    var signInClosure: (() -> Void)?
+    var signUpClosure: (() -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,11 +38,11 @@ class WelcomeViewController: UIViewController, StoryboardAble {
     }
     
     @IBAction func signInButtonPressed(_ sender: UIButton) {
-    
+        signInClosure?()
     }
     
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
-    
+        signUpClosure?()
     }
 }
 

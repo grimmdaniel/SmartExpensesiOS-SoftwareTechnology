@@ -37,6 +37,16 @@ class WelcomeCoordiator: Coordinator {
     }
     
     private func showWelcomeScreen() {
+        
+        welcomeVC.signInClosure = { [weak self] in
+            let signInVC = SignInViewController.instantiate()
+            signInVC.modalPresentationStyle = .fullScreen
+            self?.welcomeVC.present(signInVC, animated: true)
+        }
+        
+        welcomeVC.signUpClosure = {
+            
+        }
 //        welcomeVC.viewModel = smth
 //        let welcomeVC = WelcomeViewController.instantiate()
 //

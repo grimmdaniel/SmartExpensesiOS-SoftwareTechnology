@@ -213,5 +213,58 @@
             </objects>
             <point key="canvasLocation" x="101.59999999999999" y="6.746626686656672"/>
         </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="PPi-eW-aa7">
+            <objects>
+                <viewController storyboardIdentifier="SignInViewController" id="HhT-7M-wn8" customClass="SignInViewController" customModule="SmartExpensesiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ByT-Td-mbZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ru-BJ-gVr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Wj-gH-pkK">
+                                        <rect key="frame" x="8" y="8" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="4Wj-gH-pkK" secondAttribute="height" id="XWC-2r-jSG"/>
+                                        </constraints>
+                                        <state key="normal" image="CloseButton"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIZ-yx-GBf">
+                                        <rect key="frame" x="160" y="5" width="55" height="34"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" red="0.52549019607843139" green="0.50980392156862742" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="4Wj-gH-pkK" secondAttribute="bottom" constant="8" id="Hpo-qf-ChL"/>
+                                    <constraint firstAttribute="height" constant="44" id="Rm7-HV-rCP"/>
+                                    <constraint firstItem="4Wj-gH-pkK" firstAttribute="top" secondItem="8ru-BJ-gVr" secondAttribute="top" constant="8" id="ohm-PB-IC1"/>
+                                    <constraint firstAttribute="bottom" secondItem="wIZ-yx-GBf" secondAttribute="bottom" constant="5" id="q4y-6w-qkS"/>
+                                    <constraint firstItem="4Wj-gH-pkK" firstAttribute="leading" secondItem="8ru-BJ-gVr" secondAttribute="leading" constant="8" id="qEK-jq-w5W"/>
+                                    <constraint firstItem="wIZ-yx-GBf" firstAttribute="top" secondItem="8ru-BJ-gVr" secondAttribute="top" constant="5" id="v78-3g-HfH"/>
+                                    <constraint firstItem="wIZ-yx-GBf" firstAttribute="centerX" secondItem="8ru-BJ-gVr" secondAttribute="centerX" id="zAI-hj-eRW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hxU-tn-mhq" firstAttribute="trailing" secondItem="8ru-BJ-gVr" secondAttribute="trailing" id="DrO-4c-QOD"/>
+                            <constraint firstItem="8ru-BJ-gVr" firstAttribute="top" secondItem="hxU-tn-mhq" secondAttribute="top" id="wIo-mZ-7dw"/>
+                            <constraint firstItem="8ru-BJ-gVr" firstAttribute="leading" secondItem="hxU-tn-mhq" secondAttribute="leading" id="xVA-Gg-xte"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hxU-tn-mhq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W58-oV-gIC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797.60000000000002" y="6.746626686656672"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="CloseButton" width="24" height="25"/>
+    </resources>
 </document>

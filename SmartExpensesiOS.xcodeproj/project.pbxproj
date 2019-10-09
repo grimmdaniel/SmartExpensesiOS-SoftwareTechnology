@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083A5024234DE1ED00F352B8 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A5023234DE1ED00F352B8 /* ColorTheme.swift */; };
+		084E367F234DE731008B7801 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E367E234DE731008B7801 /* Coordinator.swift */; };
+		084E3683234DE90F008B7801 /* StoryboardAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E3682234DE90F008B7801 /* StoryboardAble.swift */; };
+		084E3685234DE935008B7801 /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E3684234DE935008B7801 /* WelcomeCoordinator.swift */; };
+		084E3689234DEB10008B7801 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E3688234DEB10008B7801 /* WelcomeViewController.swift */; };
+		084E368D234E1769008B7801 /* WelcomeImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E368C234E1769008B7801 /* WelcomeImageCell.swift */; };
 		085C609123477E2F00BA038C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085C609023477E2F00BA038C /* AppDelegate.swift */; };
-		085C609323477E2F00BA038C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085C609223477E2F00BA038C /* ViewController.swift */; };
 		085C609623477E2F00BA038C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 085C609423477E2F00BA038C /* Main.storyboard */; };
 		085C609823477E3000BA038C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 085C609723477E3000BA038C /* Assets.xcassets */; };
 		085C609B23477E3000BA038C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 085C609923477E3000BA038C /* LaunchScreen.storyboard */; };
 		085C60A623477E3000BA038C /* SmartExpensesiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085C60A523477E3000BA038C /* SmartExpensesiOSTests.swift */; };
+		0889DDC7234E7F2400E34AF2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889DDC6234E7F2400E34AF2 /* SignInViewController.swift */; };
+		0889DDCA234E87C600E34AF2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889DDC9234E87C600E34AF2 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +33,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		083A5023234DE1ED00F352B8 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
+		084E367E234DE731008B7801 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		084E3682234DE90F008B7801 /* StoryboardAble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardAble.swift; sourceTree = "<group>"; };
+		084E3684234DE935008B7801 /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
+		084E3688234DEB10008B7801 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		084E368C234E1769008B7801 /* WelcomeImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeImageCell.swift; sourceTree = "<group>"; };
 		085C608D23477E2F00BA038C /* SmartExpensesiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartExpensesiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		085C609023477E2F00BA038C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		085C609223477E2F00BA038C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		085C609523477E2F00BA038C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		085C609723477E3000BA038C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		085C609A23477E3000BA038C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +48,8 @@
 		085C60A123477E3000BA038C /* SmartExpensesiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartExpensesiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		085C60A523477E3000BA038C /* SmartExpensesiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartExpensesiOSTests.swift; sourceTree = "<group>"; };
 		085C60A723477E3000BA038C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0889DDC6234E7F2400E34AF2 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		0889DDC9234E87C600E34AF2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		083A5022234DE19A00F352B8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				083A5023234DE1ED00F352B8 /* ColorTheme.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		084E367D234DE720008B7801 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				084E3680234DE8CB008B7801 /* WelcomeCoordinator */,
+				084E367E234DE731008B7801 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		084E3680234DE8CB008B7801 /* WelcomeCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				084E3684234DE935008B7801 /* WelcomeCoordinator.swift */,
+			);
+			path = WelcomeCoordinator;
+			sourceTree = "<group>";
+		};
+		084E3681234DE8FC008B7801 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				084E3682234DE90F008B7801 /* StoryboardAble.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		084E3686234DEAF1008B7801 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0889DDC8234E864100E34AF2 /* SignUpViewController */,
+				0889DDC4234E7EF900E34AF2 /* SignInViewController */,
+				084E3687234DEAF9008B7801 /* WelcomeViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		084E3687234DEAF9008B7801 /* WelcomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				084E368B234E173F008B7801 /* Cell */,
+				084E368A234E1732008B7801 /* View */,
+			);
+			path = WelcomeViewController;
+			sourceTree = "<group>";
+		};
+		084E368A234E1732008B7801 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				084E3688234DEB10008B7801 /* WelcomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		084E368B234E173F008B7801 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				084E368C234E1769008B7801 /* WelcomeImageCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		085C608423477E2F00BA038C = {
 			isa = PBXGroup;
 			children = (
@@ -78,8 +160,11 @@
 		085C608F23477E2F00BA038C /* SmartExpensesiOS */ = {
 			isa = PBXGroup;
 			children = (
+				084E3686234DEAF1008B7801 /* ViewControllers */,
+				084E3681234DE8FC008B7801 /* Protocols */,
+				084E367D234DE720008B7801 /* Coordinator */,
+				083A5022234DE19A00F352B8 /* Utils */,
 				085C609023477E2F00BA038C /* AppDelegate.swift */,
-				085C609223477E2F00BA038C /* ViewController.swift */,
 				085C609423477E2F00BA038C /* Main.storyboard */,
 				085C609723477E3000BA038C /* Assets.xcassets */,
 				085C609923477E3000BA038C /* LaunchScreen.storyboard */,
@@ -95,6 +180,30 @@
 				085C60A723477E3000BA038C /* Info.plist */,
 			);
 			path = SmartExpensesiOSTests;
+			sourceTree = "<group>";
+		};
+		0889DDC4234E7EF900E34AF2 /* SignInViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0889DDC5234E7F1100E34AF2 /* View */,
+			);
+			path = SignInViewController;
+			sourceTree = "<group>";
+		};
+		0889DDC5234E7F1100E34AF2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0889DDC6234E7F2400E34AF2 /* SignInViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0889DDC8234E864100E34AF2 /* SignUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0889DDC9234E87C600E34AF2 /* SignUpViewController.swift */,
+			);
+			path = SignUpViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +329,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				085C609323477E2F00BA038C /* ViewController.swift in Sources */,
+				084E3683234DE90F008B7801 /* StoryboardAble.swift in Sources */,
 				085C609123477E2F00BA038C /* AppDelegate.swift in Sources */,
+				084E3685234DE935008B7801 /* WelcomeCoordinator.swift in Sources */,
+				084E3689234DEB10008B7801 /* WelcomeViewController.swift in Sources */,
+				0889DDC7234E7F2400E34AF2 /* SignInViewController.swift in Sources */,
+				084E368D234E1769008B7801 /* WelcomeImageCell.swift in Sources */,
+				0889DDCA234E87C600E34AF2 /* SignUpViewController.swift in Sources */,
+				083A5024234DE1ED00F352B8 /* ColorTheme.swift in Sources */,
+				084E367F234DE731008B7801 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +502,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5N8DHC85Z;
 				INFOPLIST_FILE = SmartExpensesiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -393,7 +510,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.daniel.grimm.smartexpenses.SmartExpensesiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -404,6 +521,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5N8DHC85Z;
 				INFOPLIST_FILE = SmartExpensesiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,7 +529,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.daniel.grimm.smartexpenses.SmartExpensesiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

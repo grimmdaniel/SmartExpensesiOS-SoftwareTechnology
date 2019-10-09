@@ -51,6 +51,7 @@ extension WelcomeViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WelcomeImageCell.cellID, for: indexPath) as? WelcomeImageCell else { return UICollectionViewCell() }
+        cell.welcomeImageView.image = UIImage(named:"welcomeImage_\(indexPath.item + 1).png")
         return cell
     }
     

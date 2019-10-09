@@ -16,6 +16,5 @@ class WelcomeImageCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         welcomeImageView.contentMode = .scaleAspectFit
-        welcomeImageView.image = UIImage(named: "welcomeImage_1.png")
     }
 }

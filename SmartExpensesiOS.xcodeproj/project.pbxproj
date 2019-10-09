@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083A5024234DE1ED00F352B8 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A5023234DE1ED00F352B8 /* ColorTheme.swift */; };
 		085C609123477E2F00BA038C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085C609023477E2F00BA038C /* AppDelegate.swift */; };
 		085C609623477E2F00BA038C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 085C609423477E2F00BA038C /* Main.storyboard */; };
 		085C609823477E3000BA038C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 085C609723477E3000BA038C /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		083A5023234DE1ED00F352B8 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		085C608D23477E2F00BA038C /* SmartExpensesiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartExpensesiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		085C609023477E2F00BA038C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		085C609523477E2F00BA038C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		083A5022234DE19A00F352B8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				083A5023234DE1ED00F352B8 /* ColorTheme.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		085C608423477E2F00BA038C = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +86,7 @@
 		085C608F23477E2F00BA038C /* SmartExpensesiOS */ = {
 			isa = PBXGroup;
 			children = (
+				083A5022234DE19A00F352B8 /* Utils */,
 				085C609023477E2F00BA038C /* AppDelegate.swift */,
 				085C609423477E2F00BA038C /* Main.storyboard */,
 				085C609723477E3000BA038C /* Assets.xcassets */,
@@ -218,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				085C609123477E2F00BA038C /* AppDelegate.swift in Sources */,
+				083A5024234DE1ED00F352B8 /* ColorTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

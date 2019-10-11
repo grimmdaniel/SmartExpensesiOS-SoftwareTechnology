@@ -38,6 +38,8 @@ class WelcomeCoordiator: Coordinator {
     
     private func showWelcomeScreen() {
         
+        welcomeVC.viewModel = WelcomeViewControllerViewModel()
+        
         welcomeVC.signInClosure = { [weak self] in
             let signInVC = SignInViewController.instantiate()
             signInVC.modalPresentationStyle = .fullScreen

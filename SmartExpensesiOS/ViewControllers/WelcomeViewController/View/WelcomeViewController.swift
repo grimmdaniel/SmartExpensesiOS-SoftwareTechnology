@@ -20,12 +20,8 @@ class WelcomeViewController: UIViewController, StoryboardAble {
     @IBOutlet weak var welcomeCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    let textsToShow = [
-        ("Follow expenses","from anywhere"),
-        ("Find cheap places","in seconds"),
-        ("Share expenses","with anyone")
-    ]
-    
+    var viewModel: WelcomeViewControllerViewModel!
+        
     var signInClosure: (() -> Void)?
     var signUpClosure: (() -> Void)?
     
@@ -48,13 +44,18 @@ class WelcomeViewController: UIViewController, StoryboardAble {
 
 extension WelcomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return viewModel.numberOfSections
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return viewModel.numberOfItemsInSection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WelcomeImageCell.cellID, for: indexPath) as? WelcomeImageCell else { return UICollectionViewCell() }
-        cell.welcomeImageView.image = UIImage(named:"welcomeImage_\(indexPath.item + 1).png")
+        let currentImage = viewModel.getElement(for: indexPath.item).imageName
+        cell.welcomeImageView.image = UIImage(named: currentImage)
         return cell
     }
     
@@ -77,7 +78,8 @@ extension WelcomeViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     private func changeUI(for index: Int) {
         pageControl.currentPage = index
-        nameLabel1.text = textsToShow[index].0
-        nameLabel2.text = textsToShow[index].1
+        let currentItem = viewModel.getElement(for: index)
+        nameLabel1.text = currentItem.primaryText
+        nameLabel2.text = currentItem.secondaryText
     }
 }

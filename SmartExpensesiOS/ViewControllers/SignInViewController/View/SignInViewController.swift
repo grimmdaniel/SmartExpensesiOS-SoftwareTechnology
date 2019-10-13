@@ -18,7 +18,7 @@ class SignInViewController: UIViewController, StoryboardAble {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        titleLabel.text = "signInScreenTitleText".localized
     }
     
     @IBAction func closeScreenButtonPressed(_ sender: UIButton) {

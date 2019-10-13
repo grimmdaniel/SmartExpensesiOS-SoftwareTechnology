@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "Sign in"; ObjectID = "0WR-d0-P39"; */
+"0WR-d0-P39.normalTitle" = "Sign in";
+
+/* Class = "UILabel"; text = "Follow expenses"; ObjectID = "4S6-8z-x0c"; */
+"4S6-8z-x0c.text" = "Follow expenses";
+
+/* Class = "UILabel"; text = "SIGN UP"; ObjectID = "5sg-k5-bfz"; */
+"5sg-k5-bfz.text" = "SIGN UP";
+
+/* Class = "UILabel"; text = "from anywhere"; ObjectID = "ByF-UE-L7n"; */
+"ByF-UE-L7n.text" = "from anywhere";
+
+/* Class = "UILabel"; text = "Don’t have an account?"; ObjectID = "LXN-C6-hpG"; */
+"LXN-C6-hpG.text" = "Don’t have an account?";
+
+/* Class = "UIButton"; normalTitle = "Sign up"; ObjectID = "mXx-cY-Gsv"; */
+"mXx-cY-Gsv.normalTitle" = "Sign up";
+
+/* Class = "UILabel"; text = "SIGN IN"; ObjectID = "wIZ-yx-GBf"; */
+"wIZ-yx-GBf.text" = "SIGN IN";

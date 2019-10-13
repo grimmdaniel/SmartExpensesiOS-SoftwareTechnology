@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  SmartExpensesiOS
+
+  Created by Grimm Dániel on 13/10/2019.
+  Copyright © 2019 com.daniel.grimm.smartexpenses. All rights reserved.
+*/
+
+//welcome screen
+"welcomeScreenSignInButtonText" = "Iniciar sessão";
+"welcomeScreenSignUpButtonText" = "Registra-te";
+"welcomeScreenDontHaveAnAccountQuestion" = "Não tens uma conta?";
+
+//sign up screen
+"signUpScreenTitleText" = "Registra-te";
+
+//sign in screen
+"signInScreenTitleText" = "Iniciar sessão";

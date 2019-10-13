@@ -31,6 +31,13 @@ class WelcomeViewController: UIViewController, StoryboardAble {
         welcomeCollectionView.delegate = self
         welcomeCollectionView.dataSource = self
         signInButton.layer.cornerRadius = 6.0
+        setUpUITexts()
+    }
+    
+    private func setUpUITexts() {
+        signInButton.setTitle("welcomeScreenSignInButtonText".localized, for: .normal)
+        signUpButton.setTitle("welcomeScreenSignUpButtonText".localized, for: .normal)
+        dontHaveAccountLabel.text = "welcomeScreenDontHaveAnAccountQuestion".localized
     }
     
     @IBAction func signInButtonPressed(_ sender: UIButton) {

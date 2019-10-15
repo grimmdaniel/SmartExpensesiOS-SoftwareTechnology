@@ -16,3 +16,10 @@
 
 //sign in screen
 "signInScreenTitleText" = "Sign in";
+"signInScreenForgotPassword" = "Forgot password?";
+
+"signInScreenEmailLabel" = "E-mail address";
+"signInScreenEmailPlaceholder" = "joe@smartexpenses.com";
+"signInScreenPasswordPlaceholder" = "**********";
+"signInScreenPasswordLabel" = "Password";
+"signInScreenSignInButtonText" = "Sign in";

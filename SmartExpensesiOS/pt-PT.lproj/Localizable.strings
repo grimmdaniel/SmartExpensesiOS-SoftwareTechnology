@@ -8,11 +8,18 @@
 
 //welcome screen
 "welcomeScreenSignInButtonText" = "Iniciar sessão";
-"welcomeScreenSignUpButtonText" = "Registra-te";
-"welcomeScreenDontHaveAnAccountQuestion" = "Não tens uma conta?";
+"welcomeScreenSignUpButtonText" = "Inscreva-se";
+"welcomeScreenDontHaveAnAccountQuestion" = "Não tem uma conta?";
 
 //sign up screen
-"signUpScreenTitleText" = "Registra-te";
+"signUpScreenTitleText" = "Inscreva-se";
 
 //sign in screen
 "signInScreenTitleText" = "Iniciar sessão";
+"signInScreenForgotPassword" = "Esqueceu a senha?";
+
+"signInScreenEmailLabel" = "Endereço de e-mail";
+"signInScreenEmailPlaceholder" = "joe@smartexpenses.pt";
+"signInScreenPasswordPlaceholder" = "**********";
+"signInScreenPasswordLabel" = "Palavra-passe";
+"signInScreenSignInButtonText" = "INICIAR SESSÃO";

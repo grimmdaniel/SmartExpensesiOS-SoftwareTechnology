@@ -16,3 +16,10 @@
 
 //sign in screen
 "signInScreenTitleText" = "Bejelentkezés";
+"signInScreenForgotPassword" = "Elfelejtett jelszó?";
+
+"signInScreenEmailLabel" = "Email cím";
+"signInScreenEmailPlaceholder" = "joe@smartexpenses.hu";
+"signInScreenPasswordPlaceholder" = "**********";
+"signInScreenPasswordLabel" = "Jelszó";
+"signInScreenSignInButtonText" = "Bejelentkezés";

@@ -12,7 +12,15 @@ class HomeViewController: UIViewController, StoryboardAble {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        navigationController?.navigationBar.barTintColor = ColorTheme.primaryColor
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        
         title = "Home"
+        tabBarItem.image = UIImage(named: "tabbar_0.png")
     }
 }

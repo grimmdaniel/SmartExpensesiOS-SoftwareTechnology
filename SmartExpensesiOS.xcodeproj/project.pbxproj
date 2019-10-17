@@ -34,6 +34,8 @@
 		0889DDD023507CF000E34AF2 /* WelcomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889DDCF23507CF000E34AF2 /* WelcomeModel.swift */; };
 		08D5244A23539D5D001BB6FF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08D5244C23539D5D001BB6FF /* Localizable.strings */; };
 		08D5245223539EAA001BB6FF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5245123539EAA001BB6FF /* Extensions.swift */; };
+		08FC1ADC23590B1C00C988AA /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FC1ADB23590B1C00C988AA /* TabbarController.swift */; };
+		08FC1ADD23590B1C00C988AA /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FC1ADB23590B1C00C988AA /* TabbarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,7 @@
 		08D524532353A0E8001BB6FF /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Main.strings"; sourceTree = "<group>"; };
 		08D524542353A0E8001BB6FF /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		08D524552353A0E8001BB6FF /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		08FC1ADB23590B1C00C988AA /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +199,7 @@
 		084E3686234DEAF1008B7801 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				08FC1ADA23590AFB00C988AA /* TabbarController */,
 				0830B6902358A26800A3AE9A /* MyExpensesViewController */,
 				0830B68323589AE300A3AE9A /* HomeViewController */,
 				0889DDC8234E864100E34AF2 /* SignUpViewController */,
@@ -316,6 +320,14 @@
 				0889DDCF23507CF000E34AF2 /* WelcomeModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		08FC1ADA23590AFB00C988AA /* TabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				08FC1ADB23590B1C00C988AA /* TabbarController.swift */,
+			);
+			path = TabbarController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,6 +463,7 @@
 				0830B6972358A2D600A3AE9A /* MyExpensesCoordinator.swift in Sources */,
 				084E3689234DEB10008B7801 /* WelcomeViewController.swift in Sources */,
 				0889DDD023507CF000E34AF2 /* WelcomeModel.swift in Sources */,
+				08FC1ADC23590B1C00C988AA /* TabbarController.swift in Sources */,
 				0889DDC7234E7F2400E34AF2 /* SignInViewController.swift in Sources */,
 				0830B68A23589B7C00A3AE9A /* MainTabCoordinator.swift in Sources */,
 				0830B68623589B0400A3AE9A /* HomeViewController.swift in Sources */,
@@ -474,6 +487,7 @@
 				0830B68723589B0400A3AE9A /* HomeViewController.swift in Sources */,
 				0830B68F23589C1D00A3AE9A /* HomeScreenCoordinator.swift in Sources */,
 				0830B6982358A2D600A3AE9A /* MyExpensesCoordinator.swift in Sources */,
+				08FC1ADD23590B1C00C988AA /* TabbarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

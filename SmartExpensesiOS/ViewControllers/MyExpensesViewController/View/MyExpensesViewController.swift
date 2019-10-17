@@ -9,10 +9,18 @@
 import UIKit
 
 class MyExpensesViewController: UIViewController, StoryboardAble {
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        
+        title = "MyExpenses"
+        tabBarItem.image = UIImage(named: "tabbar_1.png")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        title = "MyExpenses"
+        
+        navigationController?.navigationBar.barTintColor = ColorTheme.primaryColor
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
 }

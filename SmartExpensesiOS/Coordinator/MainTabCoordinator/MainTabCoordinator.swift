@@ -14,7 +14,7 @@ class MainTabCoordinator: Coordinator {
         return tabBarController
     }
     
-    private let tabBarController = UITabBarController()
+    private let tabBarController = TabbarController()
     
     override init() {
         super.init()

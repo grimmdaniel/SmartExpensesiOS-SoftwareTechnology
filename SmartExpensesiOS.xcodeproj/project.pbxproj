@@ -52,6 +52,7 @@
 		085C60A123477E3000BA038C /* SmartExpensesiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartExpensesiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		085C60A523477E3000BA038C /* SmartExpensesiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartExpensesiOSTests.swift; sourceTree = "<group>"; };
 		085C60A723477E3000BA038C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0864B24C235864E80018EA4F /* SmartExpensesiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartExpensesiOS.entitlements; sourceTree = "<group>"; };
 		0889DDC6234E7F2400E34AF2 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		0889DDC9234E87C600E34AF2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0889DDCC23507C3200E34AF2 /* WelcomeViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerViewModel.swift; sourceTree = "<group>"; };
@@ -177,6 +178,7 @@
 		085C608F23477E2F00BA038C /* SmartExpensesiOS */ = {
 			isa = PBXGroup;
 			children = (
+				0864B24C235864E80018EA4F /* SmartExpensesiOS.entitlements */,
 				084E3686234DEAF1008B7801 /* ViewControllers */,
 				084E3681234DE8FC008B7801 /* Protocols */,
 				084E367D234DE720008B7801 /* Coordinator */,
@@ -555,6 +557,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmartExpensesiOS/SmartExpensesiOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5N8DHC85Z;
 				INFOPLIST_FILE = SmartExpensesiOS/Info.plist;
@@ -574,6 +577,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmartExpensesiOS/SmartExpensesiOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5N8DHC85Z;
 				INFOPLIST_FILE = SmartExpensesiOS/Info.plist;

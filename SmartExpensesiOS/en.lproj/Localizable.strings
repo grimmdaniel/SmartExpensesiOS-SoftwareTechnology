@@ -1,0 +1,36 @@
+/* 
+  Localizable.strings
+  SmartExpensesiOS
+
+  Created by Grimm Dániel on 13/10/2019.
+  Copyright © 2019 com.daniel.grimm.smartexpenses. All rights reserved.
+*/
+
+//welcome screen
+"welcomeScreenSignInButtonText" = "Sign in";
+"welcomeScreenSignUpButtonText" = "Sign up";
+"welcomeScreenDontHaveAnAccountQuestion" = "Don’t have an account?";
+
+//sign up screen
+"signUpScreenTitleText" = "Sign Up";
+"signUpScreenWelcomeText" = "Register with email";
+"signUpScreenEmailLabel" = "E-mail address";
+"signUpScreenEmailPlaceholder" = "joe@smartexpenses.com";
+"signUpScreenPasswordLabel" = "Create password";
+"signUpScreenPasswordPlaceholder" = "**********";
+"signUpScreenConfirmPasswordLabel" = "Confirm password";
+"signUpScreenConfirmPasswordPlaceholder" = "**********";
+"signUpScreenSignUpButtonText" = "REGISTER NOW";
+"signUpScreenTermsAndConditionsLabel" = "By signing, I agree Smart Expenses'";
+"signUpScreenTermsAndConditionsButton" = "Terms and Conditions";
+
+//sign in screen
+"signInScreenTitleText" = "Sign in";
+"signInScreenForgotPassword" = "Forgot password?";
+"signInScreenWelcomeLabelText" = "Sign in to Smart Expenses";
+
+"signInScreenEmailLabel" = "E-mail address";
+"signInScreenEmailPlaceholder" = "joe@smartexpenses.com";
+"signInScreenPasswordPlaceholder" = "**********";
+"signInScreenPasswordLabel" = "Password";
+"signInScreenSignInButtonText" = "SIGN IN";

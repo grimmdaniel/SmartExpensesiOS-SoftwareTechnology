@@ -1,0 +1,37 @@
+/* 
+  Localizable.strings
+  SmartExpensesiOS
+
+  Created by Grimm Dániel on 13/10/2019.
+  Copyright © 2019 com.daniel.grimm.smartexpenses. All rights reserved.
+*/
+
+//welcome screen
+"welcomeScreenSignInButtonText" = "Iniciar sessão";
+"welcomeScreenSignUpButtonText" = "Inscreva-se";
+"welcomeScreenDontHaveAnAccountQuestion" = "Não tem uma conta?";
+
+//sign up screen
+"signUpScreenTitleText" = "Inscreva-se";
+"signUpScreenWelcomeText" = "Inscreva-se com e-mail";
+"signUpScreenEmailLabel" = "Endereço de e-mail";
+"signUpScreenEmailPlaceholder" = "joe@smartexpenses.pt";
+"signUpScreenPasswordLabel" = "Criar uma senha";
+"signUpScreenPasswordPlaceholder" = "**********";
+"signUpScreenConfirmPasswordLabel" = "Criar uma senha";
+"signUpScreenConfirmPasswordPlaceholder" = "**********";
+"signUpScreenSignUpButtonText" = "INSCREVA-SE";
+"signUpScreenTermsAndConditionsLabel" = "Ao me inscrever, eu concordo Smart Expenses";
+"signUpScreenTermsAndConditionsButton" = "Termos e Condições";
+
+
+//sign in screen
+"signInScreenTitleText" = "Iniciar sessão";
+"signInScreenForgotPassword" = "Esqueceu a senha?";
+"signInScreenWelcomeLabelText" = "Faça login em Smart Expenses";
+
+"signInScreenEmailLabel" = "Endereço de e-mail";
+"signInScreenEmailPlaceholder" = "joe@smartexpenses.pt";
+"signInScreenPasswordPlaceholder" = "**********";
+"signInScreenPasswordLabel" = "Palavra-passe";
+"signInScreenSignInButtonText" = "INICIAR SESSÃO";

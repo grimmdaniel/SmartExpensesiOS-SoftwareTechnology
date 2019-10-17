@@ -13,15 +13,87 @@ class SignUpViewController: UIViewController, StoryboardAble {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var closeScreenButton: UIButton!
     
+    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var emailAddressLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var confirmPasswordLabel: UILabel!
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var termsAndConditionsButton: UIButton!
+    @IBOutlet weak var termsAndConditionsLabel: UILabel!
+    
     var closeScreenClosure: (() -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        emailTextField.returnKeyType = UIReturnKeyType.next
+        passwordTextField.returnKeyType = UIReturnKeyType.next
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        confirmPasswordTextField.delegate = self
+        setUpUI(for: [emailTextField,passwordTextField,confirmPasswordTextField])
+        setTranslations()
+    }
+    
+    @objc func closeKeyboard() {
+        view.endEditing(true)
+    }
+    
+    private func setTranslations() {
+        titleLabel.text = "signUpScreenTitleText".localized
+        welcomeLabel.text = "signUpScreenWelcomeText".localized
+        emailAddressLabel.text = "signUpScreenEmailLabel".localized
+        emailTextField.placeholder = "signUpScreenEmailPlaceholder".localized
+        passwordLabel.text = "signUpScreenPasswordLabel".localized
+        passwordTextField.placeholder = "signUpScreenPasswordPlaceholder".localized
+        confirmPasswordLabel.text = "signUpScreenConfirmPasswordLabel".localized
+        confirmPasswordTextField.placeholder = "signUpScreenConfirmPasswordPlaceholder".localized
+        signUpButton.setTitle("signUpScreenSignUpButtonText".localized, for: .normal)
+        termsAndConditionsLabel.text = "signUpScreenTermsAndConditionsLabel".localized
+        termsAndConditionsButton.setTitle("signUpScreenTermsAndConditionsButton".localized, for: .normal)
+    }
+    
+    private func setUpUI(for textfields: [UITextField]) {
+        signUpButton.layer.cornerRadius = 20.0
+        for textField in textfields {
+            textField.layer.cornerRadius = 4.0
+            textField.layer.masksToBounds = false
+            textField.layer.shadowRadius = 3.0
+            textField.layer.shadowColor = UIColor.black.cgColor
+            textField.layer.shadowOffset = CGSize(width: 1, height: 1)
+            textField.layer.shadowOpacity = 0.5
+        }
     }
     
     @IBAction func closeScreenButtonPressed(_ sender: UIButton) {
         closeScreenClosure?()
+    }
+    
+    @IBAction func registerButtonPressed(_ sender: UIButton) {
+        closeScreenClosure?()
+    }
+    
+    @IBAction func termsAndConditionsButtonPressed(_ sender: UIButton) {
+        print("terms and conditions pressed")
+    }
+}
+
+extension SignUpViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        if textField == emailTextField {
+            passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
+            confirmPasswordTextField.becomeFirstResponder()
+        }
+        return true
     }
 }

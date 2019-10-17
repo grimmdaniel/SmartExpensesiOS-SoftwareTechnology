@@ -48,6 +48,11 @@ class WelcomeCoordiator: Coordinator {
                 self?.welcomeVC.dismiss(animated: true)
             }
             
+            signInVC.signInCompletedClosure = { [weak self] in
+                guard let self = self else { return }
+                self.didFinish?(self)
+            }
+            
             self?.welcomeVC.present(signInVC, animated: true)
         }
         
@@ -57,6 +62,11 @@ class WelcomeCoordiator: Coordinator {
             
             signUpVC.closeScreenClosure = { [weak self] in
                 self?.welcomeVC.dismiss(animated: true)
+            }
+            
+            signUpVC.signUpCompletedClosure = { [weak self] in
+                guard let self = self else { return }
+                self.didFinish?(self)
             }
             
             self?.welcomeVC.present(signUpVC, animated: true)

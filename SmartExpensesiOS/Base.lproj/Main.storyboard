@@ -398,6 +398,7 @@
                         <outlet property="passwordTextField" destination="2uQ-hz-Ynz" id="Cag-px-Txr"/>
                         <outlet property="signInButton" destination="Kfo-5M-FXL" id="Yef-ht-bwN"/>
                         <outlet property="titleLabel" destination="wIZ-yx-GBf" id="8Jc-mc-FpN"/>
+                        <outlet property="welcomeLabel" destination="YVt-MJ-6fe" id="8gb-7o-BAU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W58-oV-gIC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -628,6 +629,7 @@
                         <outlet property="termsAndConditionsButton" destination="ZKA-eh-5Pa" id="h4t-ua-f91"/>
                         <outlet property="termsAndConditionsLabel" destination="p2Z-2K-1MP" id="tET-R7-ozY"/>
                         <outlet property="titleLabel" destination="5sg-k5-bfz" id="YKy-cB-WVw"/>
+                        <outlet property="welcomeLabel" destination="lie-vU-mbv" id="sKB-cJ-F7Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2V-dA-IJC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

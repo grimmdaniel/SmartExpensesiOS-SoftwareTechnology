@@ -13,10 +13,22 @@
 
 //sign up screen
 "signUpScreenTitleText" = "Inscreva-se";
+"signUpScreenWelcomeText" = "Inscreva-se com e-mail";
+"signUpScreenEmailLabel" = "Endereço de e-mail";
+"signUpScreenEmailPlaceholder" = "joe@smartexpenses.pt";
+"signUpScreenPasswordLabel" = "Criar uma senha";
+"signUpScreenPasswordPlaceholder" = "**********";
+"signUpScreenConfirmPasswordLabel" = "Criar uma senha";
+"signUpScreenConfirmPasswordPlaceholder" = "**********";
+"signUpScreenSignUpButtonText" = "INSCREVA-SE";
+"signUpScreenTermsAndConditionsLabel" = "Ao me inscrever, eu concordo Smart Expenses";
+"signUpScreenTermsAndConditionsButton" = "Termos e Condições";
+
 
 //sign in screen
 "signInScreenTitleText" = "Iniciar sessão";
 "signInScreenForgotPassword" = "Esqueceu a senha?";
+"signInScreenWelcomeLabelText" = "Faça login em Smart Expenses";
 
 "signInScreenEmailLabel" = "Endereço de e-mail";
 "signInScreenEmailPlaceholder" = "joe@smartexpenses.pt";

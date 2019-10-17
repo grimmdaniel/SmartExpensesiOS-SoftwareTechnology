@@ -13,13 +13,24 @@
 
 //sign up screen
 "signUpScreenTitleText" = "Regisztráció";
+"signUpScreenWelcomeText" = "Regisztráció emaillel";
+"signUpScreenEmailLabel" = "E-mail cím";
+"signUpScreenEmailPlaceholder" = "joe@smartexpenses.hu";
+"signUpScreenPasswordLabel" = "Új jelszó";
+"signUpScreenPasswordPlaceholder" = "**********";
+"signUpScreenConfirmPasswordLabel" = "Jelszó megerősítése";
+"signUpScreenConfirmPasswordPlaceholder" = "**********";
+"signUpScreenSignUpButtonText" = "REGISZTRÁCIÓ";
+"signUpScreenTermsAndConditionsLabel" = "A regisztrációval elfogadom a Smart Expenses";
+"signUpScreenTermsAndConditionsButton" = "Felhasználási Feltételeit";
 
 //sign in screen
 "signInScreenTitleText" = "Bejelentkezés";
 "signInScreenForgotPassword" = "Elfelejtett jelszó?";
+"signInScreenWelcomeLabelText" = "Bejelentkezés a Smart Expensesbe";
 
 "signInScreenEmailLabel" = "Email cím";
 "signInScreenEmailPlaceholder" = "joe@smartexpenses.hu";
 "signInScreenPasswordPlaceholder" = "**********";
 "signInScreenPasswordLabel" = "Jelszó";
-"signInScreenSignInButtonText" = "Bejelentkezés";
+"signInScreenSignInButtonText" = "BEJELENTKEZÉS";

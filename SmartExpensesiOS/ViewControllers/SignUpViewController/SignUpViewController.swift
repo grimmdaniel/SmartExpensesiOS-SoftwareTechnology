@@ -13,6 +13,7 @@ class SignUpViewController: UIViewController, StoryboardAble {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var closeScreenButton: UIButton!
     
+    @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var emailAddressLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var confirmPasswordLabel: UILabel!
@@ -47,6 +48,16 @@ class SignUpViewController: UIViewController, StoryboardAble {
     
     private func setTranslations() {
         titleLabel.text = "signUpScreenTitleText".localized
+        welcomeLabel.text = "signUpScreenWelcomeText".localized
+        emailAddressLabel.text = "signUpScreenEmailLabel".localized
+        emailTextField.placeholder = "signUpScreenEmailPlaceholder".localized
+        passwordLabel.text = "signUpScreenPasswordLabel".localized
+        passwordTextField.placeholder = "signUpScreenPasswordPlaceholder".localized
+        confirmPasswordLabel.text = "signUpScreenConfirmPasswordLabel".localized
+        confirmPasswordTextField.placeholder = "signUpScreenConfirmPasswordPlaceholder".localized
+        signUpButton.setTitle("signUpScreenSignUpButtonText".localized, for: .normal)
+        termsAndConditionsLabel.text = "signUpScreenTermsAndConditionsLabel".localized
+        termsAndConditionsButton.setTitle("signUpScreenTermsAndConditionsButton".localized, for: .normal)
     }
     
     private func setUpUI(for textfields: [UITextField]) {

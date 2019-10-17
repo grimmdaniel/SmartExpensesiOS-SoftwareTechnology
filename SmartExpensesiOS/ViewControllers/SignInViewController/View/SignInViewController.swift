@@ -13,6 +13,7 @@ class SignInViewController: UIViewController, StoryboardAble {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var closeScreenButton: UIButton!
     
+    @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var emailAddressLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var forgotPasswordLabel: UILabel!
@@ -41,6 +42,7 @@ class SignInViewController: UIViewController, StoryboardAble {
     }
     
     private func setTranslations() {
+        welcomeLabel.text = "signInScreenWelcomeLabelText".localized
         titleLabel.text = "signInScreenTitleText".localized
         emailAddressLabel.text = "signInScreenEmailLabel".localized
         passwordLabel.text = "signInScreenPasswordLabel".localized

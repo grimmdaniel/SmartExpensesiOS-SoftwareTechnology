@@ -644,17 +644,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SAN-pn-Zg6">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KpY-hk-pMX">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zNg-tR-czn">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zNg-tR-czn" id="up3-iq-cOh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="SAN-pn-Zg6" firstAttribute="trailing" secondItem="IZP-8j-p3G" secondAttribute="trailing" id="7Su-1c-Lta"/>
-                            <constraint firstItem="SAN-pn-Zg6" firstAttribute="top" secondItem="IZP-8j-p3G" secondAttribute="top" id="JEd-Fm-AYR"/>
-                            <constraint firstItem="SAN-pn-Zg6" firstAttribute="bottom" secondItem="IZP-8j-p3G" secondAttribute="bottom" id="L8v-e1-qJb"/>
-                            <constraint firstItem="SAN-pn-Zg6" firstAttribute="leading" secondItem="IZP-8j-p3G" secondAttribute="leading" id="ZAa-iT-oNW"/>
+                            <constraint firstItem="KpY-hk-pMX" firstAttribute="trailing" secondItem="IZP-8j-p3G" secondAttribute="trailing" id="OD3-ZC-inW"/>
+                            <constraint firstItem="KpY-hk-pMX" firstAttribute="bottom" secondItem="IZP-8j-p3G" secondAttribute="bottom" id="QQi-Tg-yqj"/>
+                            <constraint firstItem="KpY-hk-pMX" firstAttribute="top" secondItem="IZP-8j-p3G" secondAttribute="top" id="VKm-cP-eKF"/>
+                            <constraint firstItem="KpY-hk-pMX" firstAttribute="leading" secondItem="IZP-8j-p3G" secondAttribute="leading" id="WPc-oM-f30"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IZP-8j-p3G"/>
                     </view>
@@ -662,6 +672,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5V-90-ASo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2228" y="6.746626686656672"/>
+        </scene>
+        <!--Profile Settings View Controller-->
+        <scene sceneID="uui-vj-Znj">
+            <objects>
+                <viewController storyboardIdentifier="ProfileSettingsViewController" id="4hM-so-rZg" customClass="ProfileSettingsViewController" customModule="SmartExpensesiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zn9-U1-3S6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="CKz-4J-1hu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kij-QH-e4P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2230" y="690"/>
         </scene>
         <!--My Expenses View Controller-->
         <scene sceneID="kMc-i0-0OB">

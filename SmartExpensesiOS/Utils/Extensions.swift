@@ -14,3 +14,25 @@ extension String {
         return NSLocalizedString(self, comment: "")
     }
 }
+
+extension UserDefaults {
+    
+    private enum Keys {
+        
+        static let token = "API_KEY"
+    }
+    
+    static var APIKEY: String? {
+        
+        get {
+            return UserDefaults.standard.string(forKey: Keys.token)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Keys.token)
+        }
+    }
+    
+    static var isSignedIn: Bool {
+        return APIKEY != nil
+    }
+}

@@ -14,7 +14,9 @@ class HomeViewController: UIViewController, StoryboardAble {
         super.viewDidLoad()
         
         navigationController?.navigationBar.barTintColor = ColorTheme.primaryColor
+        navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createNewExpense))
     }
     
     required init?(coder: NSCoder) {
@@ -22,5 +24,9 @@ class HomeViewController: UIViewController, StoryboardAble {
         
         title = "Home"
         tabBarItem.image = UIImage(named: "tabbar_0.png")
+    }
+    
+    @objc func createNewExpense() {
+        print("Creating new expense...")
     }
 }

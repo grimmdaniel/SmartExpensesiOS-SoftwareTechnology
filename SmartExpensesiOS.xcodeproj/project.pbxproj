@@ -32,6 +32,10 @@
 		0889DDCA234E87C600E34AF2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889DDC9234E87C600E34AF2 /* SignUpViewController.swift */; };
 		0889DDCD23507C3200E34AF2 /* WelcomeViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889DDCC23507C3200E34AF2 /* WelcomeViewControllerViewModel.swift */; };
 		0889DDD023507CF000E34AF2 /* WelcomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889DDCF23507CF000E34AF2 /* WelcomeModel.swift */; };
+		08B4364D235F35890046F326 /* ProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4364C235F35890046F326 /* ProfileSettingsViewController.swift */; };
+		08B4364E235F35890046F326 /* ProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4364C235F35890046F326 /* ProfileSettingsViewController.swift */; };
+		08B43651235F35ED0046F326 /* ProfileSettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B43650235F35ED0046F326 /* ProfileSettingsCoordinator.swift */; };
+		08B43652235F35ED0046F326 /* ProfileSettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B43650235F35ED0046F326 /* ProfileSettingsCoordinator.swift */; };
 		08D5244A23539D5D001BB6FF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08D5244C23539D5D001BB6FF /* Localizable.strings */; };
 		08D5245223539EAA001BB6FF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5245123539EAA001BB6FF /* Extensions.swift */; };
 		08FC1ADC23590B1C00C988AA /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FC1ADB23590B1C00C988AA /* TabbarController.swift */; };
@@ -74,6 +78,8 @@
 		0889DDC9234E87C600E34AF2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0889DDCC23507C3200E34AF2 /* WelcomeViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerViewModel.swift; sourceTree = "<group>"; };
 		0889DDCF23507CF000E34AF2 /* WelcomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeModel.swift; sourceTree = "<group>"; };
+		08B4364C235F35890046F326 /* ProfileSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsViewController.swift; sourceTree = "<group>"; };
+		08B43650235F35ED0046F326 /* ProfileSettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsCoordinator.swift; sourceTree = "<group>"; };
 		08D5244B23539D5D001BB6FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		08D5244D23539D79001BB6FF /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Main.strings; sourceTree = "<group>"; };
 		08D5244E23539D7A001BB6FF /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -171,6 +177,7 @@
 		084E367D234DE720008B7801 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				08B4364F235F35DA0046F326 /* ProfileSettingsCoordinator */,
 				0830B6952358A2CD00A3AE9A /* MyExpensesCoordinator */,
 				0830B68C23589C0800A3AE9A /* HomeScreenCoordinator */,
 				0830B68823589B6100A3AE9A /* MainTabCoordinator */,
@@ -200,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				08FC1ADA23590AFB00C988AA /* TabbarController */,
+				08B4364B235F355F0046F326 /* ProfileSettingsViewController */,
 				0830B6902358A26800A3AE9A /* MyExpensesViewController */,
 				0830B68323589AE300A3AE9A /* HomeViewController */,
 				0889DDC8234E864100E34AF2 /* SignUpViewController */,
@@ -320,6 +328,30 @@
 				0889DDCF23507CF000E34AF2 /* WelcomeModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		08B4364B235F355F0046F326 /* ProfileSettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				08B43653235F373B0046F326 /* View */,
+			);
+			path = ProfileSettingsViewController;
+			sourceTree = "<group>";
+		};
+		08B4364F235F35DA0046F326 /* ProfileSettingsCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				08B43650235F35ED0046F326 /* ProfileSettingsCoordinator.swift */,
+			);
+			path = ProfileSettingsCoordinator;
+			sourceTree = "<group>";
+		};
+		08B43653235F373B0046F326 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08B4364C235F35890046F326 /* ProfileSettingsViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		08FC1ADA23590AFB00C988AA /* TabbarController */ = {
@@ -463,6 +495,7 @@
 				0830B6972358A2D600A3AE9A /* MyExpensesCoordinator.swift in Sources */,
 				084E3689234DEB10008B7801 /* WelcomeViewController.swift in Sources */,
 				0889DDD023507CF000E34AF2 /* WelcomeModel.swift in Sources */,
+				08B43651235F35ED0046F326 /* ProfileSettingsCoordinator.swift in Sources */,
 				08FC1ADC23590B1C00C988AA /* TabbarController.swift in Sources */,
 				0889DDC7234E7F2400E34AF2 /* SignInViewController.swift in Sources */,
 				0830B68A23589B7C00A3AE9A /* MainTabCoordinator.swift in Sources */,
@@ -473,6 +506,7 @@
 				0889DDCA234E87C600E34AF2 /* SignUpViewController.swift in Sources */,
 				083A5024234DE1ED00F352B8 /* ColorTheme.swift in Sources */,
 				0889DDCD23507C3200E34AF2 /* WelcomeViewControllerViewModel.swift in Sources */,
+				08B4364D235F35890046F326 /* ProfileSettingsViewController.swift in Sources */,
 				084E367F234DE731008B7801 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,12 +516,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				085C60A623477E3000BA038C /* SmartExpensesiOSTests.swift in Sources */,
+				08B43652235F35ED0046F326 /* ProfileSettingsCoordinator.swift in Sources */,
 				0830B68B23589B7C00A3AE9A /* MainTabCoordinator.swift in Sources */,
 				0830B6942358A28B00A3AE9A /* MyExpensesViewController.swift in Sources */,
 				0830B68723589B0400A3AE9A /* HomeViewController.swift in Sources */,
 				0830B68F23589C1D00A3AE9A /* HomeScreenCoordinator.swift in Sources */,
 				0830B6982358A2D600A3AE9A /* MyExpensesCoordinator.swift in Sources */,
 				08FC1ADD23590B1C00C988AA /* TabbarController.swift in Sources */,
+				08B4364E235F35890046F326 /* ProfileSettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

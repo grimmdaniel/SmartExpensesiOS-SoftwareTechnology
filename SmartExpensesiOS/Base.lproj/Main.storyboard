@@ -748,19 +748,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rA0-QB-Dtc">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EQV-dl-e8E">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="rA0-QB-Dtc" firstAttribute="trailing" secondItem="9v7-kt-Sms" secondAttribute="trailing" id="LW3-yE-Hoq"/>
-                            <constraint firstItem="rA0-QB-Dtc" firstAttribute="top" secondItem="9v7-kt-Sms" secondAttribute="top" id="chp-eZ-GlS"/>
-                            <constraint firstItem="rA0-QB-Dtc" firstAttribute="bottom" secondItem="9v7-kt-Sms" secondAttribute="bottom" id="iKd-XL-jOO"/>
-                            <constraint firstItem="rA0-QB-Dtc" firstAttribute="leading" secondItem="9v7-kt-Sms" secondAttribute="leading" id="r8E-q3-JCg"/>
+                            <constraint firstItem="9v7-kt-Sms" firstAttribute="bottom" secondItem="EQV-dl-e8E" secondAttribute="bottom" id="4I8-aD-V4S"/>
+                            <constraint firstItem="9v7-kt-Sms" firstAttribute="trailing" secondItem="EQV-dl-e8E" secondAttribute="trailing" id="Bmm-se-8VN"/>
+                            <constraint firstItem="EQV-dl-e8E" firstAttribute="top" secondItem="9v7-kt-Sms" secondAttribute="top" id="E3U-de-u2u"/>
+                            <constraint firstItem="EQV-dl-e8E" firstAttribute="leading" secondItem="9v7-kt-Sms" secondAttribute="leading" id="qhB-8u-BFZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9v7-kt-Sms"/>
                     </view>
+                    <connections>
+                        <outlet property="socialMapView" destination="EQV-dl-e8E" id="QqD-ub-ZsX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XnN-ro-FqO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

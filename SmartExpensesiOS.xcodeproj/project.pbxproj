@@ -44,6 +44,7 @@
 		08B43662235F40AC0046F326 /* CurrencyRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B43660235F40AC0046F326 /* CurrencyRateViewController.swift */; };
 		08B43665235F41AF0046F326 /* CurrencyRateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B43664235F41AF0046F326 /* CurrencyRateCoordinator.swift */; };
 		08B43666235F41AF0046F326 /* CurrencyRateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B43664235F41AF0046F326 /* CurrencyRateCoordinator.swift */; };
+		08B43669235F570F0046F326 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B43668235F570F0046F326 /* MapKit.framework */; };
 		08D5244A23539D5D001BB6FF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08D5244C23539D5D001BB6FF /* Localizable.strings */; };
 		08D5245223539EAA001BB6FF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5245123539EAA001BB6FF /* Extensions.swift */; };
 		08FC1ADC23590B1C00C988AA /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FC1ADB23590B1C00C988AA /* TabbarController.swift */; };
@@ -92,6 +93,7 @@
 		08B4365A235F39F40046F326 /* SocialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialCoordinator.swift; sourceTree = "<group>"; };
 		08B43660235F40AC0046F326 /* CurrencyRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRateViewController.swift; sourceTree = "<group>"; };
 		08B43664235F41AF0046F326 /* CurrencyRateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRateCoordinator.swift; sourceTree = "<group>"; };
+		08B43668235F570F0046F326 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		08D5244B23539D5D001BB6FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		08D5244D23539D79001BB6FF /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Main.strings; sourceTree = "<group>"; };
 		08D5244E23539D7A001BB6FF /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08B43669235F570F0046F326 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +269,7 @@
 				085C608F23477E2F00BA038C /* SmartExpensesiOS */,
 				085C60A423477E3000BA038C /* SmartExpensesiOSTests */,
 				085C608E23477E2F00BA038C /* Products */,
+				08B43667235F570F0046F326 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 			wrapsLines = 0;
@@ -416,6 +420,14 @@
 				08B43664235F41AF0046F326 /* CurrencyRateCoordinator.swift */,
 			);
 			path = CurrencyRateCoordinator;
+			sourceTree = "<group>";
+		};
+		08B43667235F570F0046F326 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08B43668235F570F0046F326 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		08FC1ADA23590AFB00C988AA /* TabbarController */ = {
@@ -701,6 +713,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;

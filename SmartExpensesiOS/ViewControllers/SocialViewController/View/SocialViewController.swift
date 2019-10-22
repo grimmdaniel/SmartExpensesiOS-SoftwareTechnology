@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import MapKit
 
 class SocialViewController: UIViewController, StoryboardAble {
+    
+    @IBOutlet weak var socialMapView: MKMapView!
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)

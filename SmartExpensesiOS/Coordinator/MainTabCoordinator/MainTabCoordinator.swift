@@ -22,16 +22,19 @@ class MainTabCoordinator: Coordinator {
         //child coordinators
         let homeScreenCoordinator = HomeScreenCoordinator()
         let myExpensesCoordinator = MyExpensesCoordinator()
+        let socialCoordinator = SocialCoordianator()
         let profileSettingsCoordinator = ProfileSettingsCoordinator()
         
         tabBarController.viewControllers = [
             homeScreenCoordinator.rootViewController,
             myExpensesCoordinator.rootViewController,
+            socialCoordinator.rootViewController,
             profileSettingsCoordinator.rootViewController
         ]
         
         childCoordinators.append(homeScreenCoordinator)
         childCoordinators.append(myExpensesCoordinator)
+        childCoordinators.append(socialCoordinator)
         childCoordinators.append(profileSettingsCoordinator)
     }
     

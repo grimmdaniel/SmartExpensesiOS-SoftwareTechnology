@@ -688,6 +688,21 @@
             </objects>
             <point key="canvasLocation" x="2230" y="690"/>
         </scene>
+        <!--Currency Rate View Controller-->
+        <scene sceneID="MEK-uf-DpX">
+            <objects>
+                <viewController storyboardIdentifier="CurrencyRateViewController" id="zKu-yD-8b2" customClass="CurrencyRateViewController" customModule="SmartExpensesiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1gt-CW-JwB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Hgd-d1-BUH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWX-vw-MB1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2901" y="689"/>
+        </scene>
         <!--My Expenses View Controller-->
         <scene sceneID="kMc-i0-0OB">
             <objects>

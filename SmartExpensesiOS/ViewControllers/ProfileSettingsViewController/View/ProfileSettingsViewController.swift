@@ -14,13 +14,21 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
         super.init(coder: coder)
         
         title = "My Profile"
-        tabBarItem.image = UIImage(named: "tabbar_4.png")
+        tabBarItem = UITabBarItem(title: "My Profile", image: UIImage(named: "tabbar_4.png"), tag: 4)
     }
+    
+    var logOutClosure: (() -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.navigationBar.barTintColor = ColorTheme.primaryColor
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(logOut))
+    }
+    
+    @objc func logOut() {
+        logOutClosure?()
     }
 }

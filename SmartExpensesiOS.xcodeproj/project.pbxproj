@@ -51,6 +51,8 @@
 		08B4367223619CA00046F326 /* ExpenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4367023619CA00046F326 /* ExpenseCell.swift */; };
 		08B436752361A9110046F326 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B436742361A9110046F326 /* Expense.swift */; };
 		08B436762361A9110046F326 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B436742361A9110046F326 /* Expense.swift */; };
+		08B436792361C0580046F326 /* NotificationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B436782361C0580046F326 /* NotificationConstants.swift */; };
+		08B4367A2361C0580046F326 /* NotificationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B436782361C0580046F326 /* NotificationConstants.swift */; };
 		08D5244A23539D5D001BB6FF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08D5244C23539D5D001BB6FF /* Localizable.strings */; };
 		08D5245223539EAA001BB6FF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5245123539EAA001BB6FF /* Extensions.swift */; };
 		08FC1ADC23590B1C00C988AA /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FC1ADB23590B1C00C988AA /* TabbarController.swift */; };
@@ -103,6 +105,7 @@
 		08B4366C23619C3E0046F326 /* ExpenseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpenseCell.xib; sourceTree = "<group>"; };
 		08B4367023619CA00046F326 /* ExpenseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCell.swift; sourceTree = "<group>"; };
 		08B436742361A9110046F326 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		08B436782361C0580046F326 /* NotificationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationConstants.swift; sourceTree = "<group>"; };
 		08D5244B23539D5D001BB6FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		08D5244D23539D79001BB6FF /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Main.strings; sourceTree = "<group>"; };
 		08D5244E23539D7A001BB6FF /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -194,6 +197,7 @@
 			children = (
 				083A5023234DE1ED00F352B8 /* ColorTheme.swift */,
 				08D5245123539EAA001BB6FF /* Extensions.swift */,
+				08B436782361C0580046F326 /* NotificationConstants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -634,6 +638,7 @@
 				083A5024234DE1ED00F352B8 /* ColorTheme.swift in Sources */,
 				0889DDCD23507C3200E34AF2 /* WelcomeViewControllerViewModel.swift in Sources */,
 				08B4364D235F35890046F326 /* ProfileSettingsViewController.swift in Sources */,
+				08B436792361C0580046F326 /* NotificationConstants.swift in Sources */,
 				08B436752361A9110046F326 /* Expense.swift in Sources */,
 				084E367F234DE731008B7801 /* Coordinator.swift in Sources */,
 			);
@@ -653,6 +658,7 @@
 				08B43658235F39BC0046F326 /* SocialViewController.swift in Sources */,
 				0830B68F23589C1D00A3AE9A /* HomeScreenCoordinator.swift in Sources */,
 				08B436762361A9110046F326 /* Expense.swift in Sources */,
+				08B4367A2361C0580046F326 /* NotificationConstants.swift in Sources */,
 				08B43666235F41AF0046F326 /* CurrencyRateCoordinator.swift in Sources */,
 				0830B6982358A2D600A3AE9A /* MyExpensesCoordinator.swift in Sources */,
 				08FC1ADD23590B1C00C988AA /* TabbarController.swift in Sources */,

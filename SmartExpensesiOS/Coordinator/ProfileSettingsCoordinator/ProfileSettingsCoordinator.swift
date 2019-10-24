@@ -37,6 +37,10 @@ class ProfileSettingsCoordinator: Coordinator {
     private func showProfileSettingsScreen() {
         
         let profileSettingsViewController = ProfileSettingsViewController.instantiate()
+        
+        profileSettingsViewController.logOutClosure = {
+            NotificationCenter.default.post(name: NSNotification.Name(NotificationConstants.logOutNotification), object: nil)
+        }
         navigationController.pushViewController(profileSettingsViewController, animated: true)
     }
 }

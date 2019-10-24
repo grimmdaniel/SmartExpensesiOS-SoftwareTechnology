@@ -45,6 +45,12 @@
 		08B43665235F41AF0046F326 /* CurrencyRateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B43664235F41AF0046F326 /* CurrencyRateCoordinator.swift */; };
 		08B43666235F41AF0046F326 /* CurrencyRateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B43664235F41AF0046F326 /* CurrencyRateCoordinator.swift */; };
 		08B43669235F570F0046F326 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B43668235F570F0046F326 /* MapKit.framework */; };
+		08B4366D23619C3E0046F326 /* ExpenseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08B4366C23619C3E0046F326 /* ExpenseCell.xib */; };
+		08B4366E23619C3E0046F326 /* ExpenseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08B4366C23619C3E0046F326 /* ExpenseCell.xib */; };
+		08B4367123619CA00046F326 /* ExpenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4367023619CA00046F326 /* ExpenseCell.swift */; };
+		08B4367223619CA00046F326 /* ExpenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4367023619CA00046F326 /* ExpenseCell.swift */; };
+		08B436752361A9110046F326 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B436742361A9110046F326 /* Expense.swift */; };
+		08B436762361A9110046F326 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B436742361A9110046F326 /* Expense.swift */; };
 		08D5244A23539D5D001BB6FF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08D5244C23539D5D001BB6FF /* Localizable.strings */; };
 		08D5245223539EAA001BB6FF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5245123539EAA001BB6FF /* Extensions.swift */; };
 		08FC1ADC23590B1C00C988AA /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FC1ADB23590B1C00C988AA /* TabbarController.swift */; };
@@ -94,6 +100,9 @@
 		08B43660235F40AC0046F326 /* CurrencyRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRateViewController.swift; sourceTree = "<group>"; };
 		08B43664235F41AF0046F326 /* CurrencyRateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRateCoordinator.swift; sourceTree = "<group>"; };
 		08B43668235F570F0046F326 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		08B4366C23619C3E0046F326 /* ExpenseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpenseCell.xib; sourceTree = "<group>"; };
+		08B4367023619CA00046F326 /* ExpenseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCell.swift; sourceTree = "<group>"; };
+		08B436742361A9110046F326 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		08D5244B23539D5D001BB6FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		08D5244D23539D79001BB6FF /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Main.strings; sourceTree = "<group>"; };
 		08D5244E23539D7A001BB6FF /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -287,6 +296,8 @@
 			isa = PBXGroup;
 			children = (
 				0864B24C235864E80018EA4F /* SmartExpensesiOS.entitlements */,
+				08B436732361A8FF0046F326 /* Model */,
+				08B4366A23619C0E0046F326 /* View */,
 				084E3686234DEAF1008B7801 /* ViewControllers */,
 				084E3681234DE8FC008B7801 /* Protocols */,
 				084E367D234DE720008B7801 /* Coordinator */,
@@ -430,6 +441,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		08B4366A23619C0E0046F326 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08B4366B23619C180046F326 /* XIB */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		08B4366B23619C180046F326 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				08B4366F23619C690046F326 /* ExpenseCell */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		08B4366F23619C690046F326 /* ExpenseCell */ = {
+			isa = PBXGroup;
+			children = (
+				08B4366C23619C3E0046F326 /* ExpenseCell.xib */,
+				08B4367023619CA00046F326 /* ExpenseCell.swift */,
+			);
+			path = ExpenseCell;
+			sourceTree = "<group>";
+		};
+		08B436732361A8FF0046F326 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				08B436742361A9110046F326 /* Expense.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		08FC1ADA23590AFB00C988AA /* TabbarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,6 +569,7 @@
 				085C609B23477E3000BA038C /* LaunchScreen.storyboard in Resources */,
 				08D5244A23539D5D001BB6FF /* Localizable.strings in Resources */,
 				085C609823477E3000BA038C /* Assets.xcassets in Resources */,
+				08B4366D23619C3E0046F326 /* ExpenseCell.xib in Resources */,
 				085C609623477E2F00BA038C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -533,6 +578,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08B4366E23619C3E0046F326 /* ExpenseCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +622,7 @@
 				08B43661235F40AC0046F326 /* CurrencyRateViewController.swift in Sources */,
 				08B43657235F39BC0046F326 /* SocialViewController.swift in Sources */,
 				08B43665235F41AF0046F326 /* CurrencyRateCoordinator.swift in Sources */,
+				08B4367123619CA00046F326 /* ExpenseCell.swift in Sources */,
 				0889DDC7234E7F2400E34AF2 /* SignInViewController.swift in Sources */,
 				0830B68A23589B7C00A3AE9A /* MainTabCoordinator.swift in Sources */,
 				0830B68623589B0400A3AE9A /* HomeViewController.swift in Sources */,
@@ -587,6 +634,7 @@
 				083A5024234DE1ED00F352B8 /* ColorTheme.swift in Sources */,
 				0889DDCD23507C3200E34AF2 /* WelcomeViewControllerViewModel.swift in Sources */,
 				08B4364D235F35890046F326 /* ProfileSettingsViewController.swift in Sources */,
+				08B436752361A9110046F326 /* Expense.swift in Sources */,
 				084E367F234DE731008B7801 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -599,10 +647,12 @@
 				08B43652235F35ED0046F326 /* ProfileSettingsCoordinator.swift in Sources */,
 				0830B68B23589B7C00A3AE9A /* MainTabCoordinator.swift in Sources */,
 				0830B6942358A28B00A3AE9A /* MyExpensesViewController.swift in Sources */,
+				08B4367223619CA00046F326 /* ExpenseCell.swift in Sources */,
 				08B4365C235F39F40046F326 /* SocialCoordinator.swift in Sources */,
 				0830B68723589B0400A3AE9A /* HomeViewController.swift in Sources */,
 				08B43658235F39BC0046F326 /* SocialViewController.swift in Sources */,
 				0830B68F23589C1D00A3AE9A /* HomeScreenCoordinator.swift in Sources */,
+				08B436762361A9110046F326 /* Expense.swift in Sources */,
 				08B43666235F41AF0046F326 /* CurrencyRateCoordinator.swift in Sources */,
 				0830B6982358A2D600A3AE9A /* MyExpensesCoordinator.swift in Sources */,
 				08FC1ADD23590B1C00C988AA /* TabbarController.swift in Sources */,

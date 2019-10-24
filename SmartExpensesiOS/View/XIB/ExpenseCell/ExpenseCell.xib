@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ExpenseCell" customModule="SmartExpensesiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djH-iF-XJA">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="6rE-yQ-Ftx">
+                            <rect key="frame" x="5" y="5" width="365" height="70"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="HRR-5h-w0o">
+                                    <rect key="frame" x="0.0" y="0.0" width="365" height="35"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AAg-Ef-bKk">
+                                            <rect key="frame" x="0.0" y="0.0" width="328.5" height="35"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One bottle of Porto Wine" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d74-KH-kIr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="328.5" height="35"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="d74-KH-kIr" secondAttribute="trailing" id="0KG-6u-1w2"/>
+                                                <constraint firstItem="d74-KH-kIr" firstAttribute="leading" secondItem="AAg-Ef-bKk" secondAttribute="leading" id="5w4-Y1-6GM"/>
+                                            </constraints>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uLD-Ro-9hK">
+                                            <rect key="frame" x="328.5" y="0.0" width="36.5" height="35"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="categoryType" translatesAutoresizingMaskIntoConstraints="NO" id="Ncd-85-80q">
+                                                    <rect key="frame" x="0.0" y="0.0" width="36.5" height="35"/>
+                                                </imageView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="AAg-Ef-bKk" firstAttribute="width" secondItem="HRR-5h-w0o" secondAttribute="width" multiplier="0.9" id="BqK-pO-PIs"/>
+                                        <constraint firstItem="uLD-Ro-9hK" firstAttribute="leading" secondItem="AAg-Ef-bKk" secondAttribute="trailing" id="eiL-En-QSX"/>
+                                        <constraint firstAttribute="trailing" secondItem="uLD-Ro-9hK" secondAttribute="trailing" id="wWk-6i-iSz"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0BV-pS-YHD">
+                                    <rect key="frame" x="0.0" y="35" width="365" height="35"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="MIk-cU-eqW">
+                                            <rect key="frame" x="0.0" y="0.0" width="209" height="35"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8Kq-4Q-2rj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="S92-6e-cf9">
+                                                            <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="S92-6e-cf9" secondAttribute="height" id="U6G-fn-oDM"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5wS-RX-mTz">
+                                                    <rect key="frame" x="35" y="0.0" width="174" height="35"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gz1-Hu-gml">
+                                                            <rect key="frame" x="0.0" y="0.0" width="174" height="35"/>
+                                                            <string key="text">1111 Budapest 11. kerület
+ Bartók Béla út 124.</string>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5wS-RX-mTz" firstAttribute="leading" secondItem="8Kq-4Q-2rj" secondAttribute="trailing" id="0XF-9T-IQd"/>
+                                                <constraint firstAttribute="trailing" secondItem="5wS-RX-mTz" secondAttribute="trailing" id="oiW-hx-4ex"/>
+                                            </constraints>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="GAG-d5-Qdf">
+                                            <rect key="frame" x="219" y="0.0" width="146" height="35"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1920 HUF" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTU-5c-E40">
+                                                    <rect key="frame" x="0.0" y="0.0" width="146" height="35"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="GAG-d5-Qdf" firstAttribute="width" secondItem="0BV-pS-YHD" secondAttribute="width" multiplier="0.4" id="Sfw-Ix-YO1"/>
+                                        <constraint firstItem="GAG-d5-Qdf" firstAttribute="leading" secondItem="MIk-cU-eqW" secondAttribute="trailing" constant="10" id="XEa-nI-fnX"/>
+                                        <constraint firstItem="MIk-cU-eqW" firstAttribute="leading" secondItem="0BV-pS-YHD" secondAttribute="leading" id="hYZ-7z-nvO"/>
+                                        <constraint firstAttribute="trailing" secondItem="GAG-d5-Qdf" secondAttribute="trailing" id="iZQ-j0-eCO"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="HRR-5h-w0o" secondAttribute="trailing" id="Pnw-Wb-Ab7"/>
+                                <constraint firstItem="HRR-5h-w0o" firstAttribute="leading" secondItem="6rE-yQ-Ftx" secondAttribute="leading" id="inb-Qb-X2B"/>
+                                <constraint firstItem="0BV-pS-YHD" firstAttribute="leading" secondItem="6rE-yQ-Ftx" secondAttribute="leading" id="mY7-nv-vRM"/>
+                                <constraint firstAttribute="trailing" secondItem="0BV-pS-YHD" secondAttribute="trailing" id="xhI-6I-Msg"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="6rE-yQ-Ftx" firstAttribute="top" secondItem="djH-iF-XJA" secondAttribute="top" constant="5" id="2Kv-h5-2bo"/>
+                        <constraint firstAttribute="trailing" secondItem="6rE-yQ-Ftx" secondAttribute="trailing" constant="5" id="M13-dz-jWH"/>
+                        <constraint firstItem="6rE-yQ-Ftx" firstAttribute="leading" secondItem="djH-iF-XJA" secondAttribute="leading" constant="5" id="RCX-Lr-ZKQ"/>
+                        <constraint firstAttribute="bottom" secondItem="6rE-yQ-Ftx" secondAttribute="bottom" constant="5" id="hgX-EN-1zZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="djH-iF-XJA" secondAttribute="bottom" id="7hC-x2-OnS"/>
+                <constraint firstItem="djH-iF-XJA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7wl-MC-bSE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="djH-iF-XJA" secondAttribute="trailing" id="SHz-6A-JGm"/>
+                <constraint firstItem="djH-iF-XJA" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Zvj-in-tkK"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="croppedView" destination="djH-iF-XJA" id="R0D-mf-cX9"/>
+                <outlet property="expenseCategoryLogo" destination="Ncd-85-80q" id="FaM-6J-ugP"/>
+                <outlet property="expenseNameLabel" destination="d74-KH-kIr" id="tDJ-6w-At3"/>
+                <outlet property="expensePlaceLabel" destination="Gz1-Hu-gml" id="LCc-SB-niO"/>
+                <outlet property="expensePlaceLogo" destination="S92-6e-cf9" id="Etj-vy-6MD"/>
+                <outlet property="expensePriceLabel" destination="YTU-5c-E40" id="foi-nI-mJR"/>
+            </connections>
+            <point key="canvasLocation" x="138.40000000000001" y="139.43028485757122"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="categoryType" width="50" height="50"/>
+        <image name="placeLogo" width="30" height="38"/>
+    </resources>
+</document>

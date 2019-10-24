@@ -711,30 +711,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZSO-Wx-bw4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="nNS-ne-i7I">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nNS-ne-i7I" id="IRX-fi-npZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="10" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZSO-Wx-bw4">
+                                <rect key="frame" x="10" y="0.0" width="355" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ZSO-Wx-bw4" firstAttribute="bottom" secondItem="Ear-ek-MlG" secondAttribute="bottom" id="7HH-Vz-JsB"/>
                             <constraint firstItem="ZSO-Wx-bw4" firstAttribute="top" secondItem="Ear-ek-MlG" secondAttribute="top" id="E0G-U7-wk7"/>
-                            <constraint firstItem="ZSO-Wx-bw4" firstAttribute="trailing" secondItem="Ear-ek-MlG" secondAttribute="trailing" id="Hwn-Pu-BZ5"/>
-                            <constraint firstItem="ZSO-Wx-bw4" firstAttribute="leading" secondItem="Ear-ek-MlG" secondAttribute="leading" id="WrF-gn-fSr"/>
+                            <constraint firstItem="ZSO-Wx-bw4" firstAttribute="trailing" secondItem="Ear-ek-MlG" secondAttribute="trailing" constant="-10" id="Hwn-Pu-BZ5"/>
+                            <constraint firstItem="ZSO-Wx-bw4" firstAttribute="leading" secondItem="Ear-ek-MlG" secondAttribute="leading" constant="10" id="WrF-gn-fSr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ear-ek-MlG"/>
                     </view>
+                    <connections>
+                        <outlet property="myExpensesTableView" destination="ZSO-Wx-bw4" id="Jqf-xf-qoO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1V-f3-1U6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

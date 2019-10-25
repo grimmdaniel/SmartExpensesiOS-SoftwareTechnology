@@ -27,6 +27,7 @@ class SignUpViewController: UIViewController, StoryboardAble {
     @IBOutlet weak var termsAndConditionsLabel: UILabel!
     
     var closeScreenClosure: (() -> Void)?
+    var signUpCompletedClosure: (() -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +78,7 @@ class SignUpViewController: UIViewController, StoryboardAble {
     }
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        closeScreenClosure?()
+        signUpCompletedClosure?()
     }
     
     @IBAction func termsAndConditionsButtonPressed(_ sender: UIButton) {

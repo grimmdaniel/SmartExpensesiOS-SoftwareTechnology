@@ -48,6 +48,10 @@ class WelcomeCoordiator: Coordinator {
                 self?.welcomeVC.dismiss(animated: true)
             }
             
+            signInVC.signInCompletedClosure = {
+                NotificationCenter.default.post(name: NSNotification.Name(NotificationConstants.signInNotification), object: nil)
+            }
+            
             self?.welcomeVC.present(signInVC, animated: true)
         }
         
@@ -57,6 +61,10 @@ class WelcomeCoordiator: Coordinator {
             
             signUpVC.closeScreenClosure = { [weak self] in
                 self?.welcomeVC.dismiss(animated: true)
+            }
+            
+            signUpVC.signUpCompletedClosure = {
+                NotificationCenter.default.post(name: NSNotification.Name(NotificationConstants.signInNotification), object: nil)
             }
             
             self?.welcomeVC.present(signUpVC, animated: true)

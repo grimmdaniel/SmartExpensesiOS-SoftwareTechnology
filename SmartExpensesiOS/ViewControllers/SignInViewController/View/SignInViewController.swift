@@ -24,6 +24,7 @@ class SignInViewController: UIViewController, StoryboardAble {
     @IBOutlet weak var signInButton: UIButton!
     
     var closeScreenClosure: (() -> Void)?
+    var signInCompletedClosure: (() -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +74,7 @@ class SignInViewController: UIViewController, StoryboardAble {
     }
     
     @IBAction func signInButtonPressed(_ sender: UIButton) {
-        closeScreenClosure?()
+        signInCompletedClosure?()
     }
 }
 

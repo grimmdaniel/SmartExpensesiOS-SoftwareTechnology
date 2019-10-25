@@ -636,6 +636,132 @@
             </objects>
             <point key="canvasLocation" x="1493.5999999999999" y="6.746626686656672"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="PtZ-v8-fd8">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="3zH-1z-hyQ" customClass="HomeViewController" customModule="SmartExpensesiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hjT-i4-3fJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KpY-hk-pMX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zNg-tR-czn">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zNg-tR-czn" id="up3-iq-cOh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KpY-hk-pMX" firstAttribute="trailing" secondItem="IZP-8j-p3G" secondAttribute="trailing" id="OD3-ZC-inW"/>
+                            <constraint firstItem="KpY-hk-pMX" firstAttribute="bottom" secondItem="IZP-8j-p3G" secondAttribute="bottom" id="QQi-Tg-yqj"/>
+                            <constraint firstItem="KpY-hk-pMX" firstAttribute="top" secondItem="IZP-8j-p3G" secondAttribute="top" id="VKm-cP-eKF"/>
+                            <constraint firstItem="KpY-hk-pMX" firstAttribute="leading" secondItem="IZP-8j-p3G" secondAttribute="leading" id="WPc-oM-f30"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IZP-8j-p3G"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h5V-90-ASo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2228" y="6.746626686656672"/>
+        </scene>
+        <!--Profile Settings View Controller-->
+        <scene sceneID="uui-vj-Znj">
+            <objects>
+                <viewController storyboardIdentifier="ProfileSettingsViewController" id="4hM-so-rZg" customClass="ProfileSettingsViewController" customModule="SmartExpensesiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zn9-U1-3S6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="CKz-4J-1hu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kij-QH-e4P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2230" y="690"/>
+        </scene>
+        <!--Currency Rate View Controller-->
+        <scene sceneID="MEK-uf-DpX">
+            <objects>
+                <viewController storyboardIdentifier="CurrencyRateViewController" id="zKu-yD-8b2" customClass="CurrencyRateViewController" customModule="SmartExpensesiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1gt-CW-JwB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Hgd-d1-BUH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWX-vw-MB1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2901" y="689"/>
+        </scene>
+        <!--My Expenses View Controller-->
+        <scene sceneID="kMc-i0-0OB">
+            <objects>
+                <viewController storyboardIdentifier="MyExpensesViewController" id="fRu-y1-CwB" customClass="MyExpensesViewController" customModule="SmartExpensesiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="74t-Qm-EAt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="10" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZSO-Wx-bw4">
+                                <rect key="frame" x="10" y="0.0" width="355" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZSO-Wx-bw4" firstAttribute="bottom" secondItem="Ear-ek-MlG" secondAttribute="bottom" id="7HH-Vz-JsB"/>
+                            <constraint firstItem="ZSO-Wx-bw4" firstAttribute="top" secondItem="Ear-ek-MlG" secondAttribute="top" id="E0G-U7-wk7"/>
+                            <constraint firstItem="ZSO-Wx-bw4" firstAttribute="trailing" secondItem="Ear-ek-MlG" secondAttribute="trailing" constant="-10" id="Hwn-Pu-BZ5"/>
+                            <constraint firstItem="ZSO-Wx-bw4" firstAttribute="leading" secondItem="Ear-ek-MlG" secondAttribute="leading" constant="10" id="WrF-gn-fSr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ear-ek-MlG"/>
+                    </view>
+                    <connections>
+                        <outlet property="myExpensesTableView" destination="ZSO-Wx-bw4" id="Jqf-xf-qoO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f1V-f3-1U6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2901.5999999999999" y="5.8470764617691158"/>
+        </scene>
+        <!--Social View Controller-->
+        <scene sceneID="4tL-FB-vsO">
+            <objects>
+                <viewController storyboardIdentifier="SocialViewController" id="1Sn-ar-4aU" customClass="SocialViewController" customModule="SmartExpensesiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GH6-Ls-5fS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EQV-dl-e8E">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9v7-kt-Sms" firstAttribute="bottom" secondItem="EQV-dl-e8E" secondAttribute="bottom" id="4I8-aD-V4S"/>
+                            <constraint firstItem="9v7-kt-Sms" firstAttribute="trailing" secondItem="EQV-dl-e8E" secondAttribute="trailing" id="Bmm-se-8VN"/>
+                            <constraint firstItem="EQV-dl-e8E" firstAttribute="top" secondItem="9v7-kt-Sms" secondAttribute="top" id="E3U-de-u2u"/>
+                            <constraint firstItem="EQV-dl-e8E" firstAttribute="leading" secondItem="9v7-kt-Sms" secondAttribute="leading" id="qhB-8u-BFZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9v7-kt-Sms"/>
+                    </view>
+                    <connections>
+                        <outlet property="socialMapView" destination="EQV-dl-e8E" id="QqD-ub-ZsX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XnN-ro-FqO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3564" y="5.8470764617691158"/>
+        </scene>
     </scenes>
     <resources>
         <image name="CloseButton" width="50" height="50"/>

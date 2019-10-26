@@ -30,6 +30,8 @@
 		085C60A623477E3000BA038C /* SmartExpensesiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085C60A523477E3000BA038C /* SmartExpensesiOSTests.swift */; };
 		0883DEA0236489E600E91AF5 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883DE9F236489E600E91AF5 /* LoginService.swift */; };
 		0883DEA1236489E600E91AF5 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883DE9F236489E600E91AF5 /* LoginService.swift */; };
+		0883DEA4236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883DEA3236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift */; };
+		0883DEA5236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883DEA3236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift */; };
 		0889DDC7234E7F2400E34AF2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889DDC6234E7F2400E34AF2 /* SignInViewController.swift */; };
 		0889DDCA234E87C600E34AF2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889DDC9234E87C600E34AF2 /* SignUpViewController.swift */; };
 		0889DDCD23507C3200E34AF2 /* WelcomeViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889DDCC23507C3200E34AF2 /* WelcomeViewControllerViewModel.swift */; };
@@ -94,6 +96,7 @@
 		085C60A723477E3000BA038C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0864B24C235864E80018EA4F /* SmartExpensesiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartExpensesiOS.entitlements; sourceTree = "<group>"; };
 		0883DE9F236489E600E91AF5 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		0883DEA3236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendationsTableViewCell.swift; sourceTree = "<group>"; };
 		0889DDC6234E7F2400E34AF2 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		0889DDC9234E87C600E34AF2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0889DDCC23507C3200E34AF2 /* WelcomeViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerViewModel.swift; sourceTree = "<group>"; };
@@ -142,6 +145,7 @@
 		0830B68323589AE300A3AE9A /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0883DEA22364959200E91AF5 /* Cell */,
 				0830B68423589AF000A3AE9A /* View */,
 			);
 			path = HomeViewController;
@@ -335,6 +339,14 @@
 				0883DE9F236489E600E91AF5 /* LoginService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		0883DEA22364959200E91AF5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0883DEA3236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		0889DDC4234E7EF900E34AF2 /* SignInViewController */ = {
@@ -634,6 +646,7 @@
 				084E3689234DEB10008B7801 /* WelcomeViewController.swift in Sources */,
 				0889DDD023507CF000E34AF2 /* WelcomeModel.swift in Sources */,
 				08B43651235F35ED0046F326 /* ProfileSettingsCoordinator.swift in Sources */,
+				0883DEA4236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift in Sources */,
 				08FC1ADC23590B1C00C988AA /* TabbarController.swift in Sources */,
 				08B43661235F40AC0046F326 /* CurrencyRateViewController.swift in Sources */,
 				08B43657235F39BC0046F326 /* SocialViewController.swift in Sources */,
@@ -676,6 +689,7 @@
 				08B43666235F41AF0046F326 /* CurrencyRateCoordinator.swift in Sources */,
 				0830B6982358A2D600A3AE9A /* MyExpensesCoordinator.swift in Sources */,
 				08FC1ADD23590B1C00C988AA /* TabbarController.swift in Sources */,
+				0883DEA5236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift in Sources */,
 				08B43662235F40AC0046F326 /* CurrencyRateViewController.swift in Sources */,
 				08B4364E235F35890046F326 /* ProfileSettingsViewController.swift in Sources */,
 			);

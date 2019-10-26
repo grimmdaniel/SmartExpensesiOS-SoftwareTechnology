@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     private var welcomeCoordiator: WelcomeCoordiator!
-    private var mainTabCoordinator: MainTabCoordinator!
+    private var mainTabCoordinator = MainTabCoordinator()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -23,7 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(userLoggedOut), name: NSNotification.Name(NotificationConstants.logOutNotification), object: nil)
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        userLoggedOut()
+        
+        if LoginService.isUserLoggedIn {
+            self.window?.rootViewController = self.mainTabCoordinator.rootViewController
+            self.mainTabCoordinator.start()
+        } else {
+            userLoggedOut()
+        }
+        
         window?.makeKeyAndVisible()
         return true
     }

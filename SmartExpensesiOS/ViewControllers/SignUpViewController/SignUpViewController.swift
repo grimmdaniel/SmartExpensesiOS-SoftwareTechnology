@@ -78,6 +78,7 @@ class SignUpViewController: UIViewController, StoryboardAble {
     }
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
+        LoginService.loginUser(with: "asdasdasd")
         signUpCompletedClosure?()
     }
     

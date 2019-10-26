@@ -29,6 +29,7 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
     }
     
     @objc func logOut() {
+        LoginService.logOutUser()
         logOutClosure?()
     }
 }

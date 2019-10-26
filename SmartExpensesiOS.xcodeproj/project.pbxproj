@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		080429482364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080429472364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift */; };
+		080429492364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080429472364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift */; };
 		0830B68623589B0400A3AE9A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0830B68523589B0400A3AE9A /* HomeViewController.swift */; };
 		0830B68723589B0400A3AE9A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0830B68523589B0400A3AE9A /* HomeViewController.swift */; };
 		0830B68A23589B7C00A3AE9A /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0830B68923589B7C00A3AE9A /* MainTabCoordinator.swift */; };
@@ -74,6 +76,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		080429472364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendationCollectionViewCell.swift; sourceTree = "<group>"; };
 		0830B68523589B0400A3AE9A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0830B68923589B7C00A3AE9A /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
 		0830B68D23589C1D00A3AE9A /* HomeScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCoordinator.swift; sourceTree = "<group>"; };
@@ -345,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				0883DEA3236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift */,
+				080429472364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -646,6 +650,7 @@
 				084E3689234DEB10008B7801 /* WelcomeViewController.swift in Sources */,
 				0889DDD023507CF000E34AF2 /* WelcomeModel.swift in Sources */,
 				08B43651235F35ED0046F326 /* ProfileSettingsCoordinator.swift in Sources */,
+				080429482364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift in Sources */,
 				0883DEA4236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift in Sources */,
 				08FC1ADC23590B1C00C988AA /* TabbarController.swift in Sources */,
 				08B43661235F40AC0046F326 /* CurrencyRateViewController.swift in Sources */,
@@ -686,6 +691,7 @@
 				0830B68F23589C1D00A3AE9A /* HomeScreenCoordinator.swift in Sources */,
 				08B436762361A9110046F326 /* Expense.swift in Sources */,
 				08B4367A2361C0580046F326 /* NotificationConstants.swift in Sources */,
+				080429492364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift in Sources */,
 				08B43666235F41AF0046F326 /* CurrencyRateCoordinator.swift in Sources */,
 				0830B6982358A2D600A3AE9A /* MyExpensesCoordinator.swift in Sources */,
 				08FC1ADD23590B1C00C988AA /* TabbarController.swift in Sources */,

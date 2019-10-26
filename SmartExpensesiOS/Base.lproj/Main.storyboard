@@ -646,21 +646,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="10" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="KpY-hk-pMX">
-                                <rect key="frame" x="10" y="0.0" width="355" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeRecommendationsTableViewCell" rowHeight="208" id="zNg-tR-czn" customClass="HomeRecommendationsTableViewCell" customModule="SmartExpensesiOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="355" height="208"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="208"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zNg-tR-czn" id="up3-iq-cOh">
-                                            <rect key="frame" x="0.0" y="0.0" width="355" height="208"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="208"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1pJ-Je-KC8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="355" height="208"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="208"/>
                                                     <subviews>
                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WFA-yj-qXK">
-                                                            <rect key="frame" x="0.0" y="0.0" width="355" height="208"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="208"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="hmv-23-Byu">
                                                                 <size key="itemSize" width="50" height="50"/>
@@ -736,10 +736,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="KpY-hk-pMX" firstAttribute="trailing" secondItem="IZP-8j-p3G" secondAttribute="trailing" constant="-10" id="OD3-ZC-inW"/>
+                            <constraint firstItem="KpY-hk-pMX" firstAttribute="trailing" secondItem="IZP-8j-p3G" secondAttribute="trailing" id="OD3-ZC-inW"/>
                             <constraint firstItem="KpY-hk-pMX" firstAttribute="bottom" secondItem="IZP-8j-p3G" secondAttribute="bottom" id="QQi-Tg-yqj"/>
                             <constraint firstItem="KpY-hk-pMX" firstAttribute="top" secondItem="IZP-8j-p3G" secondAttribute="top" id="VKm-cP-eKF"/>
-                            <constraint firstItem="KpY-hk-pMX" firstAttribute="leading" secondItem="IZP-8j-p3G" secondAttribute="leading" constant="10" id="WPc-oM-f30"/>
+                            <constraint firstItem="KpY-hk-pMX" firstAttribute="leading" secondItem="IZP-8j-p3G" secondAttribute="leading" id="WPc-oM-f30"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IZP-8j-p3G"/>
                     </view>
@@ -790,7 +790,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="10" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZSO-Wx-bw4">
-                                <rect key="frame" x="10" y="0.0" width="355" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -798,8 +798,8 @@
                         <constraints>
                             <constraint firstItem="ZSO-Wx-bw4" firstAttribute="bottom" secondItem="Ear-ek-MlG" secondAttribute="bottom" id="7HH-Vz-JsB"/>
                             <constraint firstItem="ZSO-Wx-bw4" firstAttribute="top" secondItem="Ear-ek-MlG" secondAttribute="top" id="E0G-U7-wk7"/>
-                            <constraint firstItem="ZSO-Wx-bw4" firstAttribute="trailing" secondItem="Ear-ek-MlG" secondAttribute="trailing" constant="-10" id="Hwn-Pu-BZ5"/>
-                            <constraint firstItem="ZSO-Wx-bw4" firstAttribute="leading" secondItem="Ear-ek-MlG" secondAttribute="leading" constant="10" id="WrF-gn-fSr"/>
+                            <constraint firstItem="ZSO-Wx-bw4" firstAttribute="trailing" secondItem="Ear-ek-MlG" secondAttribute="trailing" id="Hwn-Pu-BZ5"/>
+                            <constraint firstItem="ZSO-Wx-bw4" firstAttribute="leading" secondItem="Ear-ek-MlG" secondAttribute="leading" id="WrF-gn-fSr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ear-ek-MlG"/>
                     </view>

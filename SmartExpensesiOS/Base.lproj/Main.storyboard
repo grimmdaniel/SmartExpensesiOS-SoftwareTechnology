@@ -828,6 +828,9 @@
                                     <constraint firstAttribute="width" secondItem="Egn-Pj-Nga" secondAttribute="height" multiplier="1:1" id="pii-Jm-gn0"/>
                                 </constraints>
                                 <state key="normal" image="my_loc"/>
+                                <connections>
+                                    <action selector="myPositionButtonPressed:" destination="1Sn-ar-4aU" eventType="touchUpInside" id="z6O-09-XAs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -843,6 +846,7 @@
                         <viewLayoutGuide key="safeArea" id="9v7-kt-Sms"/>
                     </view>
                     <connections>
+                        <outlet property="myPositionButton" destination="Egn-Pj-Nga" id="aOg-O2-FnA"/>
                         <outlet property="socialMapView" destination="EQV-dl-e8E" id="QqD-ub-ZsX"/>
                     </connections>
                 </viewController>

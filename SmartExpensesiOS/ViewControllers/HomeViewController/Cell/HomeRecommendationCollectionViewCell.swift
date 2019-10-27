@@ -18,7 +18,7 @@ class HomeRecommendationCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        shadowView.layer.shadowColor = UIColor.black.cgColor
+        shadowView.layer.shadowColor = UIColor.darkGray.cgColor
         shadowView.layer.shadowOffset = CGSize(width: 0, height: 2)
         shadowView.layer.shadowOpacity = 1
         shadowView.backgroundColor = UIColor.white

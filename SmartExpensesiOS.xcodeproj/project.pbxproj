@@ -19,6 +19,8 @@
 		0830B6942358A28B00A3AE9A /* MyExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0830B6922358A28B00A3AE9A /* MyExpensesViewController.swift */; };
 		0830B6972358A2D600A3AE9A /* MyExpensesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0830B6962358A2D600A3AE9A /* MyExpensesCoordinator.swift */; };
 		0830B6982358A2D600A3AE9A /* MyExpensesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0830B6962358A2D600A3AE9A /* MyExpensesCoordinator.swift */; };
+		083661582365FF2700A524B8 /* CustomMKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083661572365FF2700A524B8 /* CustomMKAnnotation.swift */; };
+		083661592365FF2700A524B8 /* CustomMKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083661572365FF2700A524B8 /* CustomMKAnnotation.swift */; };
 		083A5024234DE1ED00F352B8 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A5023234DE1ED00F352B8 /* ColorTheme.swift */; };
 		084E367F234DE731008B7801 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E367E234DE731008B7801 /* Coordinator.swift */; };
 		084E3683234DE90F008B7801 /* StoryboardAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E3682234DE90F008B7801 /* StoryboardAble.swift */; };
@@ -82,6 +84,7 @@
 		0830B68D23589C1D00A3AE9A /* HomeScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCoordinator.swift; sourceTree = "<group>"; };
 		0830B6922358A28B00A3AE9A /* MyExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExpensesViewController.swift; sourceTree = "<group>"; };
 		0830B6962358A2D600A3AE9A /* MyExpensesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExpensesCoordinator.swift; sourceTree = "<group>"; };
+		083661572365FF2700A524B8 /* CustomMKAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMKAnnotation.swift; sourceTree = "<group>"; };
 		083A5023234DE1ED00F352B8 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		084E367E234DE731008B7801 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		084E3682234DE90F008B7801 /* StoryboardAble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardAble.swift; sourceTree = "<group>"; };
@@ -200,6 +203,14 @@
 				0830B6962358A2D600A3AE9A /* MyExpensesCoordinator.swift */,
 			);
 			path = MyExpensesCoordinator;
+			sourceTree = "<group>";
+		};
+		083661562365FF0D00A524B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				083661572365FF2700A524B8 /* CustomMKAnnotation.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		083A5022234DE19A00F352B8 /* Utils */ = {
@@ -420,6 +431,7 @@
 		08B43654235F39990046F326 /* SocialViewController */ = {
 			isa = PBXGroup;
 			children = (
+				083661562365FF0D00A524B8 /* Model */,
 				08B43655235F39AC0046F326 /* View */,
 			);
 			path = SocialViewController;
@@ -643,6 +655,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				084E3683234DE90F008B7801 /* StoryboardAble.swift in Sources */,
+				083661582365FF2700A524B8 /* CustomMKAnnotation.swift in Sources */,
 				085C609123477E2F00BA038C /* AppDelegate.swift in Sources */,
 				084E3685234DE935008B7801 /* WelcomeCoordinator.swift in Sources */,
 				0830B68E23589C1D00A3AE9A /* HomeScreenCoordinator.swift in Sources */,
@@ -696,6 +709,7 @@
 				0830B6982358A2D600A3AE9A /* MyExpensesCoordinator.swift in Sources */,
 				08FC1ADD23590B1C00C988AA /* TabbarController.swift in Sources */,
 				0883DEA5236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift in Sources */,
+				083661592365FF2700A524B8 /* CustomMKAnnotation.swift in Sources */,
 				08B43662235F40AC0046F326 /* CurrencyRateViewController.swift in Sources */,
 				08B4364E235F35890046F326 /* ProfileSettingsViewController.swift in Sources */,
 			);

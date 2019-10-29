@@ -13,6 +13,7 @@ class ColorTheme {
     static let primaryColor: UIColor = UIColor.hexStringToUIColor(hexCode: "24AA7B")
     static let secondaryColor: UIColor = UIColor.hexStringToUIColor(hexCode: "2E2727")
     static let defaultBackgroundColor: UIColor = UIColor.hexStringToUIColor(hexCode: "D8D8D8")
+    static let loadingBackgroundColor: UIColor = UIColor.hexStringToUIColor(hexCode: "DADFEC")
 }
 
 extension UIColor {

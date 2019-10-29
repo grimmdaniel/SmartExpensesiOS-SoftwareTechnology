@@ -8,9 +8,20 @@
 
 import UIKit
 
-class MyExpensesViewController: UIViewController, StoryboardAble {
+class MyExpensesViewController: UIViewController, StoryboardAble, AnimatableVC {
     
     @IBOutlet weak var myExpensesTableView: UITableView!
+    
+    var isLoadingContent: Bool = true {
+        didSet {
+            myExpensesTableView.reloadData()
+            if isLoadingContent {
+                startAnimation()
+            } else {
+                stopAnimation()
+            }
+        }
+    }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -22,15 +33,31 @@ class MyExpensesViewController: UIViewController, StoryboardAble {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.barTintColor = ColorTheme.primaryColor
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-    
-        let nibObject = UINib.init(nibName: ExpenseCell.nibName, bundle: nil)
-        myExpensesTableView.register(nibObject, forCellReuseIdentifier: ExpenseCell.cellName)
+        setUpNavbar()
+        let expenseNibObject = UINib.init(nibName: ExpenseCell.nibName, bundle: nil)
+        myExpensesTableView.register(expenseNibObject, forCellReuseIdentifier: ExpenseCell.cellName)
+        
+        let contentLoadingNibObject = UINib.init(nibName: ContentLoadingCell.nibName, bundle: nil)
+        myExpensesTableView.register(contentLoadingNibObject, forCellReuseIdentifier: ContentLoadingCell.cellName)
         
         myExpensesTableView.delegate = self
         myExpensesTableView.dataSource = self
         myExpensesTableView.backgroundColor = .white
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        startAnimation()
+    }
+    
+    private func setUpNavbar() {
+        navigationController?.navigationBar.barTintColor = ColorTheme.primaryColor
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Animation", style: .plain, target: self, action: #selector(startStopAnimating(_:)))
+    }
+    
+    @objc func startStopAnimating(_ sender: UIBarButtonItem) {
+        isLoadingContent.toggle()
     }
 }
 
@@ -45,8 +72,13 @@ extension MyExpensesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ExpenseCell.cellName) as? ExpenseCell else { return UITableViewCell() }
-        return cell
+        if isLoadingContent {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ContentLoadingCell.cellName) as? ContentLoadingCell else { return UITableViewCell() }
+            return cell
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ExpenseCell.cellName) as? ExpenseCell else { return UITableViewCell() }
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

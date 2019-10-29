@@ -39,5 +39,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Smart Expenses would like to use your location, in order to show you recommendations, and history of purchases.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Smart Expenses would like to use your location, in order to show you recommendations, and history of purchases.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Smart Expenses would like to use your location, in order to show you recommendations, and history of purchases.</string>
 </dict>
 </plist>

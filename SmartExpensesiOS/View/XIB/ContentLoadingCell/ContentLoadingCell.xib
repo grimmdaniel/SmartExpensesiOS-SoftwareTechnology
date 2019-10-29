@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ThP-NK-mRc" customClass="ContentLoadingCell" customModule="SmartExpensesiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCw-nV-JTx">
+                    <rect key="frame" x="10" y="0.0" width="355" height="80"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A3d-v7-Nzd">
+                            <rect key="frame" x="44" y="43" width="311" height="32"/>
+                            <color key="backgroundColor" red="0.85490196080000003" green="0.87450980389999999" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="Fou-Gg-d4h"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="shimmerAnimation" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xSM-SJ-3et">
+                            <rect key="frame" x="0.0" y="5" width="355" height="32"/>
+                            <color key="backgroundColor" red="0.85490196080000003" green="0.87450980389999999" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="DWX-Pn-9De"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="shimmerAnimation" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKw-p2-KmQ">
+                            <rect key="frame" x="0.0" y="43" width="38" height="32"/>
+                            <color key="backgroundColor" red="0.85490196078431369" green="0.87450980392156863" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="38" id="SMG-Dx-JFf"/>
+                                <constraint firstAttribute="height" constant="32" id="nso-Le-d1t"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="shimmerAnimation" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="A3d-v7-Nzd" secondAttribute="trailing" id="7HS-Y6-qUk"/>
+                        <constraint firstItem="xSM-SJ-3et" firstAttribute="top" secondItem="DCw-nV-JTx" secondAttribute="top" constant="5" id="8xP-EY-8yF"/>
+                        <constraint firstItem="bKw-p2-KmQ" firstAttribute="leading" secondItem="DCw-nV-JTx" secondAttribute="leading" id="Rle-UE-W6r"/>
+                        <constraint firstItem="xSM-SJ-3et" firstAttribute="leading" secondItem="DCw-nV-JTx" secondAttribute="leading" id="S1F-ee-8VM"/>
+                        <constraint firstItem="A3d-v7-Nzd" firstAttribute="leading" secondItem="bKw-p2-KmQ" secondAttribute="trailing" constant="6" id="gcH-lO-ZOl"/>
+                        <constraint firstAttribute="trailing" secondItem="xSM-SJ-3et" secondAttribute="trailing" id="nSH-Ux-Q9L"/>
+                        <constraint firstAttribute="bottom" secondItem="A3d-v7-Nzd" secondAttribute="bottom" constant="5" id="pe8-Pm-Zug"/>
+                        <constraint firstAttribute="bottom" secondItem="bKw-p2-KmQ" secondAttribute="bottom" constant="5" id="qea-yb-dQ3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="DCw-nV-JTx" firstAttribute="bottom" secondItem="yBS-QC-2ue" secondAttribute="bottom" id="P22-l8-EY2"/>
+                <constraint firstItem="DCw-nV-JTx" firstAttribute="trailing" secondItem="yBS-QC-2ue" secondAttribute="trailing" constant="-10" id="TJD-Wm-Ps2"/>
+                <constraint firstItem="DCw-nV-JTx" firstAttribute="top" secondItem="yBS-QC-2ue" secondAttribute="top" id="UMu-q9-3WL"/>
+                <constraint firstItem="DCw-nV-JTx" firstAttribute="leading" secondItem="yBS-QC-2ue" secondAttribute="leading" constant="10" id="dYU-Hw-z3R"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="yBS-QC-2ue"/>
+            <connections>
+                <outlet property="loadingImageView" destination="bKw-p2-KmQ" id="NCA-G1-PQn"/>
+                <outlet property="loadingText1View" destination="xSM-SJ-3et" id="C4D-no-s0e"/>
+                <outlet property="loadingText2View" destination="A3d-v7-Nzd" id="TsU-10-WtZ"/>
+            </connections>
+            <point key="canvasLocation" x="-23.199999999999999" y="53.973013493253376"/>
+        </view>
+    </objects>
+</document>

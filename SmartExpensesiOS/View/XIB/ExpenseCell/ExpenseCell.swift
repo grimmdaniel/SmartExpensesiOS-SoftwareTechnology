@@ -27,6 +27,7 @@ class ExpenseCell: UITableViewCell {
     }
     
     override func awakeFromNib() {
+        selectionStyle = .none
         initializeUIComponents()
     }
     

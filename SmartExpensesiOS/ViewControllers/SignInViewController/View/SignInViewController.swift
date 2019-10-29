@@ -74,6 +74,7 @@ class SignInViewController: UIViewController, StoryboardAble {
     }
     
     @IBAction func signInButtonPressed(_ sender: UIButton) {
+        LoginService.loginUser(with: "asdasdasd")
         signInCompletedClosure?()
     }
 }

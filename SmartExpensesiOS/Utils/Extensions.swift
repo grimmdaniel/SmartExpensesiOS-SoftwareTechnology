@@ -6,12 +6,19 @@
 //  Copyright © 2019 com.daniel.grimm.smartexpenses. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension String {
     
     var localized: String {
         return NSLocalizedString(self, comment: "")
+    }
+}
+
+extension UIView {
+    func asCircle() {
+        self.layer.cornerRadius = self.frame.width / 2
+        self.layer.masksToBounds = true
     }
 }
 

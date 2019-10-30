@@ -65,8 +65,7 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
     }
     
     @objc func logOut() {
-        LoginService.logOutUser()
-        logOutClosure?()
+        logOutPressed()
     }
     
     @objc func addNewImage() {
@@ -101,6 +100,16 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
         imagePicker.allowsEditing = true
         imagePicker.sourceType = .camera
         present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func logOutPressed() {
+        let alertVC = UIAlertController(title: "Confirmation", message: "Are you sure want to log out?", preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alertVC.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { [weak self] (_) in
+            LoginService.logOutUser()
+            self?.logOutClosure?()
+        }))
+        present(alertVC, animated: true, completion: nil)
     }
 }
 

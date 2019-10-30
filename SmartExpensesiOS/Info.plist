@@ -45,5 +45,9 @@
 	<string>Smart Expenses would like to use your location, in order to show you recommendations, and history of purchases.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Smart Expenses would like to use your location, in order to show you recommendations, and history of purchases.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Smart Expenses would like to use your camera to create a new profile picture.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Smart Expenses would like to use your photo library to select a new profile picture.</string>
 </dict>
 </plist>

@@ -13,6 +13,10 @@ extension String {
     var localized: String {
         return NSLocalizedString(self, comment: "")
     }
+    
+    var trimmed: String {
+        return self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
 }
 
 extension UIView {
@@ -27,6 +31,7 @@ extension UserDefaults {
     private enum Keys {
         
         static let token = "API_KEY"
+        static let userName = "USER_EMAIL"
     }
     
     static var APIKEY: String? {
@@ -36,6 +41,16 @@ extension UserDefaults {
         }
         set {
             UserDefaults.standard.set(newValue, forKey: Keys.token)
+        }
+    }
+    
+    static var USERNAME: String? {
+        
+        get {
+            return UserDefaults.standard.string(forKey: Keys.userName)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Keys.userName)
         }
     }
     

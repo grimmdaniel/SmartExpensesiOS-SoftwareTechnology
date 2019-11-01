@@ -67,6 +67,7 @@ class WelcomeCoordiator: Coordinator {
                 NotificationCenter.default.post(name: NSNotification.Name(NotificationConstants.signInNotification), object: nil)
             }
             
+            signUpVC.viewModel = SignUpViewModel()
             self?.welcomeVC.present(signUpVC, animated: true)
         }
 //        welcomeVC.viewModel = smth

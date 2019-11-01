@@ -28,6 +28,7 @@ class SignUpViewController: UIViewController, StoryboardAble {
     
     var closeScreenClosure: (() -> Void)?
     var signUpCompletedClosure: (() -> Void)?
+    var viewModel: SignUpViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,13 +74,26 @@ class SignUpViewController: UIViewController, StoryboardAble {
         }
     }
     
+    private func getCredentialsFromTextFields() -> UserCredential? {
+        guard let emailRaw = emailTextField.text else { return nil }
+        guard let email = viewModel.validateEmailAddress(email: emailRaw) else { return nil }
+        
+        guard let passwordRaw = passwordTextField.text else { return nil }
+        guard let confirmedPasswordRaw = confirmPasswordTextField.text else { return nil }
+        guard let password = viewModel.validatePasswords(password: passwordRaw, confirmation: confirmedPasswordRaw) else { return nil }
+        
+        return UserCredential(email: email,password: password)
+    }
+    
     @IBAction func closeScreenButtonPressed(_ sender: UIButton) {
         closeScreenClosure?()
     }
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        LoginService.loginUser(with: "asdasdasd")
-        signUpCompletedClosure?()
+        guard let user = getCredentialsFromTextFields() else { return }
+        print(user)
+//        LoginService.loginUser(with: "asdasdasd")
+//        signUpCompletedClosure?()
     }
     
     @IBAction func termsAndConditionsButtonPressed(_ sender: UIButton) {

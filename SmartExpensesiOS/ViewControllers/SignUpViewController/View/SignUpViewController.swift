@@ -29,23 +29,39 @@ class SignUpViewController: UIViewController, StoryboardAble {
     var closeScreenClosure: (() -> Void)?
     var signUpCompletedClosure: (() -> Void)?
     var viewModel: SignUpViewModel!
-
+    let service = SignUpService()
+    
+    var activityIndicator = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        service.delegate = self
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
         view.addGestureRecognizer(tapGesture)
-        emailTextField.returnKeyType = UIReturnKeyType.next
-        passwordTextField.returnKeyType = UIReturnKeyType.next
-        emailTextField.delegate = self
-        passwordTextField.delegate = self
-        confirmPasswordTextField.delegate = self
+        setUpActivityIndicator()
+        setUpTextFieldBehaviour()
         setUpUI(for: [emailTextField,passwordTextField,confirmPasswordTextField])
         setTranslations()
     }
     
     @objc func closeKeyboard() {
         view.endEditing(true)
+    }
+    
+    private func setUpActivityIndicator() {
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.style = UIActivityIndicatorView.Style.gray
+        self.view.addSubview(activityIndicator)
+    }
+    
+    private func setUpTextFieldBehaviour() {
+        emailTextField.returnKeyType = UIReturnKeyType.next
+        passwordTextField.returnKeyType = UIReturnKeyType.next
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        confirmPasswordTextField.delegate = self
     }
     
     private func setTranslations() {
@@ -91,13 +107,29 @@ class SignUpViewController: UIViewController, StoryboardAble {
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
         guard let user = getCredentialsFromTextFields() else { return }
-        print(user)
-//        LoginService.loginUser(with: "asdasdasd")
-//        signUpCompletedClosure?()
+        service.registerUser(user: user)
     }
     
     @IBAction func termsAndConditionsButtonPressed(_ sender: UIButton) {
         print("terms and conditions pressed")
+    }
+}
+
+extension SignUpViewController: RegistrationDelegate {
+    
+    func didStartRegistration() {
+        activityIndicator.startAnimating()
+    }
+    
+    func didFinishRegistration(token: String, user: String) {
+        activityIndicator.stopAnimating()
+        LoginService.loginUser(token: token, user: user)
+        signUpCompletedClosure?()
+    }
+    
+    func didFailToRegisterUser(error: Error) {
+        activityIndicator.stopAnimating()
+        showErrorPopUp(title: "Error", message: error.localizedDescription)
     }
 }
 

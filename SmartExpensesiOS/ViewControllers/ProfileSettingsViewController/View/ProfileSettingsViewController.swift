@@ -38,6 +38,7 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
         
         setUpNavbar()
         setUpTableView()
+        profileNameLabel.text = UserDefaults.USERNAME ?? "N/A"
     }
     
     override func viewDidAppear(_ animated: Bool) {

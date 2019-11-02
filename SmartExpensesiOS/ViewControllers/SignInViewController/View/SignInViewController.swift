@@ -25,21 +25,38 @@ class SignInViewController: UIViewController, StoryboardAble {
     
     var closeScreenClosure: (() -> Void)?
     var signInCompletedClosure: (() -> Void)?
+    let service = AuthorizationService()
+    var viewModel: SignInViewModel!
+    
+    var activityIndicator = UIActivityIndicatorView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        service.delegate = self
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
         view.addGestureRecognizer(tapGesture)
-        emailTextField.returnKeyType = UIReturnKeyType.next
-        emailTextField.delegate = self
-        passwordTextField.delegate = self
+        setUpActivityIndicator()
+        setUpTextFieldBehaviour()
         setUpUI()
         setTranslations()
     }
     
     @objc func closeKeyboard() {
         view.endEditing(true)
+    }
+    
+    private func setUpTextFieldBehaviour() {
+        emailTextField.returnKeyType = UIReturnKeyType.next
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+    }
+    
+    private func setUpActivityIndicator() {
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.style = UIActivityIndicatorView.Style.gray
+        self.view.addSubview(activityIndicator)
     }
     
     private func setTranslations() {
@@ -69,13 +86,47 @@ class SignInViewController: UIViewController, StoryboardAble {
         passwordTextField.layer.shadowOpacity = 0.5
     }
     
+    private func getCredentialsFromTextFields() -> UserCredential? {
+        guard let emailRaw = emailTextField.text else { return nil }
+        guard let email = viewModel.validateEmailAddress(email: emailRaw) else {
+            showErrorPopUp(title: "Warning", message: "Email format is not valid.")
+            return nil
+        }
+        
+        guard let passwordRaw = passwordTextField.text else { return nil }
+        guard let password = viewModel.validatePasswords(password: passwordRaw) else {
+            showErrorPopUp(title: "Warning", message: "Password has to contain at least 8 characters, with one capitalized letter, and a number.")
+            return nil
+        }
+        
+        return UserCredential(email: email,password: password)
+    }
+    
     @IBAction func closeScreenButtonPressed(_ sender: UIButton) {
         closeScreenClosure?()
     }
     
     @IBAction func signInButtonPressed(_ sender: UIButton) {
-        LoginService.loginUser(with: "asdasdasd")
+        guard let user = getCredentialsFromTextFields() else { return }
+        service.loginUser(user: user)
+    }
+}
+
+extension SignInViewController: AuthorizationDelegate {
+    
+    func didStartAuthorization() {
+        activityIndicator.startAnimating()
+    }
+    
+    func didFinishAuthorization(token: String, user: String) {
+        activityIndicator.stopAnimating()
+        LoginService.loginUser(token: token, user: user)
         signInCompletedClosure?()
+    }
+    
+    func didFailToAuthorizeUser(error: Error) {
+        activityIndicator.stopAnimating()
+        showErrorPopUp(title: "Error", message: error.localizedDescription)
     }
 }
 

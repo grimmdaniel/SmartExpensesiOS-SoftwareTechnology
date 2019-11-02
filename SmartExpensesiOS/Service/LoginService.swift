@@ -14,11 +14,13 @@ class LoginService {
         return UserDefaults.isSignedIn
     }
     
-    static func loginUser(with token: String) {
+    static func loginUser(token: String, user: String) {
         UserDefaults.APIKEY = token
+        UserDefaults.USERNAME = user
     }
     
     static func logOutUser() {
         UserDefaults.APIKEY = nil
+        UserDefaults.USERNAME = nil
     }
 }

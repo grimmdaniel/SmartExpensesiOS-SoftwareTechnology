@@ -17,6 +17,12 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
     @IBOutlet weak var totalSpendingsLabel: UILabel!
     @IBOutlet weak var settingsTableView: UITableView!
     
+    var currentProfileImage: UIImage! {
+        didSet {
+            profileImageView.image = currentProfileImage
+        }
+    }
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
@@ -32,6 +38,7 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
         
         setUpNavbar()
         setUpTableView()
+        profileNameLabel.text = UserDefaults.USERNAME ?? "N/A"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,15 +61,71 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
     private func setUpUI() {
         profileRingView.asCircle()
         profileImageView.asCircle()
+        profileImageView.isUserInteractionEnabled = true
+        profileImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(addNewImage)))
     }
     
     @objc func logOut() {
-        LoginService.logOutUser()
-        logOutClosure?()
+        logOutPressed()
+    }
+    
+    @objc func addNewImage() {
+        let optionMenu = UIAlertController(title: nil, message: "Select image", preferredStyle: .actionSheet)
+        let browseAction = UIAlertAction(title: "Browse gallery", style: .default) { [weak self] (_) in
+            self?.addImageFromLibrary()
+        }
+        let createImageAction = UIAlertAction(title: "Create new", style: .default) { [weak self] (_) in
+            self?.createNewPhoto()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        optionMenu.addAction(browseAction)
+        optionMenu.addAction(createImageAction)
+        optionMenu.addAction(cancelAction)
+        self.present(optionMenu, animated: true, completion: nil)
     }
     
     @IBAction func editProfileButtonPressed(_ sender: UIButton) {
+    }
     
+    func addImageFromLibrary() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func createNewPhoto() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = .camera
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func logOutPressed() {
+        let alertVC = UIAlertController(title: "Confirmation", message: "Are you sure want to log out?", preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alertVC.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { [weak self] (_) in
+            LoginService.logOutUser()
+            self?.logOutClosure?()
+        }))
+        present(alertVC, animated: true, completion: nil)
+    }
+}
+
+extension ProfileSettingsViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            currentProfileImage = pickedImage
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
 }
 
@@ -79,6 +142,7 @@ extension ProfileSettingsViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell") else { return UITableViewCell() }
         cell.textLabel?.text = menuPoints[indexPath.row]
+        cell.textLabel?.font = UIFont(name: "HelveticaNeue-Regular", size: 16)
         return cell
     }
     

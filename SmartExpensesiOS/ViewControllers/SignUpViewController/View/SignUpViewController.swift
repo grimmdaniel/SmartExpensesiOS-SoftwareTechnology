@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class SignUpViewController: UIViewController, StoryboardAble {
 
@@ -28,23 +29,40 @@ class SignUpViewController: UIViewController, StoryboardAble {
     
     var closeScreenClosure: (() -> Void)?
     var signUpCompletedClosure: (() -> Void)?
-
+    var viewModel: SignUpViewModel!
+    let service = AuthorizationService()
+    
+    var activityIndicator = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        service.delegate = self
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
         view.addGestureRecognizer(tapGesture)
-        emailTextField.returnKeyType = UIReturnKeyType.next
-        passwordTextField.returnKeyType = UIReturnKeyType.next
-        emailTextField.delegate = self
-        passwordTextField.delegate = self
-        confirmPasswordTextField.delegate = self
+        setUpActivityIndicator()
+        setUpTextFieldBehaviour()
         setUpUI(for: [emailTextField,passwordTextField,confirmPasswordTextField])
         setTranslations()
     }
     
     @objc func closeKeyboard() {
         view.endEditing(true)
+    }
+    
+    private func setUpActivityIndicator() {
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.style = UIActivityIndicatorView.Style.gray
+        self.view.addSubview(activityIndicator)
+    }
+    
+    private func setUpTextFieldBehaviour() {
+        emailTextField.returnKeyType = UIReturnKeyType.next
+        passwordTextField.returnKeyType = UIReturnKeyType.next
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        confirmPasswordTextField.delegate = self
     }
     
     private func setTranslations() {
@@ -73,17 +91,57 @@ class SignUpViewController: UIViewController, StoryboardAble {
         }
     }
     
+    private func getCredentialsFromTextFields() -> UserCredential? {
+        guard let emailRaw = emailTextField.text else { return nil }
+        guard let email = viewModel.validateEmailAddress(email: emailRaw) else {
+            showErrorPopUp(title: "Warning", message: "Email format is not valid.")
+            return nil
+        }
+        
+        guard let passwordRaw = passwordTextField.text else { return nil }
+        guard let confirmedPasswordRaw = confirmPasswordTextField.text else { return nil }
+        guard let password = viewModel.validatePasswords(password: passwordRaw, confirmation: confirmedPasswordRaw) else {
+            showErrorPopUp(title: "Warning", message: "Password has to contain at least 8 characters, with one capitalized letter, and a number. Password and password confirmation must be the same.")
+            return nil
+        }
+        
+        return UserCredential(email: email,password: password)
+    }
+    
+    private func openTermsAndConditions() {
+        let safariViewController = SFSafariViewController(url: URL(string: "https://www.termsandconditionsgenerator.com")!)
+        present(safariViewController, animated: true, completion: nil)
+    }
+    
     @IBAction func closeScreenButtonPressed(_ sender: UIButton) {
         closeScreenClosure?()
     }
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        LoginService.loginUser(with: "asdasdasd")
-        signUpCompletedClosure?()
+        guard let user = getCredentialsFromTextFields() else { return }
+        service.registerUser(user: user)
     }
     
     @IBAction func termsAndConditionsButtonPressed(_ sender: UIButton) {
-        print("terms and conditions pressed")
+        openTermsAndConditions()
+    }
+}
+
+extension SignUpViewController: AuthorizationDelegate {
+    
+    func didStartAuthorization() {
+        activityIndicator.startAnimating()
+    }
+    
+    func didFinishAuthorization(token: String, user: String) {
+        activityIndicator.stopAnimating()
+        LoginService.loginUser(token: token, user: user)
+        signUpCompletedClosure?()
+    }
+    
+    func didFailToAuthorizeUser(error: Error) {
+        activityIndicator.stopAnimating()
+        showErrorPopUp(title: "Error", message: error.localizedDescription)
     }
 }
 

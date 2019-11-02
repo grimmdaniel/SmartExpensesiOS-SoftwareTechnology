@@ -13,6 +13,10 @@ extension String {
     var localized: String {
         return NSLocalizedString(self, comment: "")
     }
+    
+    var trimmed: String {
+        return self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
 }
 
 extension UIView {
@@ -22,11 +26,21 @@ extension UIView {
     }
 }
 
+extension UIViewController {
+    
+    func showErrorPopUp(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
+}
+
 extension UserDefaults {
     
     private enum Keys {
         
         static let token = "API_KEY"
+        static let userName = "USER_EMAIL"
     }
     
     static var APIKEY: String? {
@@ -36,6 +50,16 @@ extension UserDefaults {
         }
         set {
             UserDefaults.standard.set(newValue, forKey: Keys.token)
+        }
+    }
+    
+    static var USERNAME: String? {
+        
+        get {
+            return UserDefaults.standard.string(forKey: Keys.userName)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Keys.userName)
         }
     }
     

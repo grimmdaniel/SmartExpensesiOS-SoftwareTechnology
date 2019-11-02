@@ -29,7 +29,7 @@ class SignUpViewController: UIViewController, StoryboardAble {
     var closeScreenClosure: (() -> Void)?
     var signUpCompletedClosure: (() -> Void)?
     var viewModel: SignUpViewModel!
-    let service = SignUpService()
+    let service = AuthorizationService()
     
     var activityIndicator = UIActivityIndicatorView()
     
@@ -115,19 +115,19 @@ class SignUpViewController: UIViewController, StoryboardAble {
     }
 }
 
-extension SignUpViewController: RegistrationDelegate {
+extension SignUpViewController: AuthorizationDelegate {
     
-    func didStartRegistration() {
+    func didStartAuthorization() {
         activityIndicator.startAnimating()
     }
     
-    func didFinishRegistration(token: String, user: String) {
+    func didFinishAuthorization(token: String, user: String) {
         activityIndicator.stopAnimating()
         LoginService.loginUser(token: token, user: user)
         signUpCompletedClosure?()
     }
     
-    func didFailToRegisterUser(error: Error) {
+    func didFailToAuthorizeUser(error: Error) {
         activityIndicator.stopAnimating()
         showErrorPopUp(title: "Error", message: error.localizedDescription)
     }

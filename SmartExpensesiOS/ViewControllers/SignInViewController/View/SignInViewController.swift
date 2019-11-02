@@ -88,10 +88,16 @@ class SignInViewController: UIViewController, StoryboardAble {
     
     private func getCredentialsFromTextFields() -> UserCredential? {
         guard let emailRaw = emailTextField.text else { return nil }
-        guard let email = viewModel.validateEmailAddress(email: emailRaw) else { return nil }
+        guard let email = viewModel.validateEmailAddress(email: emailRaw) else {
+            showErrorPopUp(title: "Warning", message: "Email format is not valid.")
+            return nil
+        }
         
         guard let passwordRaw = passwordTextField.text else { return nil }
-        guard let password = viewModel.validatePasswords(password: passwordRaw) else { return nil }
+        guard let password = viewModel.validatePasswords(password: passwordRaw) else {
+            showErrorPopUp(title: "Warning", message: "Password has to contain at least 8 characters, with one capitalized letter, and a number.")
+            return nil
+        }
         
         return UserCredential(email: email,password: password)
     }

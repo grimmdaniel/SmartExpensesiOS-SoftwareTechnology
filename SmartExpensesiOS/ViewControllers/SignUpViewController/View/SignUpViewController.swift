@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class SignUpViewController: UIViewController, StoryboardAble {
 
@@ -92,13 +93,24 @@ class SignUpViewController: UIViewController, StoryboardAble {
     
     private func getCredentialsFromTextFields() -> UserCredential? {
         guard let emailRaw = emailTextField.text else { return nil }
-        guard let email = viewModel.validateEmailAddress(email: emailRaw) else { return nil }
+        guard let email = viewModel.validateEmailAddress(email: emailRaw) else {
+            showErrorPopUp(title: "Warning", message: "Email format is not valid.")
+            return nil
+        }
         
         guard let passwordRaw = passwordTextField.text else { return nil }
         guard let confirmedPasswordRaw = confirmPasswordTextField.text else { return nil }
-        guard let password = viewModel.validatePasswords(password: passwordRaw, confirmation: confirmedPasswordRaw) else { return nil }
+        guard let password = viewModel.validatePasswords(password: passwordRaw, confirmation: confirmedPasswordRaw) else {
+            showErrorPopUp(title: "Warning", message: "Password has to contain at least 8 characters, with one capitalized letter, and a number. Password and password confirmation must be the same.")
+            return nil
+        }
         
         return UserCredential(email: email,password: password)
+    }
+    
+    private func openTermsAndConditions() {
+        let safariViewController = SFSafariViewController(url: URL(string: "https://www.termsandconditionsgenerator.com")!)
+        present(safariViewController, animated: true, completion: nil)
     }
     
     @IBAction func closeScreenButtonPressed(_ sender: UIButton) {
@@ -111,7 +123,7 @@ class SignUpViewController: UIViewController, StoryboardAble {
     }
     
     @IBAction func termsAndConditionsButtonPressed(_ sender: UIButton) {
-        print("terms and conditions pressed")
+        openTermsAndConditions()
     }
 }
 

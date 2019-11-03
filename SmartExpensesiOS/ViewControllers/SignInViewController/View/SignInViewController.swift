@@ -124,7 +124,7 @@ extension SignInViewController: AuthorizationDelegate {
         signInCompletedClosure?()
     }
     
-    func didFailToAuthorizeUser(error: Error) {
+    func didFailToAuthorizeUser(error: NetworkError) {
         activityIndicator.stopAnimating()
         showErrorPopUp(title: "Error", message: error.localizedDescription)
     }

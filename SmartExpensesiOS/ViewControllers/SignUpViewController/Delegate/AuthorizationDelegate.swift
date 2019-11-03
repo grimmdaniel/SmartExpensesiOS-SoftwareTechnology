@@ -12,5 +12,5 @@ protocol AuthorizationDelegate: AnyObject {
     
     func didStartAuthorization()
     func didFinishAuthorization(token: String,user: String)
-    func didFailToAuthorizeUser(error: Error)
+    func didFailToAuthorizeUser(error: NetworkError)
 }

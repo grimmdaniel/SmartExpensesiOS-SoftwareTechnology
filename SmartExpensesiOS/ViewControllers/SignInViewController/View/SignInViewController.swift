@@ -25,7 +25,7 @@ class SignInViewController: UIViewController, StoryboardAble {
     
     var closeScreenClosure: (() -> Void)?
     var signInCompletedClosure: (() -> Void)?
-    let service = AuthorizationService()
+    var service: AuthorizationService!
     var viewModel: SignInViewModel!
     
     var activityIndicator = UIActivityIndicatorView()

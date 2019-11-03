@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum NetworkError: Error {
+enum NetworkError: Error, Equatable {
     case badURL
     case internalServerError
     case responseError

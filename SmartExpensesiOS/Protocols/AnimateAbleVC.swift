@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol AnimatableVC {
+public protocol AnimatableVC {
     
     func startAnimation()
     func stopAnimation()
 }
 
-extension AnimatableVC where Self: UIViewController {
+public extension AnimatableVC where Self: UIViewController {
     
     func startAnimation() {
         for animateView in getSubViewsForAnimate() {
@@ -43,7 +43,7 @@ extension AnimatableVC where Self: UIViewController {
         }
     }
     
-    private func getSubViewsForAnimate() -> [UIView] {
+    func getSubViewsForAnimate() -> [UIView] {
         var objectsToReturn: [UIView] = []
         for objView in view.subviewsRecursive() {
             objectsToReturn.append(objView)

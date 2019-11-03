@@ -30,7 +30,7 @@ class SignUpViewController: UIViewController, StoryboardAble {
     var closeScreenClosure: (() -> Void)?
     var signUpCompletedClosure: (() -> Void)?
     var viewModel: SignUpViewModel!
-    let service = AuthorizationService()
+    var service: AuthorizationService!
     
     var activityIndicator = UIActivityIndicatorView()
     

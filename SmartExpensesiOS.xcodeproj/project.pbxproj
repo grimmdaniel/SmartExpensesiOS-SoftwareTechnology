@@ -17,6 +17,14 @@
 		082595EB236C9FE900FF9F23 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595EA236C9FE900FF9F23 /* NetworkManager.swift */; };
 		082595ED236D8AE800FF9F23 /* AuthorizationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595EC236D8AE800FF9F23 /* AuthorizationDelegate.swift */; };
 		082595F0236D90DF00FF9F23 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595EF236D90DF00FF9F23 /* SignInViewModel.swift */; };
+		082595F5236F11F300FF9F23 /* TestSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595F4236F11F300FF9F23 /* TestSignInViewController.swift */; };
+		082595F6236F191B00FF9F23 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E367E234DE731008B7801 /* Coordinator.swift */; };
+		082595F7236F194700FF9F23 /* AnimateAbleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3C4923688BED00E5C185 /* AnimateAbleVC.swift */; };
+		082595F8236F194A00FF9F23 /* StoryboardAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E3682234DE90F008B7801 /* StoryboardAble.swift */; };
+		082595F9236F195A00FF9F23 /* ContentLoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3C45236885AE00E5C185 /* ContentLoadingCell.swift */; };
+		082595FA236F196900FF9F23 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A5023234DE1ED00F352B8 /* ColorTheme.swift */; };
+		082595FB236F19D000FF9F23 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5245123539EAA001BB6FF /* Extensions.swift */; };
+		082595FD236F254B00FF9F23 /* TestSignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595FC236F254B00FF9F23 /* TestSignInViewModel.swift */; };
 		0830B68623589B0400A3AE9A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0830B68523589B0400A3AE9A /* HomeViewController.swift */; };
 		0830B68723589B0400A3AE9A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0830B68523589B0400A3AE9A /* HomeViewController.swift */; };
 		0830B68A23589B7C00A3AE9A /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0830B68923589B7C00A3AE9A /* MainTabCoordinator.swift */; };
@@ -39,7 +47,6 @@
 		085C609623477E2F00BA038C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 085C609423477E2F00BA038C /* Main.storyboard */; };
 		085C609823477E3000BA038C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 085C609723477E3000BA038C /* Assets.xcassets */; };
 		085C609B23477E3000BA038C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 085C609923477E3000BA038C /* LaunchScreen.storyboard */; };
-		085C60A623477E3000BA038C /* SmartExpensesiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085C60A523477E3000BA038C /* SmartExpensesiOSTests.swift */; };
 		0883DEA0236489E600E91AF5 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883DE9F236489E600E91AF5 /* LoginService.swift */; };
 		0883DEA1236489E600E91AF5 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883DE9F236489E600E91AF5 /* LoginService.swift */; };
 		0883DEA4236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883DEA3236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift */; };
@@ -104,6 +111,8 @@
 		082595EA236C9FE900FF9F23 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		082595EC236D8AE800FF9F23 /* AuthorizationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationDelegate.swift; sourceTree = "<group>"; };
 		082595EF236D90DF00FF9F23 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		082595F4236F11F300FF9F23 /* TestSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSignInViewController.swift; sourceTree = "<group>"; };
+		082595FC236F254B00FF9F23 /* TestSignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSignInViewModel.swift; sourceTree = "<group>"; };
 		0830B68523589B0400A3AE9A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0830B68923589B7C00A3AE9A /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
 		0830B68D23589C1D00A3AE9A /* HomeScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCoordinator.swift; sourceTree = "<group>"; };
@@ -123,7 +132,6 @@
 		085C609A23477E3000BA038C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		085C609C23477E3000BA038C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		085C60A123477E3000BA038C /* SmartExpensesiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartExpensesiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		085C60A523477E3000BA038C /* SmartExpensesiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartExpensesiOSTests.swift; sourceTree = "<group>"; };
 		085C60A723477E3000BA038C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0864B24C235864E80018EA4F /* SmartExpensesiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartExpensesiOS.entitlements; sourceTree = "<group>"; };
 		0883DE9F236489E600E91AF5 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -214,6 +222,23 @@
 				082595EF236D90DF00FF9F23 /* SignInViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		082595F1236F11C200FF9F23 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				082595F2236F11D100FF9F23 /* SignInViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		082595F2236F11D100FF9F23 /* SignInViewController */ = {
+			isa = PBXGroup;
+			children = (
+				082595F4236F11F300FF9F23 /* TestSignInViewController.swift */,
+				082595FC236F254B00FF9F23 /* TestSignInViewModel.swift */,
+			);
+			path = SignInViewController;
 			sourceTree = "<group>";
 		};
 		0830B68323589AE300A3AE9A /* HomeViewController */ = {
@@ -412,7 +437,7 @@
 		085C60A423477E3000BA038C /* SmartExpensesiOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				085C60A523477E3000BA038C /* SmartExpensesiOSTests.swift */,
+				082595F1236F11C200FF9F23 /* ViewControllers */,
 				085C60A723477E3000BA038C /* Info.plist */,
 			);
 			path = SmartExpensesiOSTests;
@@ -819,13 +844,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0883DEA1236489E600E91AF5 /* LoginService.swift in Sources */,
-				085C60A623477E3000BA038C /* SmartExpensesiOSTests.swift in Sources */,
 				08B43652235F35ED0046F326 /* ProfileSettingsCoordinator.swift in Sources */,
+				082595F7236F194700FF9F23 /* AnimateAbleVC.swift in Sources */,
+				082595F5236F11F300FF9F23 /* TestSignInViewController.swift in Sources */,
 				0830B68B23589B7C00A3AE9A /* MainTabCoordinator.swift in Sources */,
 				0830B6942358A28B00A3AE9A /* MyExpensesViewController.swift in Sources */,
 				08B4367223619CA00046F326 /* ExpenseCell.swift in Sources */,
 				08B4365C235F39F40046F326 /* SocialCoordinator.swift in Sources */,
 				0830B68723589B0400A3AE9A /* HomeViewController.swift in Sources */,
+				082595FA236F196900FF9F23 /* ColorTheme.swift in Sources */,
 				08B43658235F39BC0046F326 /* SocialViewController.swift in Sources */,
 				0830B68F23589C1D00A3AE9A /* HomeScreenCoordinator.swift in Sources */,
 				08B436762361A9110046F326 /* Expense.swift in Sources */,
@@ -835,11 +862,16 @@
 				0830B6982358A2D600A3AE9A /* MyExpensesCoordinator.swift in Sources */,
 				08FC1ADD23590B1C00C988AA /* TabbarController.swift in Sources */,
 				0883DEA5236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift in Sources */,
+				082595F9236F195A00FF9F23 /* ContentLoadingCell.swift in Sources */,
+				082595F8236F194A00FF9F23 /* StoryboardAble.swift in Sources */,
+				082595F6236F191B00FF9F23 /* Coordinator.swift in Sources */,
+				082595FD236F254B00FF9F23 /* TestSignInViewModel.swift in Sources */,
 				08C1535B236C80C200DA4F60 /* Regex.swift in Sources */,
 				083661592365FF2700A524B8 /* CustomMKAnnotation.swift in Sources */,
 				08B43662235F40AC0046F326 /* CurrencyRateViewController.swift in Sources */,
 				08C15360236C88B200DA4F60 /* SignUpViewModel.swift in Sources */,
 				08B4364E235F35890046F326 /* ProfileSettingsViewController.swift in Sources */,
+				082595FB236F19D000FF9F23 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

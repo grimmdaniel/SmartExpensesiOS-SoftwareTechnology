@@ -53,6 +53,7 @@ class WelcomeCoordiator: Coordinator {
             }
             
             signInVC.viewModel = SignInViewModel()
+            signInVC.service = AuthorizationService()
             self?.welcomeVC.present(signInVC, animated: true)
         }
         
@@ -69,6 +70,7 @@ class WelcomeCoordiator: Coordinator {
             }
             
             signUpVC.viewModel = SignUpViewModel()
+            signUpVC.service = AuthorizationService()
             self?.welcomeVC.present(signUpVC, animated: true)
         }
 //        welcomeVC.viewModel = smth

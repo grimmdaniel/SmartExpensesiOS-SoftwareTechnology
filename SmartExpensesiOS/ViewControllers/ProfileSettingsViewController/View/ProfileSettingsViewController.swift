@@ -31,14 +31,18 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
     }
     
     var logOutClosure: (() -> Void)?
+    var activityIndicator = UIActivityIndicatorView()
+    var service: LogoutService!
     let menuPoints = ["Notifications","Select profile colour","Number of latest spendings","Privacy","Terms & Conditions"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        service.delegate = self
         setUpNavbar()
         setUpTableView()
         profileNameLabel.text = UserDefaults.USERNAME ?? "N/A"
+        setUpActivityIndicator()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,6 +53,13 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
         settingsTableView.delegate = self
         settingsTableView.dataSource = self
         settingsTableView.tableFooterView = UIView(frame: CGRect.zero)
+    }
+    
+    private func setUpActivityIndicator() {
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.style = UIActivityIndicatorView.Style.gray
+        self.view.addSubview(activityIndicator)
     }
     
     private func setUpNavbar() {
@@ -104,13 +115,31 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
     }
     
     func logOutPressed() {
+        guard let apikey = UserDefaults.APIKEY else { return }
         let alertVC = UIAlertController(title: "Confirmation", message: "Are you sure want to log out?", preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         alertVC.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { [weak self] (_) in
-            LoginService.logOutUser()
-            self?.logOutClosure?()
+            self?.service.logOutUser(apiKey: apikey)
         }))
         present(alertVC, animated: true, completion: nil)
+    }
+}
+
+extension ProfileSettingsViewController: LogoutDelegate {
+    
+    func didStartAuthorization() {
+        activityIndicator.startAnimating()
+    }
+    
+    func didFinishAuthorization() {
+        activityIndicator.stopAnimating()
+        LoginService.logOutUser()
+        logOutClosure?()
+    }
+    
+    func didFailToAuthorizeUser(error: NetworkError) {
+        activityIndicator.stopAnimating()
+        showErrorPopUp(title: "Error", message: error.localizedDescription)
     }
 }
 

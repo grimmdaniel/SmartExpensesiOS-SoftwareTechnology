@@ -20,6 +20,19 @@ class TestSignInViewController: XCTestCase {
         _ = signInViewController.view //to call viewDidLoad()
     }
     
+    func testAllViewsAndSubviewsLoaded() {
+        XCTAssertNotNil(signInViewController.activityIndicator)
+        XCTAssertNotNil(signInViewController.closeScreenButton)
+        XCTAssertNotNil(signInViewController.emailAddressLabel)
+        XCTAssertNotNil(signInViewController.emailTextField)
+        XCTAssertNotNil(signInViewController.passwordTextField)
+        XCTAssertNotNil(signInViewController.passwordLabel)
+        XCTAssertNotNil(signInViewController.forgotPasswordLabel)
+        XCTAssertNotNil(signInViewController.signInButton)
+        XCTAssertNotNil(signInViewController.titleLabel)
+        XCTAssertNotNil(signInViewController.welcomeLabel)
+    }
+    
     func testInternalServerErrorInLoginServiceEndToEnd() {
         let actionDelegate = FakeLoginService()
         signInViewController.service = FakeFailureLoginService(error: .internalServerError, delegate: actionDelegate)

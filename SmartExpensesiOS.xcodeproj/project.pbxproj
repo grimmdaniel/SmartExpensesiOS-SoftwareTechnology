@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		080429482364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080429472364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift */; };
 		080429492364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080429472364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift */; };
+		080D80952372D05A00F7B32A /* LogoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80942372D05A00F7B32A /* LogoutDelegate.swift */; };
+		080D80982372D08200F7B32A /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80972372D08200F7B32A /* LogoutService.swift */; };
+		080D80992372D08200F7B32A /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80972372D08200F7B32A /* LogoutService.swift */; };
 		082595DD236C978700FF9F23 /* AuthorizatonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595DC236C978700FF9F23 /* AuthorizatonService.swift */; };
 		082595E3236C9E6600FF9F23 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595E2236C9E6600FF9F23 /* HTTPMethod.swift */; };
 		082595E5236C9E7F00FF9F23 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595E4236C9E7F00FF9F23 /* EndPoints.swift */; };
@@ -103,6 +106,8 @@
 
 /* Begin PBXFileReference section */
 		080429472364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendationCollectionViewCell.swift; sourceTree = "<group>"; };
+		080D80942372D05A00F7B32A /* LogoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutDelegate.swift; sourceTree = "<group>"; };
+		080D80972372D08200F7B32A /* LogoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutService.swift; sourceTree = "<group>"; };
 		082595DC236C978700FF9F23 /* AuthorizatonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizatonService.swift; sourceTree = "<group>"; };
 		082595E2236C9E6600FF9F23 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		082595E4236C9E7F00FF9F23 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
@@ -192,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				082595DC236C978700FF9F23 /* AuthorizatonService.swift */,
+				080D80972372D08200F7B32A /* LogoutService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -211,6 +217,7 @@
 		082595DF236C9C6500FF9F23 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
+				080D80942372D05A00F7B32A /* LogoutDelegate.swift */,
 				082595EC236D8AE800FF9F23 /* AuthorizationDelegate.swift */,
 			);
 			path = Delegate;
@@ -805,6 +812,7 @@
 				084E3689234DEB10008B7801 /* WelcomeViewController.swift in Sources */,
 				0889DDD023507CF000E34AF2 /* WelcomeModel.swift in Sources */,
 				08B43651235F35ED0046F326 /* ProfileSettingsCoordinator.swift in Sources */,
+				080D80952372D05A00F7B32A /* LogoutDelegate.swift in Sources */,
 				082595F0236D90DF00FF9F23 /* SignInViewModel.swift in Sources */,
 				082595ED236D8AE800FF9F23 /* AuthorizationDelegate.swift in Sources */,
 				080429482364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift in Sources */,
@@ -823,6 +831,7 @@
 				0830B6932358A28B00A3AE9A /* MyExpensesViewController.swift in Sources */,
 				084E368D234E1769008B7801 /* WelcomeImageCell.swift in Sources */,
 				082595E3236C9E6600FF9F23 /* HTTPMethod.swift in Sources */,
+				080D80982372D08200F7B32A /* LogoutService.swift in Sources */,
 				082595E5236C9E7F00FF9F23 /* EndPoints.swift in Sources */,
 				08B4365B235F39F40046F326 /* SocialCoordinator.swift in Sources */,
 				08D5245223539EAA001BB6FF /* Extensions.swift in Sources */,
@@ -868,6 +877,7 @@
 				082595FD236F254B00FF9F23 /* TestSignInViewModel.swift in Sources */,
 				08C1535B236C80C200DA4F60 /* Regex.swift in Sources */,
 				083661592365FF2700A524B8 /* CustomMKAnnotation.swift in Sources */,
+				080D80992372D08200F7B32A /* LogoutService.swift in Sources */,
 				08B43662235F40AC0046F326 /* CurrencyRateViewController.swift in Sources */,
 				08C15360236C88B200DA4F60 /* SignUpViewModel.swift in Sources */,
 				08B4364E235F35890046F326 /* ProfileSettingsViewController.swift in Sources */,

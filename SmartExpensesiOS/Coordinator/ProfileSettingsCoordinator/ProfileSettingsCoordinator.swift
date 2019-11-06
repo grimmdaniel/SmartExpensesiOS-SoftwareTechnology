@@ -41,6 +41,8 @@ class ProfileSettingsCoordinator: Coordinator {
         profileSettingsViewController.logOutClosure = {
             NotificationCenter.default.post(name: NSNotification.Name(NotificationConstants.logOutNotification), object: nil)
         }
+        
+        profileSettingsViewController.service = LogoutService()
         navigationController.pushViewController(profileSettingsViewController, animated: true)
     }
 }

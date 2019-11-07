@@ -37,6 +37,18 @@ class MyExpensesCoordinator: Coordinator {
     private func showMyExpensesScreen() {
         
         let myExpensesViewController = MyExpensesViewController.instantiate()
+        
+        myExpensesViewController.addNewExpenseClosure = {
+            let addNewExpensesVC = AddNewExpenseViewController.instantiate()
+            addNewExpensesVC.modalPresentationStyle = .overFullScreen
+            
+            addNewExpensesVC.closeScreenClosure = {
+                myExpensesViewController.dismiss(animated: true)
+            }
+            
+            myExpensesViewController.present(addNewExpensesVC, animated: true, completion: nil)
+        }
+        
         navigationController.pushViewController(myExpensesViewController, animated: true)
     }
 }

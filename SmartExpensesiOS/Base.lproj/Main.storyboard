@@ -751,6 +751,67 @@
             </objects>
             <point key="canvasLocation" x="2228" y="6.746626686656672"/>
         </scene>
+        <!--Add New Expense View Controller-->
+        <scene sceneID="H8P-YY-CEz">
+            <objects>
+                <viewController storyboardIdentifier="AddNewExpenseViewController" id="jwh-Ag-LlD" customClass="AddNewExpenseViewController" customModule="SmartExpensesiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oYA-mb-RJc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gDS-70-j4T">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IxX-gI-kDn">
+                                        <rect key="frame" x="37.5" y="100" width="300" height="467"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lo1-Bi-jAE">
+                                                <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="5RR-NB-GIK"/>
+                                                    <constraint firstAttribute="width" constant="50" id="gyi-Wu-wcE"/>
+                                                </constraints>
+                                                <state key="normal" image="CloseButton"/>
+                                                <connections>
+                                                    <action selector="closeButtonPressed:" destination="jwh-Ag-LlD" eventType="touchUpInside" id="Hxy-hu-ceM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="lo1-Bi-jAE" firstAttribute="leading" secondItem="IxX-gI-kDn" secondAttribute="leading" constant="10" id="Y8q-8B-Mk8"/>
+                                            <constraint firstItem="lo1-Bi-jAE" firstAttribute="top" secondItem="IxX-gI-kDn" secondAttribute="top" constant="10" id="tD2-hx-haf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="IxX-gI-kDn" firstAttribute="height" secondItem="gDS-70-j4T" secondAttribute="height" multiplier="0.7" id="mqv-yl-51U"/>
+                                    <constraint firstItem="IxX-gI-kDn" firstAttribute="centerY" secondItem="gDS-70-j4T" secondAttribute="centerY" id="vEy-SS-Cne"/>
+                                    <constraint firstItem="IxX-gI-kDn" firstAttribute="centerX" secondItem="gDS-70-j4T" secondAttribute="centerX" id="xbZ-Hl-rvq"/>
+                                    <constraint firstItem="IxX-gI-kDn" firstAttribute="width" secondItem="gDS-70-j4T" secondAttribute="width" multiplier="0.8" id="xel-J7-OKA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gDS-70-j4T" firstAttribute="leading" secondItem="tF9-aT-Jnt" secondAttribute="leading" id="I8R-gM-etO"/>
+                            <constraint firstItem="tF9-aT-Jnt" firstAttribute="trailing" secondItem="gDS-70-j4T" secondAttribute="trailing" id="JLT-U1-7oR"/>
+                            <constraint firstItem="gDS-70-j4T" firstAttribute="top" secondItem="tF9-aT-Jnt" secondAttribute="top" id="XZN-xX-WkG"/>
+                            <constraint firstItem="tF9-aT-Jnt" firstAttribute="bottom" secondItem="gDS-70-j4T" secondAttribute="bottom" id="bFq-1D-9lG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tF9-aT-Jnt"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="lo1-Bi-jAE" id="I43-DQ-JPW"/>
+                        <outlet property="mainBackgroundView" destination="IxX-gI-kDn" id="zEZ-yl-NqQ"/>
+                        <outlet property="transparentBackgroundView" destination="gDS-70-j4T" id="i29-Ri-gh1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OZr-V1-h7e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1493.5999999999999" y="688.60569715142435"/>
+        </scene>
         <!--Profile Settings View Controller-->
         <scene sceneID="uui-vj-Znj">
             <objects>

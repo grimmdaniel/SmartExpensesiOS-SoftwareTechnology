@@ -10,7 +10,7 @@ import Foundation
 
 class HTTPObject {
     
-    private static let rootURL = "http://localhost:5000"
+    private static let rootURL = "https://smarte-flask.herokuapp.com"
     static let httpHeader = ["Content-Type": "application/json"]
     
     static func createHeaderWithAuthentication(apiKey: String) -> [String:String] {

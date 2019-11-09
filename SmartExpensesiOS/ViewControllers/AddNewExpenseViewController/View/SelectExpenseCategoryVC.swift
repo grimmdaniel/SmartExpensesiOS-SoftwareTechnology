@@ -14,11 +14,21 @@ class SelectExpenseCategoryVC: UIViewController, StoryboardAble {
     @IBOutlet weak var categoryTableView: UITableView!
     
     var categorySelectedClosure: ((Int?) -> Void)?
+    var currentlySelectedCategory = 0
+    private let cellID = "ExpenseCategoryCell"
+    private let categories = ["Restaurant","Tickets","Museum","Hotel","Cash","Shopping","Gas","Travel","Other"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setUPNavigationBar()
+        setUpTableView()
+    }
+    
+    private func setUpTableView() {
+        categoryTableView.delegate = self
+        categoryTableView.dataSource = self
+        categoryTableView.tableFooterView = UIView.init(frame: CGRect.zero)
     }
     
     private func setUPNavigationBar() {
@@ -34,5 +44,31 @@ class SelectExpenseCategoryVC: UIViewController, StoryboardAble {
     
     @objc func saveSelection() {
         
+    }
+}
+
+extension SelectExpenseCategoryVC: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categories.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellID) else { return UITableViewCell() }
+        cell.textLabel?.text = categories[indexPath.row]
+        cell.textLabel?.font = UIFont(name: "HelveticaNeue-Regular", size: 16)
+        cell.accessoryType = indexPath.row == currentlySelectedCategory ? .checkmark : .none
+        cell.selectionStyle = .none
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let oldIndex = currentlySelectedCategory
+        currentlySelectedCategory = indexPath.row
+        tableView.reloadRows(at: [IndexPath(row: oldIndex, section: 0),IndexPath(row: currentlySelectedCategory, section: 0)], with: .automatic)
     }
 }

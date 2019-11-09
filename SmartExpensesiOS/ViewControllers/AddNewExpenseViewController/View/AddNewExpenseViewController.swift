@@ -34,6 +34,7 @@ class AddNewExpenseViewController: UIViewController, StoryboardAble {
         setUpUI()
         
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
+        tapGesture.cancelsTouchesInView = false
         view.addGestureRecognizer(tapGesture)
         setUpTextFieldBehaviour()
         locationManager.delegate = self

@@ -14,6 +14,12 @@
 		080D80992372D08200F7B32A /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80972372D08200F7B32A /* LogoutService.swift */; };
 		081E29612374225B00F95CF4 /* AddNewExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */; };
 		081E29622374225B00F95CF4 /* AddNewExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */; };
+		081E2965237575E700F95CF4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E2964237575E700F95CF4 /* LocationManager.swift */; };
+		081E2966237575E700F95CF4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E2964237575E700F95CF4 /* LocationManager.swift */; };
+		081E29682376CF3400F95CF4 /* LocationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E29672376CF3400F95CF4 /* LocationManagerProtocol.swift */; };
+		081E29692376CF3400F95CF4 /* LocationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E29672376CF3400F95CF4 /* LocationManagerProtocol.swift */; };
+		081E296B2376CF4F00F95CF4 /* ExpenseLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E296A2376CF4F00F95CF4 /* ExpenseLocation.swift */; };
+		081E296C2376CF4F00F95CF4 /* ExpenseLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E296A2376CF4F00F95CF4 /* ExpenseLocation.swift */; };
 		082595DD236C978700FF9F23 /* AuthorizatonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595DC236C978700FF9F23 /* AuthorizatonService.swift */; };
 		082595E3236C9E6600FF9F23 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595E2236C9E6600FF9F23 /* HTTPMethod.swift */; };
 		082595E5236C9E7F00FF9F23 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595E4236C9E7F00FF9F23 /* EndPoints.swift */; };
@@ -111,6 +117,9 @@
 		080D80942372D05A00F7B32A /* LogoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutDelegate.swift; sourceTree = "<group>"; };
 		080D80972372D08200F7B32A /* LogoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutService.swift; sourceTree = "<group>"; };
 		081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewExpenseViewController.swift; sourceTree = "<group>"; };
+		081E2964237575E700F95CF4 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		081E29672376CF3400F95CF4 /* LocationManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerProtocol.swift; sourceTree = "<group>"; };
+		081E296A2376CF4F00F95CF4 /* ExpenseLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseLocation.swift; sourceTree = "<group>"; };
 		082595DC236C978700FF9F23 /* AuthorizatonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizatonService.swift; sourceTree = "<group>"; };
 		082595E2236C9E6600FF9F23 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		082595E4236C9E7F00FF9F23 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
@@ -210,6 +219,16 @@
 				081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		081E2963237575D200F95CF4 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				081E2964237575E700F95CF4 /* LocationManager.swift */,
+				081E29672376CF3400F95CF4 /* LocationManagerProtocol.swift */,
+				081E296A2376CF4F00F95CF4 /* ExpenseLocation.swift */,
+			);
+			path = LocationManager;
 			sourceTree = "<group>";
 		};
 		082595DB236C977200FF9F23 /* Service */ = {
@@ -443,6 +462,7 @@
 			isa = PBXGroup;
 			children = (
 				0864B24C235864E80018EA4F /* SmartExpensesiOS.entitlements */,
+				081E2963237575D200F95CF4 /* LocationManager */,
 				0883DE9E236489CF00E91AF5 /* Service */,
 				08B436732361A8FF0046F326 /* Model */,
 				08B4366A23619C0E0046F326 /* View */,
@@ -822,6 +842,7 @@
 				083661582365FF2700A524B8 /* CustomMKAnnotation.swift in Sources */,
 				081E29612374225B00F95CF4 /* AddNewExpenseViewController.swift in Sources */,
 				085C609123477E2F00BA038C /* AppDelegate.swift in Sources */,
+				081E29682376CF3400F95CF4 /* LocationManagerProtocol.swift in Sources */,
 				08C1535F236C88B200DA4F60 /* SignUpViewModel.swift in Sources */,
 				082595EB236C9FE900FF9F23 /* NetworkManager.swift in Sources */,
 				08AF3C47236885AE00E5C185 /* ContentLoadingCell.swift in Sources */,
@@ -832,6 +853,7 @@
 				08AF3C432368841200E5C185 /* ShimmerAnimation.swift in Sources */,
 				084E3689234DEB10008B7801 /* WelcomeViewController.swift in Sources */,
 				0889DDD023507CF000E34AF2 /* WelcomeModel.swift in Sources */,
+				081E296B2376CF4F00F95CF4 /* ExpenseLocation.swift in Sources */,
 				08B43651235F35ED0046F326 /* ProfileSettingsCoordinator.swift in Sources */,
 				080D80952372D05A00F7B32A /* LogoutDelegate.swift in Sources */,
 				082595F0236D90DF00FF9F23 /* SignInViewModel.swift in Sources */,
@@ -849,6 +871,7 @@
 				0830B68A23589B7C00A3AE9A /* MainTabCoordinator.swift in Sources */,
 				08C15358236C7ABF00DA4F60 /* UserCredential.swift in Sources */,
 				0830B68623589B0400A3AE9A /* HomeViewController.swift in Sources */,
+				081E2965237575E700F95CF4 /* LocationManager.swift in Sources */,
 				0830B6932358A28B00A3AE9A /* MyExpensesViewController.swift in Sources */,
 				084E368D234E1769008B7801 /* WelcomeImageCell.swift in Sources */,
 				082595E3236C9E6600FF9F23 /* HTTPMethod.swift in Sources */,
@@ -877,6 +900,7 @@
 				08B43652235F35ED0046F326 /* ProfileSettingsCoordinator.swift in Sources */,
 				082595F7236F194700FF9F23 /* AnimateAbleVC.swift in Sources */,
 				082595F5236F11F300FF9F23 /* TestSignInViewController.swift in Sources */,
+				081E2966237575E700F95CF4 /* LocationManager.swift in Sources */,
 				0830B68B23589B7C00A3AE9A /* MainTabCoordinator.swift in Sources */,
 				0830B6942358A28B00A3AE9A /* MyExpensesViewController.swift in Sources */,
 				08B4367223619CA00046F326 /* ExpenseCell.swift in Sources */,
@@ -887,8 +911,10 @@
 				0830B68F23589C1D00A3AE9A /* HomeScreenCoordinator.swift in Sources */,
 				08B436762361A9110046F326 /* Expense.swift in Sources */,
 				08B4367A2361C0580046F326 /* NotificationConstants.swift in Sources */,
+				081E296C2376CF4F00F95CF4 /* ExpenseLocation.swift in Sources */,
 				080429492364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift in Sources */,
 				08B43666235F41AF0046F326 /* CurrencyRateCoordinator.swift in Sources */,
+				081E29692376CF3400F95CF4 /* LocationManagerProtocol.swift in Sources */,
 				0830B6982358A2D600A3AE9A /* MyExpensesCoordinator.swift in Sources */,
 				08FC1ADD23590B1C00C988AA /* TabbarController.swift in Sources */,
 				0883DEA5236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift in Sources */,

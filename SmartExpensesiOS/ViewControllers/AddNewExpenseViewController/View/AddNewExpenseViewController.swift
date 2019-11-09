@@ -13,6 +13,7 @@ class AddNewExpenseViewController: UIViewController, StoryboardAble {
     var closeScreenClosure: (() -> Void)?
     var newExpenseCreated: (() -> Void)?
     var locationManager: LocationManager!
+    private lazy var childVC = SelectExpenseCategoryVC.instantiate()
     
     @IBOutlet weak var transparentBackgroundView: UIView!
     @IBOutlet weak var mainBackgroundView: UIView!
@@ -24,24 +25,50 @@ class AddNewExpenseViewController: UIViewController, StoryboardAble {
     @IBOutlet weak var expenseCategoryTextField: UITextField!
     
     @IBOutlet weak var selectCategoryButton: UIButton!
+    @IBOutlet weak var selectCategoryContainerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.modalPresentationCapturesStatusBarAppearance = true
-        transparentBackgroundView.backgroundColor = UIColor.darkGray.withAlphaComponent(0.5)
-        mainBackgroundView.layer.cornerRadius = 10.0
-        saveButton.layer.cornerRadius = 20.0
+        setUpUI()
         
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
         view.addGestureRecognizer(tapGesture)
         setUpTextFieldBehaviour()
-        
         locationManager.delegate = self
     }
     
     @objc func closeKeyboard() {
         view.endEditing(true)
+    }
+    
+    private func setUpUI() {
+        transparentBackgroundView.backgroundColor = UIColor.darkGray.withAlphaComponent(0.5)
+        mainBackgroundView.layer.cornerRadius = 10.0
+        selectCategoryContainerView.layer.cornerRadius = 10.0
+        selectCategoryContainerView.layer.masksToBounds = true
+        selectCategoryContainerView.isHidden = true
+        saveButton.layer.cornerRadius = 20.0
+    }
+    
+    private func showCategoryVC() {
+        
+        childVC.categorySelectedClosure = { [weak self] (categoryID) in
+            self?.removeCategoryVC()
+        }
+        
+        childVC.view.frame = selectCategoryContainerView.bounds
+        selectCategoryContainerView.addSubview(childVC.view)
+        addChild(childVC)
+        childVC.didMove(toParent: self)
+    }
+    
+    private func removeCategoryVC() {
+        childVC.willMove(toParent: nil)
+        childVC.view.removeFromSuperview()
+        childVC.removeFromParent()
+        selectCategoryContainerView.isHidden = true
     }
     
     private func setUpTextFieldBehaviour() {
@@ -71,6 +98,8 @@ class AddNewExpenseViewController: UIViewController, StoryboardAble {
     }
     
     @IBAction func selectCategoryPressed(_ sender: UIButton) {
+        selectCategoryContainerView.isHidden = false
+        showCategoryVC()
     }
     
     override var prefersStatusBarHidden: Bool {

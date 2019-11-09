@@ -926,9 +926,16 @@
                                             <constraint firstItem="lo1-Bi-jAE" firstAttribute="top" secondItem="IxX-gI-kDn" secondAttribute="top" constant="10" id="tD2-hx-haf"/>
                                         </constraints>
                                     </view>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Nd-ms-U8s">
+                                        <rect key="frame" x="38" y="100" width="300" height="467"/>
+                                    </containerView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="5Nd-ms-U8s" firstAttribute="height" secondItem="IxX-gI-kDn" secondAttribute="height" id="ANc-hD-B4J"/>
+                                    <constraint firstItem="5Nd-ms-U8s" firstAttribute="centerX" secondItem="IxX-gI-kDn" secondAttribute="centerX" id="IF8-Nz-U1G"/>
+                                    <constraint firstItem="5Nd-ms-U8s" firstAttribute="centerY" secondItem="IxX-gI-kDn" secondAttribute="centerY" id="QtO-fP-kMV"/>
+                                    <constraint firstItem="5Nd-ms-U8s" firstAttribute="width" secondItem="IxX-gI-kDn" secondAttribute="width" id="dvh-uv-URV"/>
                                     <constraint firstItem="IxX-gI-kDn" firstAttribute="height" secondItem="gDS-70-j4T" secondAttribute="height" multiplier="0.7" id="mqv-yl-51U"/>
                                     <constraint firstItem="IxX-gI-kDn" firstAttribute="centerY" secondItem="gDS-70-j4T" secondAttribute="centerY" id="vEy-SS-Cne"/>
                                     <constraint firstItem="IxX-gI-kDn" firstAttribute="centerX" secondItem="gDS-70-j4T" secondAttribute="centerX" id="xbZ-Hl-rvq"/>
@@ -953,6 +960,7 @@
                         <outlet property="mainBackgroundView" destination="IxX-gI-kDn" id="zEZ-yl-NqQ"/>
                         <outlet property="saveButton" destination="16M-GU-wwW" id="Et8-Zk-f40"/>
                         <outlet property="selectCategoryButton" destination="QOL-ID-FTg" id="Rx2-Q7-uMu"/>
+                        <outlet property="selectCategoryContainerView" destination="5Nd-ms-U8s" id="uvK-Lh-2be"/>
                         <outlet property="transparentBackgroundView" destination="gDS-70-j4T" id="i29-Ri-gh1"/>
                     </connections>
                 </viewController>
@@ -1208,6 +1216,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XnN-ro-FqO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3564" y="5.8470764617691158"/>
+        </scene>
+        <!--Select Expense CategoryVC-->
+        <scene sceneID="pHA-7h-yvZ">
+            <objects>
+                <viewController storyboardIdentifier="SelectExpenseCategoryVC" id="Drh-GS-7gD" customClass="SelectExpenseCategoryVC" customModule="SmartExpensesiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8n1-Ki-nhI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XmK-0M-cjC">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Myu-Ul-dCp"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Select category" id="tPB-H7-bMm"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cCa-ap-EkI">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vGm-CN-wW5">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vGm-CN-wW5" id="lie-f5-WJH">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XmK-0M-cjC" firstAttribute="leading" secondItem="8n1-Ki-nhI" secondAttribute="leading" id="0UG-Pc-LOV"/>
+                            <constraint firstAttribute="bottom" secondItem="cCa-ap-EkI" secondAttribute="bottom" id="A6H-4Y-3lQ"/>
+                            <constraint firstAttribute="trailing" secondItem="cCa-ap-EkI" secondAttribute="trailing" id="WPz-wk-1Ft"/>
+                            <constraint firstItem="cCa-ap-EkI" firstAttribute="leading" secondItem="8n1-Ki-nhI" secondAttribute="leading" id="XJV-ZR-DC2"/>
+                            <constraint firstItem="cCa-ap-EkI" firstAttribute="top" secondItem="XmK-0M-cjC" secondAttribute="bottom" id="etm-Xi-GOr"/>
+                            <constraint firstAttribute="trailing" secondItem="XmK-0M-cjC" secondAttribute="trailing" id="taI-ty-GYv"/>
+                            <constraint firstItem="XmK-0M-cjC" firstAttribute="top" secondItem="8n1-Ki-nhI" secondAttribute="top" id="uVT-Q7-k8I"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="categoryTableView" destination="cCa-ap-EkI" id="k5T-Hm-kGV"/>
+                        <outlet property="customNavigationBar" destination="XmK-0M-cjC" id="T8u-TS-31r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yDT-ib-0kj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="690"/>
         </scene>
     </scenes>
     <resources>

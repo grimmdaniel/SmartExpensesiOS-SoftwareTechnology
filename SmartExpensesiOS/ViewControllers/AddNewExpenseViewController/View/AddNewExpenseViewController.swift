@@ -13,6 +13,8 @@ class AddNewExpenseViewController: UIViewController, StoryboardAble {
     var closeScreenClosure: (() -> Void)?
     var newExpenseCreated: (() -> Void)?
     var locationManager: LocationManager!
+    var viewModel: AddNewExpenseViewModel!
+    
     private lazy var childVC = SelectExpenseCategoryVC.instantiate()
     
     @IBOutlet weak var transparentBackgroundView: UIView!
@@ -55,7 +57,11 @@ class AddNewExpenseViewController: UIViewController, StoryboardAble {
     
     private func showCategoryVC() {
         
-        childVC.categorySelectedClosure = { [weak self] (categoryID) in
+        childVC.categorySelectedClosure = { [weak self] (category) in
+            if let category = category {
+                self?.viewModel.currentlySelectedCategory = category
+                self?.expenseCategoryTextField.text = category.categoryName
+            }
             self?.removeCategoryVC()
         }
         
@@ -79,13 +85,13 @@ class AddNewExpenseViewController: UIViewController, StoryboardAble {
         expensePriceTextField.delegate = self
     }
     
-    private func getDataFromTextFields() {
+    private func getDataFromTextFields() -> ExpenseMeta? {
         var name = expenseNameTextField.text ?? "N/A"
         if name == "" { name = "N/A" }
         var amountString = expensePriceTextField.text ?? "0"
         if amountString == "" { amountString = "0" }
-        print(name)
-        print(amountString)
+        guard let amount = Int(amountString) else { return nil }
+        return (name,amount)
     }
     
     @IBAction func closeButtonPressed(_ sender: UIButton) {
@@ -93,7 +99,6 @@ class AddNewExpenseViewController: UIViewController, StoryboardAble {
     }
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
-        getDataFromTextFields()
         locationManager.getUserLocation()
 //        newExpenseCreated?()
     }
@@ -111,7 +116,19 @@ class AddNewExpenseViewController: UIViewController, StoryboardAble {
 extension AddNewExpenseViewController: LocationManagerProtocol {
     
     func didFinishFindLocation(location: ExpenseLocation) {
-        print(location)
+        viewModel.currentLocation = location
+        guard let data = getDataFromTextFields() else {
+            showErrorPopUp(title: "Error", message: "Some fields are missing")
+            return
+        }
+        viewModel.currentData = data
+        guard let category = viewModel.currentlySelectedCategory else {
+            showErrorPopUp(title: "Error", message: "No category has been selected")
+            return
+        }
+        viewModel.currentlySelectedCategory = category
+        let json = viewModel.generateJSON()
+        print(json)
     }
 }
 

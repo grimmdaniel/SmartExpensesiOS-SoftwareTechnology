@@ -41,6 +41,7 @@ class HomeScreenCoordinator: Coordinator {
         homeViewController.addNewExpenseClosure = {
             let addNewExpensesVC = AddNewExpenseViewController.instantiate()
             addNewExpensesVC.locationManager = LocationManager()
+            addNewExpensesVC.viewModel = AddNewExpenseViewModel()
             addNewExpensesVC.modalPresentationStyle = .overFullScreen
             
             addNewExpensesVC.closeScreenClosure = {

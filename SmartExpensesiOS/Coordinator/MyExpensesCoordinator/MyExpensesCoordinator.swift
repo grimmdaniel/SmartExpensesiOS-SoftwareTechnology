@@ -41,6 +41,7 @@ class MyExpensesCoordinator: Coordinator {
         myExpensesViewController.addNewExpenseClosure = {
             let addNewExpensesVC = AddNewExpenseViewController.instantiate()
             addNewExpensesVC.locationManager = LocationManager()
+            addNewExpensesVC.viewModel = AddNewExpenseViewModel()
             addNewExpensesVC.modalPresentationStyle = .overFullScreen
             
             addNewExpensesVC.closeScreenClosure = {

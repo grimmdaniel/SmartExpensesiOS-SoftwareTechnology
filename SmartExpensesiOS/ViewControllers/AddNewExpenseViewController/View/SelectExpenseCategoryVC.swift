@@ -13,7 +13,7 @@ class SelectExpenseCategoryVC: UIViewController, StoryboardAble {
     @IBOutlet weak var customNavigationBar: UINavigationBar!
     @IBOutlet weak var categoryTableView: UITableView!
     
-    var categorySelectedClosure: ((Int?) -> Void)?
+    var categorySelectedClosure: ((CategorySelection?) -> Void)?
     var currentlySelectedCategory = 0
     private let cellID = "ExpenseCategoryCell"
     private let categories = ["Restaurant","Tickets","Museum","Hotel","Cash","Shopping","Gas","Travel","Other"]
@@ -43,7 +43,7 @@ class SelectExpenseCategoryVC: UIViewController, StoryboardAble {
     }
     
     @objc func saveSelection() {
-        
+        categorySelectedClosure?((currentlySelectedCategory,categories[currentlySelectedCategory]))
     }
 }
 
@@ -72,3 +72,5 @@ extension SelectExpenseCategoryVC: UITableViewDelegate, UITableViewDataSource {
         tableView.reloadRows(at: [IndexPath(row: oldIndex, section: 0),IndexPath(row: currentlySelectedCategory, section: 0)], with: .automatic)
     }
 }
+
+typealias CategorySelection = (categoryID: Int, categoryName: String)

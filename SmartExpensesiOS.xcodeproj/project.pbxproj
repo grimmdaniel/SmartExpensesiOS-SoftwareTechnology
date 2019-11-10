@@ -22,6 +22,8 @@
 		081E296C2376CF4F00F95CF4 /* ExpenseLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E296A2376CF4F00F95CF4 /* ExpenseLocation.swift */; };
 		081E296F2376E9A600F95CF4 /* SelectExpenseCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E296E2376E9A600F95CF4 /* SelectExpenseCategoryVC.swift */; };
 		081E29702376E9A600F95CF4 /* SelectExpenseCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E296E2376E9A600F95CF4 /* SelectExpenseCategoryVC.swift */; };
+		081E297323785E0B00F95CF4 /* AddNewExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E297223785E0B00F95CF4 /* AddNewExpenseViewModel.swift */; };
+		081E297423785E0B00F95CF4 /* AddNewExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E297223785E0B00F95CF4 /* AddNewExpenseViewModel.swift */; };
 		082595DD236C978700FF9F23 /* AuthorizatonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595DC236C978700FF9F23 /* AuthorizatonService.swift */; };
 		082595E3236C9E6600FF9F23 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595E2236C9E6600FF9F23 /* HTTPMethod.swift */; };
 		082595E5236C9E7F00FF9F23 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595E4236C9E7F00FF9F23 /* EndPoints.swift */; };
@@ -123,6 +125,7 @@
 		081E29672376CF3400F95CF4 /* LocationManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerProtocol.swift; sourceTree = "<group>"; };
 		081E296A2376CF4F00F95CF4 /* ExpenseLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseLocation.swift; sourceTree = "<group>"; };
 		081E296E2376E9A600F95CF4 /* SelectExpenseCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectExpenseCategoryVC.swift; sourceTree = "<group>"; };
+		081E297223785E0B00F95CF4 /* AddNewExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewExpenseViewModel.swift; sourceTree = "<group>"; };
 		082595DC236C978700FF9F23 /* AuthorizatonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizatonService.swift; sourceTree = "<group>"; };
 		082595E2236C9E6600FF9F23 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		082595E4236C9E7F00FF9F23 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
@@ -211,6 +214,7 @@
 		081E295E2374223700F95CF4 /* AddNewExpenseViewController */ = {
 			isa = PBXGroup;
 			children = (
+				081E297123785DF700F95CF4 /* ViewModel */,
 				081E295F2374224700F95CF4 /* View */,
 			);
 			path = AddNewExpenseViewController;
@@ -233,6 +237,14 @@
 				081E296A2376CF4F00F95CF4 /* ExpenseLocation.swift */,
 			);
 			path = LocationManager;
+			sourceTree = "<group>";
+		};
+		081E297123785DF700F95CF4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				081E297223785E0B00F95CF4 /* AddNewExpenseViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		082595DB236C977200FF9F23 /* Service */ = {
@@ -848,6 +860,7 @@
 				085C609123477E2F00BA038C /* AppDelegate.swift in Sources */,
 				081E29682376CF3400F95CF4 /* LocationManagerProtocol.swift in Sources */,
 				08C1535F236C88B200DA4F60 /* SignUpViewModel.swift in Sources */,
+				081E297323785E0B00F95CF4 /* AddNewExpenseViewModel.swift in Sources */,
 				082595EB236C9FE900FF9F23 /* NetworkManager.swift in Sources */,
 				08AF3C47236885AE00E5C185 /* ContentLoadingCell.swift in Sources */,
 				084E3685234DE935008B7801 /* WelcomeCoordinator.swift in Sources */,
@@ -907,6 +920,7 @@
 				082595F5236F11F300FF9F23 /* TestSignInViewController.swift in Sources */,
 				081E2966237575E700F95CF4 /* LocationManager.swift in Sources */,
 				0830B68B23589B7C00A3AE9A /* MainTabCoordinator.swift in Sources */,
+				081E297423785E0B00F95CF4 /* AddNewExpenseViewModel.swift in Sources */,
 				0830B6942358A28B00A3AE9A /* MyExpensesViewController.swift in Sources */,
 				08B4367223619CA00046F326 /* ExpenseCell.swift in Sources */,
 				08B4365C235F39F40046F326 /* SocialCoordinator.swift in Sources */,

@@ -43,7 +43,13 @@ class NetworkManager {
                     completionHandler(.failure(.JSONFormatError));return
                 }
                 
-                completionHandler(.success(responseJSON))
+                let status = responseJSON["status"] as? Int ?? 1
+                if status == 0 {
+                    completionHandler(.success(responseJSON))
+                } else {
+                    let message = responseJSON["message"] as? String ?? "An error occurred, please try again later."
+                    completionHandler(.failure(.semanticError(errorMessage: message)));return
+                }
             } else {
                 if statusCode == 400 {
                     completionHandler(.failure(.badRequest));return

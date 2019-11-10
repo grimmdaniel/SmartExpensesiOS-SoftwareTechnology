@@ -35,7 +35,7 @@ extension UIViewController {
     }
 }
 
-extension UserDefaults {
+public extension UserDefaults {
     
     private enum Keys {
         

@@ -37,6 +37,23 @@ class HomeScreenCoordinator: Coordinator {
     private func showHomeScreen() {
         
         let homeViewController = HomeViewController.instantiate()
+        
+        homeViewController.addNewExpenseClosure = {
+            let addNewExpensesVC = AddNewExpenseViewController.instantiate()
+            addNewExpensesVC.locationManager = LocationManager()
+            addNewExpensesVC.viewModel = AddNewExpenseViewModel()
+            addNewExpensesVC.modalPresentationStyle = .overFullScreen
+            
+            addNewExpensesVC.closeScreenClosure = {
+                homeViewController.dismiss(animated: true)
+            }
+            
+            addNewExpensesVC.newExpenseCreated = {
+                homeViewController.dismiss(animated: true)
+            }
+            
+            homeViewController.present(addNewExpensesVC, animated: true, completion: nil)
+        }
         navigationController.pushViewController(homeViewController, animated: true)
     }
 }

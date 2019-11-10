@@ -30,7 +30,7 @@ class SignUpViewController: UIViewController, StoryboardAble {
     var closeScreenClosure: (() -> Void)?
     var signUpCompletedClosure: (() -> Void)?
     var viewModel: SignUpViewModel!
-    let service = AuthorizationService()
+    var service: AuthorizationService!
     
     var activityIndicator = UIActivityIndicatorView()
     
@@ -139,7 +139,7 @@ extension SignUpViewController: AuthorizationDelegate {
         signUpCompletedClosure?()
     }
     
-    func didFailToAuthorizeUser(error: Error) {
+    func didFailToAuthorizeUser(error: NetworkError) {
         activityIndicator.stopAnimating()
         showErrorPopUp(title: "Error", message: error.localizedDescription)
     }

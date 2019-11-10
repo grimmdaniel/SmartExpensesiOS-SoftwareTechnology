@@ -1,16 +1,16 @@
 //
-//  AuthorizationDelegate.swift
+//  LogoutDelegate.swift
 //  SmartExpensesiOS
 //
-//  Created by Grimm Dániel on 02/11/2019.
+//  Created by Grimm Dániel on 06/11/2019.
 //  Copyright © 2019 com.daniel.grimm.smartexpenses. All rights reserved.
 //
 
 import Foundation
 
-protocol AuthorizationDelegate: AnyObject {
+protocol LogoutDelegate: AnyObject {
     
     func didStartAuthorization()
-    func didFinishAuthorization(token: String,user: String)
+    func didFinishAuthorization()
     func didFailToAuthorizeUser(error: NetworkError)
 }

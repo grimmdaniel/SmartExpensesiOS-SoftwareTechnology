@@ -11,7 +11,7 @@ import UIKit
 var associateObjectValue: Int = 0
 
 // MARK: - UIView Extension
-extension UIView {
+public extension UIView {
     
     fileprivate var isAnimate: Bool {
         get {

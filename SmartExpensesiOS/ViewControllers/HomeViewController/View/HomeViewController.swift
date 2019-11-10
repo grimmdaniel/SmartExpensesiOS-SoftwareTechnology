@@ -11,6 +11,8 @@ import UIKit
 class HomeViewController: UIViewController, StoryboardAble {
     
     @IBOutlet weak var mainTableView: UITableView!
+    
+    var addNewExpenseClosure: (() -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +46,7 @@ class HomeViewController: UIViewController, StoryboardAble {
     }
     
     @objc func createNewExpense() {
-        print("Creating new expense...")
+        addNewExpenseClosure?()
     }
 }
 

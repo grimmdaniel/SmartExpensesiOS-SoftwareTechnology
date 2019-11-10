@@ -11,6 +11,7 @@ import UIKit
 class MyExpensesViewController: UIViewController, StoryboardAble, AnimatableVC {
     
     @IBOutlet weak var myExpensesTableView: UITableView!
+    var addNewExpenseClosure: (() -> Void)?
     
     var isLoadingContent: Bool = true {
         didSet {
@@ -53,7 +54,12 @@ class MyExpensesViewController: UIViewController, StoryboardAble, AnimatableVC {
         navigationController?.navigationBar.barTintColor = ColorTheme.primaryColor
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.navigationBar.tintColor = UIColor.white
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Animation", style: .plain, target: self, action: #selector(startStopAnimating(_:)))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Animation", style: .plain, target: self, action: #selector(startStopAnimating(_:)))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createNewExpense))
+    }
+    
+    @objc func createNewExpense() {
+        addNewExpenseClosure?()
     }
     
     @objc func startStopAnimating(_ sender: UIBarButtonItem) {

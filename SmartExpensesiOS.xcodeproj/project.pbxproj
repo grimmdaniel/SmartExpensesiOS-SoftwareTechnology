@@ -11,7 +11,6 @@
 		080429492364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080429472364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift */; };
 		080D80952372D05A00F7B32A /* LogoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80942372D05A00F7B32A /* LogoutDelegate.swift */; };
 		080D80982372D08200F7B32A /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80972372D08200F7B32A /* LogoutService.swift */; };
-		080D80992372D08200F7B32A /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80972372D08200F7B32A /* LogoutService.swift */; };
 		081E29612374225B00F95CF4 /* AddNewExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */; };
 		081E29622374225B00F95CF4 /* AddNewExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */; };
 		081E2965237575E700F95CF4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E2964237575E700F95CF4 /* LocationManager.swift */; };
@@ -24,6 +23,16 @@
 		081E29702376E9A600F95CF4 /* SelectExpenseCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E296E2376E9A600F95CF4 /* SelectExpenseCategoryVC.swift */; };
 		081E297323785E0B00F95CF4 /* AddNewExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E297223785E0B00F95CF4 /* AddNewExpenseViewModel.swift */; };
 		081E297423785E0B00F95CF4 /* AddNewExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E297223785E0B00F95CF4 /* AddNewExpenseViewModel.swift */; };
+		081E297F23786C6000F95CF4 /* HTTPObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595E8236C9EE600FF9F23 /* HTTPObject.swift */; };
+		081E298023786C6C00F95CF4 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595E2236C9E6600FF9F23 /* HTTPMethod.swift */; };
+		081E298123786C8500F95CF4 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595E4236C9E7F00FF9F23 /* EndPoints.swift */; };
+		081E298523786E0800F95CF4 /* FakeFailureLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E298423786E0800F95CF4 /* FakeFailureLoginService.swift */; };
+		081E298A23786E6A00F95CF4 /* FakeLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E298923786E6A00F95CF4 /* FakeLoginService.swift */; };
+		081E298B23786E9D00F95CF4 /* ShimmerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3C422368841200E5C185 /* ShimmerAnimation.swift */; };
+		081E298F23786ED700F95CF4 /* WelcomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889DDCF23507CF000E34AF2 /* WelcomeModel.swift */; };
+		081E299023786EDB00F95CF4 /* WelcomeViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889DDCC23507C3200E34AF2 /* WelcomeViewControllerViewModel.swift */; };
+		081E299123786EDF00F95CF4 /* WelcomeImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E368C234E1769008B7801 /* WelcomeImageCell.swift */; };
+		081E299223786EE300F95CF4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E3688234DEB10008B7801 /* WelcomeViewController.swift */; };
 		082595DD236C978700FF9F23 /* AuthorizatonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595DC236C978700FF9F23 /* AuthorizatonService.swift */; };
 		082595E3236C9E6600FF9F23 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595E2236C9E6600FF9F23 /* HTTPMethod.swift */; };
 		082595E5236C9E7F00FF9F23 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595E4236C9E7F00FF9F23 /* EndPoints.swift */; };
@@ -41,11 +50,8 @@
 		082595FB236F19D000FF9F23 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5245123539EAA001BB6FF /* Extensions.swift */; };
 		082595FD236F254B00FF9F23 /* TestSignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595FC236F254B00FF9F23 /* TestSignInViewModel.swift */; };
 		0830B68623589B0400A3AE9A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0830B68523589B0400A3AE9A /* HomeViewController.swift */; };
-		0830B68723589B0400A3AE9A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0830B68523589B0400A3AE9A /* HomeViewController.swift */; };
 		0830B68A23589B7C00A3AE9A /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0830B68923589B7C00A3AE9A /* MainTabCoordinator.swift */; };
-		0830B68B23589B7C00A3AE9A /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0830B68923589B7C00A3AE9A /* MainTabCoordinator.swift */; };
 		0830B68E23589C1D00A3AE9A /* HomeScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0830B68D23589C1D00A3AE9A /* HomeScreenCoordinator.swift */; };
-		0830B68F23589C1D00A3AE9A /* HomeScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0830B68D23589C1D00A3AE9A /* HomeScreenCoordinator.swift */; };
 		0830B6932358A28B00A3AE9A /* MyExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0830B6922358A28B00A3AE9A /* MyExpensesViewController.swift */; };
 		0830B6942358A28B00A3AE9A /* MyExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0830B6922358A28B00A3AE9A /* MyExpensesViewController.swift */; };
 		0830B6972358A2D600A3AE9A /* MyExpensesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0830B6962358A2D600A3AE9A /* MyExpensesCoordinator.swift */; };
@@ -75,9 +81,7 @@
 		08AF3C48236885AE00E5C185 /* ContentLoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08AF3C46236885AE00E5C185 /* ContentLoadingCell.xib */; };
 		08AF3C4A23688BED00E5C185 /* AnimateAbleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3C4923688BED00E5C185 /* AnimateAbleVC.swift */; };
 		08B4364D235F35890046F326 /* ProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4364C235F35890046F326 /* ProfileSettingsViewController.swift */; };
-		08B4364E235F35890046F326 /* ProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4364C235F35890046F326 /* ProfileSettingsViewController.swift */; };
 		08B43651235F35ED0046F326 /* ProfileSettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B43650235F35ED0046F326 /* ProfileSettingsCoordinator.swift */; };
-		08B43652235F35ED0046F326 /* ProfileSettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B43650235F35ED0046F326 /* ProfileSettingsCoordinator.swift */; };
 		08B43657235F39BC0046F326 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B43656235F39BC0046F326 /* SocialViewController.swift */; };
 		08B43658235F39BC0046F326 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B43656235F39BC0046F326 /* SocialViewController.swift */; };
 		08B4365B235F39F40046F326 /* SocialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4365A235F39F40046F326 /* SocialCoordinator.swift */; };
@@ -103,7 +107,6 @@
 		08D5244A23539D5D001BB6FF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08D5244C23539D5D001BB6FF /* Localizable.strings */; };
 		08D5245223539EAA001BB6FF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5245123539EAA001BB6FF /* Extensions.swift */; };
 		08FC1ADC23590B1C00C988AA /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FC1ADB23590B1C00C988AA /* TabbarController.swift */; };
-		08FC1ADD23590B1C00C988AA /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FC1ADB23590B1C00C988AA /* TabbarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +129,8 @@
 		081E296A2376CF4F00F95CF4 /* ExpenseLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseLocation.swift; sourceTree = "<group>"; };
 		081E296E2376E9A600F95CF4 /* SelectExpenseCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectExpenseCategoryVC.swift; sourceTree = "<group>"; };
 		081E297223785E0B00F95CF4 /* AddNewExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewExpenseViewModel.swift; sourceTree = "<group>"; };
+		081E298423786E0800F95CF4 /* FakeFailureLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFailureLoginService.swift; sourceTree = "<group>"; };
+		081E298923786E6A00F95CF4 /* FakeLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeLoginService.swift; sourceTree = "<group>"; };
 		082595DC236C978700FF9F23 /* AuthorizatonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizatonService.swift; sourceTree = "<group>"; };
 		082595E2236C9E6600FF9F23 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		082595E4236C9E7F00FF9F23 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
@@ -298,6 +303,8 @@
 			children = (
 				082595F4236F11F300FF9F23 /* TestSignInViewController.swift */,
 				082595FC236F254B00FF9F23 /* TestSignInViewModel.swift */,
+				081E298423786E0800F95CF4 /* FakeFailureLoginService.swift */,
+				081E298923786E6A00F95CF4 /* FakeLoginService.swift */,
 			);
 			path = SignInViewController;
 			sourceTree = "<group>";
@@ -914,41 +921,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				081E298523786E0800F95CF4 /* FakeFailureLoginService.swift in Sources */,
 				0883DEA1236489E600E91AF5 /* LoginService.swift in Sources */,
-				08B43652235F35ED0046F326 /* ProfileSettingsCoordinator.swift in Sources */,
 				082595F7236F194700FF9F23 /* AnimateAbleVC.swift in Sources */,
 				082595F5236F11F300FF9F23 /* TestSignInViewController.swift in Sources */,
 				081E2966237575E700F95CF4 /* LocationManager.swift in Sources */,
-				0830B68B23589B7C00A3AE9A /* MainTabCoordinator.swift in Sources */,
+				081E298B23786E9D00F95CF4 /* ShimmerAnimation.swift in Sources */,
 				081E297423785E0B00F95CF4 /* AddNewExpenseViewModel.swift in Sources */,
 				0830B6942358A28B00A3AE9A /* MyExpensesViewController.swift in Sources */,
 				08B4367223619CA00046F326 /* ExpenseCell.swift in Sources */,
 				08B4365C235F39F40046F326 /* SocialCoordinator.swift in Sources */,
-				0830B68723589B0400A3AE9A /* HomeViewController.swift in Sources */,
 				082595FA236F196900FF9F23 /* ColorTheme.swift in Sources */,
 				08B43658235F39BC0046F326 /* SocialViewController.swift in Sources */,
-				0830B68F23589C1D00A3AE9A /* HomeScreenCoordinator.swift in Sources */,
 				08B436762361A9110046F326 /* Expense.swift in Sources */,
 				08B4367A2361C0580046F326 /* NotificationConstants.swift in Sources */,
 				081E296C2376CF4F00F95CF4 /* ExpenseLocation.swift in Sources */,
+				081E299123786EDF00F95CF4 /* WelcomeImageCell.swift in Sources */,
 				080429492364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift in Sources */,
 				081E29702376E9A600F95CF4 /* SelectExpenseCategoryVC.swift in Sources */,
 				08B43666235F41AF0046F326 /* CurrencyRateCoordinator.swift in Sources */,
 				081E29692376CF3400F95CF4 /* LocationManagerProtocol.swift in Sources */,
 				0830B6982358A2D600A3AE9A /* MyExpensesCoordinator.swift in Sources */,
-				08FC1ADD23590B1C00C988AA /* TabbarController.swift in Sources */,
 				0883DEA5236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift in Sources */,
 				082595F9236F195A00FF9F23 /* ContentLoadingCell.swift in Sources */,
 				081E29622374225B00F95CF4 /* AddNewExpenseViewController.swift in Sources */,
+				081E298A23786E6A00F95CF4 /* FakeLoginService.swift in Sources */,
 				082595F8236F194A00FF9F23 /* StoryboardAble.swift in Sources */,
 				082595F6236F191B00FF9F23 /* Coordinator.swift in Sources */,
+				081E298023786C6C00F95CF4 /* HTTPMethod.swift in Sources */,
+				081E298123786C8500F95CF4 /* EndPoints.swift in Sources */,
 				082595FD236F254B00FF9F23 /* TestSignInViewModel.swift in Sources */,
+				081E298F23786ED700F95CF4 /* WelcomeModel.swift in Sources */,
 				08C1535B236C80C200DA4F60 /* Regex.swift in Sources */,
+				081E299023786EDB00F95CF4 /* WelcomeViewControllerViewModel.swift in Sources */,
+				081E299223786EE300F95CF4 /* WelcomeViewController.swift in Sources */,
+				081E297F23786C6000F95CF4 /* HTTPObject.swift in Sources */,
 				083661592365FF2700A524B8 /* CustomMKAnnotation.swift in Sources */,
-				080D80992372D08200F7B32A /* LogoutService.swift in Sources */,
 				08B43662235F40AC0046F326 /* CurrencyRateViewController.swift in Sources */,
 				08C15360236C88B200DA4F60 /* SignUpViewModel.swift in Sources */,
-				08B4364E235F35890046F326 /* ProfileSettingsViewController.swift in Sources */,
 				082595FB236F19D000FF9F23 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

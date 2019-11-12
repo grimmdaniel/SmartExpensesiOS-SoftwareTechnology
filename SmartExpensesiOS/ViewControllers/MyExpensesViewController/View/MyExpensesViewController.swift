@@ -12,6 +12,7 @@ class MyExpensesViewController: UIViewController, StoryboardAble, AnimatableVC {
     
     @IBOutlet weak var myExpensesTableView: UITableView!
     var addNewExpenseClosure: (() -> Void)?
+    var refreshControl = UIRefreshControl()
     var service: MyExpensensesService!
     
     var expenses = [Expense]()
@@ -20,7 +21,10 @@ class MyExpensesViewController: UIViewController, StoryboardAble, AnimatableVC {
         didSet {
             if !shouldLoadContent {
                 myExpensesTableView.reloadData()
+                refreshControl.endRefreshing()
                 stopAnimation()
+            } else {
+                myExpensesTableView.reloadData()
             }
         }
     }
@@ -46,7 +50,16 @@ class MyExpensesViewController: UIViewController, StoryboardAble, AnimatableVC {
         myExpensesTableView.dataSource = self
         myExpensesTableView.backgroundColor = .white
         
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(refreshTableView), for: .valueChanged)
+        myExpensesTableView.addSubview(refreshControl)
+        
         service.delegate = self
+    }
+    
+    @objc func refreshTableView() {
+        shouldLoadContent = true
+        service.fetchAllExpenses()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -87,8 +100,14 @@ extension MyExpensesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         if shouldLoadContent {
+            tableView.backgroundView = nil
             return 10
         } else {
+            if expenses.isEmpty {
+                tableView.showEmptyTableViewMessage(message: "We couldn't find any expenses to show. Pull to refresh...")
+            } else {
+                tableView.backgroundView = nil
+            }
             return expenses.count
         }
     }

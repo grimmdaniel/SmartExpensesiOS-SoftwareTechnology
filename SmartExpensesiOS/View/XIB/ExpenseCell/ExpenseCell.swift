@@ -22,7 +22,9 @@ class ExpenseCell: UITableViewCell {
     
     var currentExpense: Expense! {
         didSet {
-            
+            expenseNameLabel.text = currentExpense.title
+            expensePlaceLabel.text = currentExpense.location.address
+            expensePriceLabel.text = currentExpense.currency.formattedPrice
         }
     }
     

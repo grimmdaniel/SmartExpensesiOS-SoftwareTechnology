@@ -59,6 +59,10 @@
 		083661582365FF2700A524B8 /* CustomMKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083661572365FF2700A524B8 /* CustomMKAnnotation.swift */; };
 		083661592365FF2700A524B8 /* CustomMKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083661572365FF2700A524B8 /* CustomMKAnnotation.swift */; };
 		083A5024234DE1ED00F352B8 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A5023234DE1ED00F352B8 /* ColorTheme.swift */; };
+		084A143F237ACF7F009D142C /* MyExpensensesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084A143E237ACF7F009D142C /* MyExpensensesService.swift */; };
+		084A1442237AD00D009D142C /* MyExpensesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084A1441237AD00D009D142C /* MyExpensesDelegate.swift */; };
+		084A1444237AD81C009D142C /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084A1443237AD81C009D142C /* ResponseParser.swift */; };
+		084A1446237AFA5D009D142C /* ExpenseCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084A1445237AFA5D009D142C /* ExpenseCurrency.swift */; };
 		084E367F234DE731008B7801 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E367E234DE731008B7801 /* Coordinator.swift */; };
 		084E3683234DE90F008B7801 /* StoryboardAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E3682234DE90F008B7801 /* StoryboardAble.swift */; };
 		084E3685234DE935008B7801 /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E3684234DE935008B7801 /* WelcomeCoordinator.swift */; };
@@ -148,6 +152,10 @@
 		0830B6962358A2D600A3AE9A /* MyExpensesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExpensesCoordinator.swift; sourceTree = "<group>"; };
 		083661572365FF2700A524B8 /* CustomMKAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMKAnnotation.swift; sourceTree = "<group>"; };
 		083A5023234DE1ED00F352B8 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
+		084A143E237ACF7F009D142C /* MyExpensensesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExpensensesService.swift; sourceTree = "<group>"; };
+		084A1441237AD00D009D142C /* MyExpensesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExpensesDelegate.swift; sourceTree = "<group>"; };
+		084A1443237AD81C009D142C /* ResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
+		084A1445237AFA5D009D142C /* ExpenseCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCurrency.swift; sourceTree = "<group>"; };
 		084E367E234DE731008B7801 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		084E3682234DE90F008B7801 /* StoryboardAble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardAble.swift; sourceTree = "<group>"; };
 		084E3684234DE935008B7801 /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
@@ -240,6 +248,7 @@
 				081E2964237575E700F95CF4 /* LocationManager.swift */,
 				081E29672376CF3400F95CF4 /* LocationManagerProtocol.swift */,
 				081E296A2376CF4F00F95CF4 /* ExpenseLocation.swift */,
+				084A1445237AFA5D009D142C /* ExpenseCurrency.swift */,
 			);
 			path = LocationManager;
 			sourceTree = "<group>";
@@ -345,6 +354,8 @@
 		0830B6902358A26800A3AE9A /* MyExpensesViewController */ = {
 			isa = PBXGroup;
 			children = (
+				084A1440237ACFA5009D142C /* Delegate */,
+				084A143D237ACD88009D142C /* Service */,
 				0830B6912358A27700A3AE9A /* View */,
 			);
 			path = MyExpensesViewController;
@@ -381,8 +392,25 @@
 				08D5245123539EAA001BB6FF /* Extensions.swift */,
 				08B436782361C0580046F326 /* NotificationConstants.swift */,
 				08C15359236C80C200DA4F60 /* Regex.swift */,
+				084A1443237AD81C009D142C /* ResponseParser.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		084A143D237ACD88009D142C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				084A143E237ACF7F009D142C /* MyExpensensesService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		084A1440237ACFA5009D142C /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				084A1441237AD00D009D142C /* MyExpensesDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		084E367D234DE720008B7801 /* Coordinator */ = {
@@ -862,6 +890,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				084E3683234DE90F008B7801 /* StoryboardAble.swift in Sources */,
+				084A143F237ACF7F009D142C /* MyExpensensesService.swift in Sources */,
 				083661582365FF2700A524B8 /* CustomMKAnnotation.swift in Sources */,
 				081E29612374225B00F95CF4 /* AddNewExpenseViewController.swift in Sources */,
 				085C609123477E2F00BA038C /* AppDelegate.swift in Sources */,
@@ -874,6 +903,7 @@
 				08C1535A236C80C200DA4F60 /* Regex.swift in Sources */,
 				0830B68E23589C1D00A3AE9A /* HomeScreenCoordinator.swift in Sources */,
 				0830B6972358A2D600A3AE9A /* MyExpensesCoordinator.swift in Sources */,
+				084A1446237AFA5D009D142C /* ExpenseCurrency.swift in Sources */,
 				08AF3C432368841200E5C185 /* ShimmerAnimation.swift in Sources */,
 				084E3689234DEB10008B7801 /* WelcomeViewController.swift in Sources */,
 				0889DDD023507CF000E34AF2 /* WelcomeModel.swift in Sources */,
@@ -887,6 +917,7 @@
 				0883DEA4236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift in Sources */,
 				082595E7236C9EA900FF9F23 /* NetworkError.swift in Sources */,
 				08FC1ADC23590B1C00C988AA /* TabbarController.swift in Sources */,
+				084A1444237AD81C009D142C /* ResponseParser.swift in Sources */,
 				08B43661235F40AC0046F326 /* CurrencyRateViewController.swift in Sources */,
 				08B43657235F39BC0046F326 /* SocialViewController.swift in Sources */,
 				08B43665235F41AF0046F326 /* CurrencyRateCoordinator.swift in Sources */,
@@ -899,6 +930,7 @@
 				081E2965237575E700F95CF4 /* LocationManager.swift in Sources */,
 				0830B6932358A28B00A3AE9A /* MyExpensesViewController.swift in Sources */,
 				084E368D234E1769008B7801 /* WelcomeImageCell.swift in Sources */,
+				084A1442237AD00D009D142C /* MyExpensesDelegate.swift in Sources */,
 				082595E3236C9E6600FF9F23 /* HTTPMethod.swift in Sources */,
 				080D80982372D08200F7B32A /* LogoutService.swift in Sources */,
 				082595E5236C9E7F00FF9F23 /* EndPoints.swift in Sources */,

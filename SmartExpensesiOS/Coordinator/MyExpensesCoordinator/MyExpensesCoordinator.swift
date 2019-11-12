@@ -37,6 +37,7 @@ class MyExpensesCoordinator: Coordinator {
     private func showMyExpensesScreen() {
         
         let myExpensesViewController = MyExpensesViewController.instantiate()
+        myExpensesViewController.service = MyExpensensesService()
         
         myExpensesViewController.addNewExpenseClosure = {
             let addNewExpensesVC = AddNewExpenseViewController.instantiate()

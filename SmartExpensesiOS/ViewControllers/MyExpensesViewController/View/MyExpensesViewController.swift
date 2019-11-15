@@ -78,6 +78,11 @@ class MyExpensesViewController: UIViewController, StoryboardAble, AnimatableVC {
     @objc func createNewExpense() {
         addNewExpenseClosure?()
     }
+    
+    func newExpenseAdded(expense: Expense) {
+        expenses.insert(expense, at: 0)
+        myExpensesTableView.reloadData()
+    }
 }
 
 extension MyExpensesViewController: MyExpensesDelegate {

@@ -63,6 +63,8 @@
 		084A1442237AD00D009D142C /* MyExpensesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084A1441237AD00D009D142C /* MyExpensesDelegate.swift */; };
 		084A1444237AD81C009D142C /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084A1443237AD81C009D142C /* ResponseParser.swift */; };
 		084A1446237AFA5D009D142C /* ExpenseCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084A1445237AFA5D009D142C /* ExpenseCurrency.swift */; };
+		084A1449237B0F4A009D142C /* AddNewExpenseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084A1448237B0F4A009D142C /* AddNewExpenseService.swift */; };
+		084A144C237B10ED009D142C /* AddNewExpenseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084A144B237B10ED009D142C /* AddNewExpenseDelegate.swift */; };
 		084E367F234DE731008B7801 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E367E234DE731008B7801 /* Coordinator.swift */; };
 		084E3683234DE90F008B7801 /* StoryboardAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E3682234DE90F008B7801 /* StoryboardAble.swift */; };
 		084E3685234DE935008B7801 /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E3684234DE935008B7801 /* WelcomeCoordinator.swift */; };
@@ -156,6 +158,8 @@
 		084A1441237AD00D009D142C /* MyExpensesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExpensesDelegate.swift; sourceTree = "<group>"; };
 		084A1443237AD81C009D142C /* ResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
 		084A1445237AFA5D009D142C /* ExpenseCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCurrency.swift; sourceTree = "<group>"; };
+		084A1448237B0F4A009D142C /* AddNewExpenseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewExpenseService.swift; sourceTree = "<group>"; };
+		084A144B237B10ED009D142C /* AddNewExpenseDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewExpenseDelegate.swift; sourceTree = "<group>"; };
 		084E367E234DE731008B7801 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		084E3682234DE90F008B7801 /* StoryboardAble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardAble.swift; sourceTree = "<group>"; };
 		084E3684234DE935008B7801 /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
@@ -227,6 +231,8 @@
 		081E295E2374223700F95CF4 /* AddNewExpenseViewController */ = {
 			isa = PBXGroup;
 			children = (
+				084A144A237B108A009D142C /* Delegate */,
+				084A1447237B0E93009D142C /* Service */,
 				081E297123785DF700F95CF4 /* ViewModel */,
 				081E295F2374224700F95CF4 /* View */,
 			);
@@ -409,6 +415,22 @@
 			isa = PBXGroup;
 			children = (
 				084A1441237AD00D009D142C /* MyExpensesDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		084A1447237B0E93009D142C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				084A1448237B0F4A009D142C /* AddNewExpenseService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		084A144A237B108A009D142C /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				084A144B237B10ED009D142C /* AddNewExpenseDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -910,6 +932,7 @@
 				081E296B2376CF4F00F95CF4 /* ExpenseLocation.swift in Sources */,
 				08B43651235F35ED0046F326 /* ProfileSettingsCoordinator.swift in Sources */,
 				080D80952372D05A00F7B32A /* LogoutDelegate.swift in Sources */,
+				084A1449237B0F4A009D142C /* AddNewExpenseService.swift in Sources */,
 				082595F0236D90DF00FF9F23 /* SignInViewModel.swift in Sources */,
 				081E296F2376E9A600F95CF4 /* SelectExpenseCategoryVC.swift in Sources */,
 				082595ED236D8AE800FF9F23 /* AuthorizationDelegate.swift in Sources */,
@@ -921,6 +944,7 @@
 				08B43661235F40AC0046F326 /* CurrencyRateViewController.swift in Sources */,
 				08B43657235F39BC0046F326 /* SocialViewController.swift in Sources */,
 				08B43665235F41AF0046F326 /* CurrencyRateCoordinator.swift in Sources */,
+				084A144C237B10ED009D142C /* AddNewExpenseDelegate.swift in Sources */,
 				08B4367123619CA00046F326 /* ExpenseCell.swift in Sources */,
 				0889DDC7234E7F2400E34AF2 /* SignInViewController.swift in Sources */,
 				082595DD236C978700FF9F23 /* AuthorizatonService.swift in Sources */,

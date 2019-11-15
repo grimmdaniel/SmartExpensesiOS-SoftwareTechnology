@@ -11,9 +11,12 @@ import UIKit
 class AddNewExpenseViewController: UIViewController, StoryboardAble {
 
     var closeScreenClosure: (() -> Void)?
-    var newExpenseCreated: (() -> Void)?
+    var newExpenseCreated: ((Expense) -> Void)?
     var locationManager: LocationManager!
     var viewModel: AddNewExpenseViewModel!
+    var service: AddNewExpenseService!
+    
+    var activityIndicator = UIActivityIndicatorView()
     
     private lazy var childVC = SelectExpenseCategoryVC.instantiate()
     
@@ -39,7 +42,9 @@ class AddNewExpenseViewController: UIViewController, StoryboardAble {
         tapGesture.cancelsTouchesInView = false
         view.addGestureRecognizer(tapGesture)
         setUpTextFieldBehaviour()
+        setUpActivityIndicator()
         locationManager.delegate = self
+        service.delegate = self
     }
     
     @objc func closeKeyboard() {
@@ -53,6 +58,13 @@ class AddNewExpenseViewController: UIViewController, StoryboardAble {
         selectCategoryContainerView.layer.masksToBounds = true
         selectCategoryContainerView.isHidden = true
         saveButton.layer.cornerRadius = 20.0
+    }
+    
+    private func setUpActivityIndicator() {
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.style = UIActivityIndicatorView.Style.gray
+        self.view.addSubview(activityIndicator)
     }
     
     private func showCategoryVC() {
@@ -100,7 +112,6 @@ class AddNewExpenseViewController: UIViewController, StoryboardAble {
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
         locationManager.getUserLocation()
-//        newExpenseCreated?()
     }
     
     @IBAction func selectCategoryPressed(_ sender: UIButton) {
@@ -110,6 +121,22 @@ class AddNewExpenseViewController: UIViewController, StoryboardAble {
     
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+}
+
+extension AddNewExpenseViewController: AddNewExpensesDelegate {
+    
+    func didStartCreatingExpense() {
+        activityIndicator.startAnimating()
+    }
+    
+    func didFinishCreatingExpense(expense: Expense) {
+        activityIndicator.stopAnimating()
+        newExpenseCreated?(expense)
+    }
+    
+    func didFailCreatingExpense(error: NetworkError) {
+        activityIndicator.stopAnimating()
     }
 }
 
@@ -127,8 +154,8 @@ extension AddNewExpenseViewController: LocationManagerProtocol {
             return
         }
         viewModel.currentlySelectedCategory = category
-        let json = viewModel.generateJSON()
-        print(json)
+        guard let json = viewModel.generateJSON() else { return }
+        service.createNewExpense(from: json)
     }
 }
 

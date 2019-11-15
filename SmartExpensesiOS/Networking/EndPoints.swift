@@ -14,4 +14,5 @@ enum EndPoints: String {
     case login = "/login"
     case logout = "/logout"
     case allExpenses = "/expense/all"
+    case newExpense = "/expense/add"
 }

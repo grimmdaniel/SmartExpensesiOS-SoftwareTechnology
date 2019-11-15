@@ -18,20 +18,35 @@ class ResponseParser {
         var expensesToReturn = [Expense]()
         if let expensesRaw = json["expenses"] as? [[String:Any]] {
             for expense in expensesRaw {
-                if let expenseID = expense["id"] as? Int {
-                    if let categoryID = expense["categoryID"] as? Int {
-                        let title = expense["title"] as? String ?? "N/A"
-                        let isPrivate = expense["private"] as? Bool ?? true
-                        let currency = parseExpenseCurrency(json: expense)
-                        let location = parseExpenseLocation(json: expense)
-                        let date = expense["date"] as? String ?? "1970-01-01 00:00:01"
-                        let newExpense = Expense(id: expenseID, location: location, currency: currency, categoryID: categoryID, isPrivate: isPrivate, title: title, date: date)
-                        expensesToReturn.append(newExpense)
-                    }
+                if let newExpense = parseExpenseRaw(expense: expense) {
+                    expensesToReturn.append(newExpense)
                 }
             }
         }
         return expensesToReturn
+    }
+    
+    func parseExpense(json: [String:Any]) -> Expense? {
+        if let expenseRaw = json["expense"] as? [String:Any] {
+            let expense = parseExpenseRaw(expense: expenseRaw)
+            return expense
+        }
+        return nil
+    }
+    
+    func parseExpenseRaw(expense: [String:Any]) -> Expense? {
+        if let expenseID = expense["id"] as? Int {
+            if let categoryID = expense["categoryID"] as? Int {
+                let title = expense["title"] as? String ?? "N/A"
+                let isPrivate = expense["private"] as? Bool ?? true
+                let currency = parseExpenseCurrency(json: expense)
+                let location = parseExpenseLocation(json: expense)
+                let date = expense["date"] as? String ?? "1970-01-01 00:00:01"
+                let newExpense = Expense(id: expenseID, location: location, currency: currency, categoryID: categoryID, isPrivate: isPrivate, title: title, date: date)
+                return newExpense
+            }
+        }
+        return nil
     }
     
     private func parseExpenseCurrency(json: [String:Any]) -> ExpenseCurrency {

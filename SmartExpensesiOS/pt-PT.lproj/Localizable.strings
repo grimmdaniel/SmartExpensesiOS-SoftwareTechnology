@@ -8,22 +8,21 @@
 
 //welcome screen
 "welcomeScreenSignInButtonText" = "Iniciar sessão";
-"welcomeScreenSignUpButtonText" = "Inscreva-se";
+"welcomeScreenSignUpButtonText" = "Cadastre-se";
 "welcomeScreenDontHaveAnAccountQuestion" = "Não tem uma conta?";
 
 //sign up screen
-"signUpScreenTitleText" = "Inscreva-se";
-"signUpScreenWelcomeText" = "Inscreva-se com e-mail";
+"signUpScreenTitleText" = "Cadastre-se";
+"signUpScreenWelcomeText" = "Cadastre-se com e-mail";
 "signUpScreenEmailLabel" = "Endereço de e-mail";
 "signUpScreenEmailPlaceholder" = "joe@smartexpenses.pt";
 "signUpScreenPasswordLabel" = "Criar uma senha";
 "signUpScreenPasswordPlaceholder" = "**********";
 "signUpScreenConfirmPasswordLabel" = "Criar uma senha";
 "signUpScreenConfirmPasswordPlaceholder" = "**********";
-"signUpScreenSignUpButtonText" = "INSCREVA-SE";
-"signUpScreenTermsAndConditionsLabel" = "Ao me inscrever, eu concordo Smart Expenses";
-"signUpScreenTermsAndConditionsButton" = "Termos e Condições";
-
+"signUpScreenSignUpButtonText" = "CADASTRE-SE";
+"signUpScreenTermsAndConditionsLabel" = "Ao inscrever-se, você concorda com nossos";
+"signUpScreenTermsAndConditionsButton" = "Termos de uso e Condições";
 
 //sign in screen
 "signInScreenTitleText" = "Iniciar sessão";

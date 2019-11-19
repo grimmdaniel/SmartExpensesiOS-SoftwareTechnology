@@ -37,19 +37,22 @@ class MyExpensesCoordinator: Coordinator {
     private func showMyExpensesScreen() {
         
         let myExpensesViewController = MyExpensesViewController.instantiate()
+        myExpensesViewController.service = MyExpensensesService()
         
         myExpensesViewController.addNewExpenseClosure = {
             let addNewExpensesVC = AddNewExpenseViewController.instantiate()
             addNewExpensesVC.locationManager = LocationManager()
             addNewExpensesVC.viewModel = AddNewExpenseViewModel()
+            addNewExpensesVC.service = AddNewExpenseService()
             addNewExpensesVC.modalPresentationStyle = .overFullScreen
             
             addNewExpensesVC.closeScreenClosure = {
                 myExpensesViewController.dismiss(animated: true)
             }
             
-            addNewExpensesVC.newExpenseCreated = {
+            addNewExpensesVC.newExpenseCreated = { (expense) in
                 myExpensesViewController.dismiss(animated: true)
+                myExpensesViewController.newExpenseAdded(expense: expense)
             }
             
             myExpensesViewController.present(addNewExpensesVC, animated: true, completion: nil)

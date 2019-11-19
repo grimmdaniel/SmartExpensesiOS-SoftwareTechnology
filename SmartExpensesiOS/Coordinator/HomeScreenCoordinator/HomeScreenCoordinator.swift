@@ -42,14 +42,16 @@ class HomeScreenCoordinator: Coordinator {
             let addNewExpensesVC = AddNewExpenseViewController.instantiate()
             addNewExpensesVC.locationManager = LocationManager()
             addNewExpensesVC.viewModel = AddNewExpenseViewModel()
+            addNewExpensesVC.service = AddNewExpenseService()
             addNewExpensesVC.modalPresentationStyle = .overFullScreen
             
             addNewExpensesVC.closeScreenClosure = {
                 homeViewController.dismiss(animated: true)
             }
             
-            addNewExpensesVC.newExpenseCreated = {
+            addNewExpensesVC.newExpenseCreated = { (expense) in
                 homeViewController.dismiss(animated: true)
+                //TODO fixing expense 
             }
             
             homeViewController.present(addNewExpensesVC, animated: true, completion: nil)

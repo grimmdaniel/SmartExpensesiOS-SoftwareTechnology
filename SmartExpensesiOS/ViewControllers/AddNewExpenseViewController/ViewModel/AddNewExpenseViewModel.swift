@@ -14,16 +14,14 @@ class AddNewExpenseViewModel {
     var currentData: ExpenseMeta?
     var currentLocation: ExpenseLocation?
     
-    
     func generateJSON() -> [String:Any]? {
         guard let category = currentlySelectedCategory, let data = currentData, let location = currentLocation else { return nil }
-        //TODO fix key lattitude
         return [
             "title" : data.name,
             "private" : false,
             "currency" : "HUF",
             "value" : data.value,
-            "lattitude" : location.latitude,
+            "latitude" : location.latitude,
             "longitude" : location.longitude,
             "address" : location.address,
             "categoryID" : category.categoryID

@@ -11,7 +11,6 @@ import UIKit
 
 class WelcomeCoordiator: Coordinator {
     
-//    private let navigationController = UINavigationController()
     private let welcomeVC = WelcomeViewController.instantiate()
     
     var rootViewController: UIViewController {
@@ -19,8 +18,6 @@ class WelcomeCoordiator: Coordinator {
     }
     
     override func start() {
-        // Set Navigation Controller Delegate
-//        navigationController.delegate = self
         showWelcomeScreen()
     }
     
@@ -73,11 +70,5 @@ class WelcomeCoordiator: Coordinator {
             signUpVC.service = AuthorizationService()
             self?.welcomeVC.present(signUpVC, animated: true)
         }
-//        welcomeVC.viewModel = smth
-//        let welcomeVC = WelcomeViewController.instantiate()
-//
-//        //Viewmodel etc
-//
-//        navigationController.pushViewController(welcomeVC, animated: true)
     }
 }

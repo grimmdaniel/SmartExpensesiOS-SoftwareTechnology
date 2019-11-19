@@ -12,14 +12,19 @@ class MyExpensesViewController: UIViewController, StoryboardAble, AnimatableVC {
     
     @IBOutlet weak var myExpensesTableView: UITableView!
     var addNewExpenseClosure: (() -> Void)?
+    var refreshControl = UIRefreshControl()
+    var service: MyExpensensesService!
     
-    var isLoadingContent: Bool = true {
+    var expenses = [Expense]()
+    
+    var shouldLoadContent: Bool = true {
         didSet {
-            myExpensesTableView.reloadData()
-            if isLoadingContent {
-                startAnimation()
-            } else {
+            if !shouldLoadContent {
+                myExpensesTableView.reloadData()
+                refreshControl.endRefreshing()
                 stopAnimation()
+            } else {
+                myExpensesTableView.reloadData()
             }
         }
     }
@@ -44,17 +49,29 @@ class MyExpensesViewController: UIViewController, StoryboardAble, AnimatableVC {
         myExpensesTableView.delegate = self
         myExpensesTableView.dataSource = self
         myExpensesTableView.backgroundColor = .white
+        
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(refreshTableView), for: .valueChanged)
+        myExpensesTableView.addSubview(refreshControl)
+        
+        service.delegate = self
+    }
+    
+    @objc func refreshTableView() {
+        shouldLoadContent = true
+        service.fetchAllExpenses()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        startAnimation()
+        if self.isBeingPresented || self.isMovingToParent {
+            service.fetchAllExpenses()
+        }
     }
     
     private func setUpNavbar() {
         navigationController?.navigationBar.barTintColor = ColorTheme.primaryColor
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.navigationBar.tintColor = UIColor.white
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Animation", style: .plain, target: self, action: #selector(startStopAnimating(_:)))
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createNewExpense))
     }
     
@@ -62,15 +79,42 @@ class MyExpensesViewController: UIViewController, StoryboardAble, AnimatableVC {
         addNewExpenseClosure?()
     }
     
-    @objc func startStopAnimating(_ sender: UIBarButtonItem) {
-        isLoadingContent.toggle()
+    func newExpenseAdded(expense: Expense) {
+        expenses.insert(expense, at: 0)
+        myExpensesTableView.reloadData()
+    }
+}
+
+extension MyExpensesViewController: MyExpensesDelegate {
+    
+    func didStartFetchingExpenses() {
+        startAnimation()
+    }
+    
+    func didFinishFetchingExpenses(expenses: [Expense]) {
+        self.expenses = expenses
+        shouldLoadContent = false
+    }
+    
+    func didFailFetchingExpenses(error: NetworkError) {
+        shouldLoadContent = false
     }
 }
 
 extension MyExpensesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        if shouldLoadContent {
+            tableView.backgroundView = nil
+            return 10
+        } else {
+            if expenses.isEmpty {
+                tableView.showEmptyTableViewMessage(message: "We couldn't find any expenses to show. Pull to refresh...")
+            } else {
+                tableView.backgroundView = nil
+            }
+            return expenses.count
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -78,11 +122,12 @@ extension MyExpensesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if isLoadingContent {
+        if shouldLoadContent {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ContentLoadingCell.cellName) as? ContentLoadingCell else { return UITableViewCell() }
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ExpenseCell.cellName) as? ExpenseCell else { return UITableViewCell() }
+            cell.currentExpense = expenses[indexPath.section]
             return cell
         }
     }

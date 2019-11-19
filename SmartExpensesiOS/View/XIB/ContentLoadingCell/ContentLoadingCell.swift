@@ -30,5 +30,4 @@ class ContentLoadingCell: UITableViewCell {
         loadingText2View.backgroundColor = ColorTheme.loadingBackgroundColor
         loadingImageView.backgroundColor = ColorTheme.loadingBackgroundColor
     }
-    
 }

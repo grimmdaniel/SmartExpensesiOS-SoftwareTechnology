@@ -34,3 +34,9 @@
 "signInScreenPasswordPlaceholder" = "**********";
 "signInScreenPasswordLabel" = "Password";
 "signInScreenSignInButtonText" = "SIGN IN";
+
+//my expenses screen
+"myExpensesDeleteExpensePromptConfirmLabel" = "Confir";
+"myExpensesDeleteExpensePromptCancelLabel" = "Cancel";
+"myExpensesDeleteExpensePromptDelete" = "Delete";
+"myExpensesDeleteExpensePromptMessage" = "Are you sure want to delete this Expense?";

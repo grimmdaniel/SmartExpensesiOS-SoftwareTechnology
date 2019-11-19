@@ -34,3 +34,9 @@
 "signInScreenPasswordPlaceholder" = "**********";
 "signInScreenPasswordLabel" = "Jelszó";
 "signInScreenSignInButtonText" = "BEJELENTKEZÉS";
+
+//my expenses screen
+"myExpensesDeleteExpensePromptConfirmLabel" = "Megerősítés";
+"myExpensesDeleteExpensePromptCancelLabel" = "Mégsem";
+"myExpensesDeleteExpensePromptDelete" = "Törlés";
+"myExpensesDeleteExpensePromptMessage" = "Biztosan törölni szeretnéd ezt az Expense-t?";

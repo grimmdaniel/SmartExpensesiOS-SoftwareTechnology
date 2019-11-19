@@ -13,9 +13,9 @@ class MyExpensesViewController: UIViewController, StoryboardAble, AnimatableVC {
     @IBOutlet weak var myExpensesTableView: UITableView!
     var addNewExpenseClosure: (() -> Void)?
     var refreshControl = UIRefreshControl()
+    var activityIndicator = UIActivityIndicatorView()
     var service: MyExpensensesService!
-    
-    var expenses = [Expense]()
+    var viewModel: MyExpensesViewModel!
     
     var shouldLoadContent: Bool = true {
         didSet {
@@ -40,6 +40,13 @@ class MyExpensesViewController: UIViewController, StoryboardAble, AnimatableVC {
         super.viewDidLoad()
         
         setUpNavbar()
+        setUpTableView()
+        setUpActivityIndicator()
+        service.delegate = self
+        service.deletionDelegate = self
+    }
+    
+    private func setUpTableView() {
         let expenseNibObject = UINib.init(nibName: ExpenseCell.nibName, bundle: nil)
         myExpensesTableView.register(expenseNibObject, forCellReuseIdentifier: ExpenseCell.cellName)
         
@@ -53,8 +60,13 @@ class MyExpensesViewController: UIViewController, StoryboardAble, AnimatableVC {
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(refreshTableView), for: .valueChanged)
         myExpensesTableView.addSubview(refreshControl)
-        
-        service.delegate = self
+    }
+    
+    private func setUpActivityIndicator() {
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.style = UIActivityIndicatorView.Style.gray
+        self.view.addSubview(activityIndicator)
     }
     
     @objc func refreshTableView() {
@@ -80,7 +92,7 @@ class MyExpensesViewController: UIViewController, StoryboardAble, AnimatableVC {
     }
     
     func newExpenseAdded(expense: Expense) {
-        expenses.insert(expense, at: 0)
+        viewModel.addNewExpense(expense: expense)
         myExpensesTableView.reloadData()
     }
 }
@@ -92,12 +104,30 @@ extension MyExpensesViewController: MyExpensesDelegate {
     }
     
     func didFinishFetchingExpenses(expenses: [Expense]) {
-        self.expenses = expenses
+        viewModel.reloadDataSource(expenses: expenses)
         shouldLoadContent = false
     }
     
     func didFailFetchingExpenses(error: NetworkError) {
         shouldLoadContent = false
+    }
+}
+
+extension MyExpensesViewController: MyExpenseDeleteDelegate {
+    
+    func didStartDeleteExpense() {
+        activityIndicator.startAnimating()
+    }
+    
+    func didFinishDeleteExpense(expense: Expense) {
+        activityIndicator.stopAnimating()
+        if let index = viewModel.removeElement(element: expense) {
+            myExpensesTableView.deleteSections(IndexSet([index]), with: .fade)
+        }
+    }
+    
+    func didFailDeleteExpense(error: NetworkError) {
+        activityIndicator.stopAnimating()
     }
 }
 
@@ -108,12 +138,12 @@ extension MyExpensesViewController: UITableViewDelegate, UITableViewDataSource {
             tableView.backgroundView = nil
             return 10
         } else {
-            if expenses.isEmpty {
+            if viewModel.isEmptyExpenses {
                 tableView.showEmptyTableViewMessage(message: "We couldn't find any expenses to show. Pull to refresh...")
             } else {
                 tableView.backgroundView = nil
             }
-            return expenses.count
+            return viewModel.numberOfSections
         }
     }
     
@@ -127,7 +157,7 @@ extension MyExpensesViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ExpenseCell.cellName) as? ExpenseCell else { return UITableViewCell() }
-            cell.currentExpense = expenses[indexPath.section]
+            cell.currentExpense = viewModel.getElement(for: indexPath.section)
             return cell
         }
     }
@@ -135,4 +165,25 @@ extension MyExpensesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let currentExpense = viewModel.getElement(for: indexPath.section)
+            deletePressed(with: currentExpense)
+        }
+    }
+    
+    func deletePressed(with expense: Expense) {
+        let alertVC = UIAlertController(title: "myExpensesDeleteExpensePromptConfirmLabel".localized, message: "myExpensesDeleteExpensePromptMessage".localized, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "myExpensesDeleteExpensePromptCancelLabel".localized, style: .cancel, handler: nil))
+        alertVC.addAction(UIAlertAction(title: "myExpensesDeleteExpensePromptDelete".localized, style: .destructive, handler: { [weak self] (_) in
+            self?.service.deleteExpense(expense: expense)
+        }))
+        present(alertVC, animated: true, completion: nil)
+    }
+
 }

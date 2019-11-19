@@ -34,3 +34,9 @@
 "signInScreenPasswordPlaceholder" = "**********";
 "signInScreenPasswordLabel" = "Palavra-passe";
 "signInScreenSignInButtonText" = "INICIAR SESSÃO";
+
+//my expenses screen
+"myExpensesDeleteExpensePromptConfirmLabel" = "Confirmar";
+"myExpensesDeleteExpensePromptCancelLabel" = "Cancelar";
+"myExpensesDeleteExpensePromptDelete" = "Apagar";
+"myExpensesDeleteExpensePromptMessage" = "Tem certeza de que deseja apagar este Expense?";

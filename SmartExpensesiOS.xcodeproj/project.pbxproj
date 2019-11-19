@@ -84,6 +84,7 @@
 		0889DDD023507CF000E34AF2 /* WelcomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889DDCF23507CF000E34AF2 /* WelcomeModel.swift */; };
 		088E04E22384201E006F3F82 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E04E12384201E006F3F82 /* HomeViewModel.swift */; };
 		088E04E52384271C006F3F82 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 088E04E42384271C006F3F82 /* SDWebImage */; };
+		088E04E823845319006F3F82 /* MyExpensesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E04E723845319006F3F82 /* MyExpensesViewModel.swift */; };
 		08AF3C432368841200E5C185 /* ShimmerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3C422368841200E5C185 /* ShimmerAnimation.swift */; };
 		08AF3C47236885AE00E5C185 /* ContentLoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3C45236885AE00E5C185 /* ContentLoadingCell.swift */; };
 		08AF3C48236885AE00E5C185 /* ContentLoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08AF3C46236885AE00E5C185 /* ContentLoadingCell.xib */; };
@@ -184,6 +185,7 @@
 		0889DDCC23507C3200E34AF2 /* WelcomeViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerViewModel.swift; sourceTree = "<group>"; };
 		0889DDCF23507CF000E34AF2 /* WelcomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeModel.swift; sourceTree = "<group>"; };
 		088E04E12384201E006F3F82 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		088E04E723845319006F3F82 /* MyExpensesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExpensesViewModel.swift; sourceTree = "<group>"; };
 		08AF3C422368841200E5C185 /* ShimmerAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerAnimation.swift; sourceTree = "<group>"; };
 		08AF3C45236885AE00E5C185 /* ContentLoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentLoadingCell.swift; sourceTree = "<group>"; };
 		08AF3C46236885AE00E5C185 /* ContentLoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentLoadingCell.xib; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 		0830B6902358A26800A3AE9A /* MyExpensesViewController */ = {
 			isa = PBXGroup;
 			children = (
+				088E04E623845305006F3F82 /* ViewModel */,
 				084A1440237ACFA5009D142C /* Delegate */,
 				084A143D237ACD88009D142C /* Service */,
 				0830B6912358A27700A3AE9A /* View */,
@@ -652,6 +655,14 @@
 			isa = PBXGroup;
 			children = (
 				088E04E12384201E006F3F82 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		088E04E623845305006F3F82 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				088E04E723845319006F3F82 /* MyExpensesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -967,6 +978,7 @@
 				0830B6972358A2D600A3AE9A /* MyExpensesCoordinator.swift in Sources */,
 				084A1446237AFA5D009D142C /* ExpenseCurrency.swift in Sources */,
 				08AF3C432368841200E5C185 /* ShimmerAnimation.swift in Sources */,
+				088E04E823845319006F3F82 /* MyExpensesViewModel.swift in Sources */,
 				084E3689234DEB10008B7801 /* WelcomeViewController.swift in Sources */,
 				0889DDD023507CF000E34AF2 /* WelcomeModel.swift in Sources */,
 				081E296B2376CF4F00F95CF4 /* ExpenseLocation.swift in Sources */,

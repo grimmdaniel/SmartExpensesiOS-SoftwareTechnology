@@ -38,6 +38,7 @@ class MyExpensesCoordinator: Coordinator {
         
         let myExpensesViewController = MyExpensesViewController.instantiate()
         myExpensesViewController.service = MyExpensensesService()
+        myExpensesViewController.viewModel = MyExpensesViewModel()
         
         myExpensesViewController.addNewExpenseClosure = {
             let addNewExpensesVC = AddNewExpenseViewController.instantiate()

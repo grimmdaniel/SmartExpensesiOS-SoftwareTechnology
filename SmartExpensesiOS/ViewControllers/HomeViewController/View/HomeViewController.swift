@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class HomeViewController: UIViewController, StoryboardAble, AnimatableVC {
     
@@ -128,6 +129,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeRecommendationsTableViewCell.cellID, for: indexPath) as? HomeRecommendationsTableViewCell else { return UITableViewCell() }
                 cell.recommendations = viewModel.getRecommendations()
                 cell.recommendationsCollectionView.reloadData()
+                
+                cell.urlOpenClosure = { [weak self] (url) in
+                    let safariViewController = SFSafariViewController(url: url)
+                    self?.present(safariViewController, animated: true, completion: nil)
+                }
                 return cell
             } else {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: ExpenseCell.cellName) as? ExpenseCell else { return UITableViewCell() }

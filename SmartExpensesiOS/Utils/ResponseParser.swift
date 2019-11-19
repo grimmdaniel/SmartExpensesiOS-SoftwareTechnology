@@ -74,8 +74,10 @@ class ResponseParser {
     
     private func parseRecommendation(json: [String:Any]) -> Recommendation? {
         if let recommendationID = json["id"] as? Int {
-            if let imageURL = json["url"] as? String {
-                return Recommendation(id: recommendationID, imagePath: imageURL)
+            if let imageURL = json["imageUrl"] as? String {
+                if let websiteURL = json["websiteUrl"] as? String {
+                    return Recommendation(id: recommendationID, imagePath: imageURL, websiteURL: websiteURL)
+                }
             }
         }
         return nil

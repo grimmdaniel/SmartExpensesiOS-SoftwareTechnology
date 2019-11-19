@@ -12,4 +12,5 @@ struct Recommendation {
     
     let id: Int
     let imagePath: String
+    let websiteURL: String
 }

@@ -13,6 +13,9 @@ class HomeRecommendationsTableViewCell: UITableViewCell {
     static let cellID = "HomeRecommendationsTableViewCell"
     
     @IBOutlet weak var recommendationsCollectionView: UICollectionView!
+    
+    var recommendations = [Recommendation]()
+    
 }
 
 extension HomeRecommendationsTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -22,12 +25,12 @@ extension HomeRecommendationsTableViewCell: UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return recommendations.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeRecommendationCollectionViewCell.cellID, for: indexPath) as? HomeRecommendationCollectionViewCell else { return UICollectionViewCell() }
-        cell.recommendationImageView.image = UIImage(named: "dummy\(indexPath.item % 2).png")
+        cell.currentRecommendation = recommendations[indexPath.item]
         return cell
     }
     

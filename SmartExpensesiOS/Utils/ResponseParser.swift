@@ -26,6 +26,29 @@ class ResponseParser {
         return expensesToReturn
     }
     
+    func parseHomeScreenData(json: [String:Any]) -> ([Recommendation],[Expense]) {
+        var recommendations = [Recommendation]()
+        var expenses = [Expense]()
+        if let items = json["expenses"] as? [String:Any] {
+            if let expensesRaw = items["expenses"] as? [[String:Any]] {
+                for expenseRaw in expensesRaw {
+                    if let newExpense = parseExpenseRaw(expense: expenseRaw) {
+                        expenses.append(newExpense)
+                    }
+                }
+            }
+            
+            if let recommendationsRaw = items["images"] as? [[String:Any]] {
+                for recommendationRaw in recommendationsRaw {
+                    if let recommendation = parseRecommendation(json: recommendationRaw) {
+                        recommendations.append(recommendation)
+                    }
+                }
+            }
+        }
+        return (recommendations,expenses)
+    }
+    
     func parseExpense(json: [String:Any]) -> Expense? {
         if let expenseRaw = json["expense"] as? [String:Any] {
             let expense = parseExpenseRaw(expense: expenseRaw)
@@ -44,6 +67,15 @@ class ResponseParser {
                 let date = expense["date"] as? String ?? "1970-01-01 00:00:01"
                 let newExpense = Expense(id: expenseID, location: location, currency: currency, categoryID: categoryID, isPrivate: isPrivate, title: title, date: date)
                 return newExpense
+            }
+        }
+        return nil
+    }
+    
+    private func parseRecommendation(json: [String:Any]) -> Recommendation? {
+        if let recommendationID = json["id"] as? Int {
+            if let imageURL = json["url"] as? String {
+                return Recommendation(id: recommendationID, imagePath: imageURL)
             }
         }
         return nil

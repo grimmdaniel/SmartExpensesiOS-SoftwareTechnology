@@ -8,15 +8,30 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, StoryboardAble {
+class HomeViewController: UIViewController, StoryboardAble, AnimatableVC {
     
     @IBOutlet weak var mainTableView: UITableView!
-    
     var addNewExpenseClosure: (() -> Void)?
+    var refreshControl = UIRefreshControl()
+    var service: HomeViewControllerService!
+    var viewModel: HomeViewModel!
+    
+    var shouldLoadContent: Bool = true {
+        didSet {
+            if !shouldLoadContent {
+                mainTableView.reloadData()
+                refreshControl.endRefreshing()
+                stopAnimation()
+            } else {
+                mainTableView.reloadData()
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        service.delegate = self
         setUpNavbar()
         setUpTableView()
     }
@@ -26,6 +41,12 @@ class HomeViewController: UIViewController, StoryboardAble {
         
         title = "Home"
         tabBarItem.image = UIImage(named: "tabbar_0.png")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if self.isBeingPresented || self.isMovingToParent {
+            service.fetchRecentExpenses(number: UserDefaults.numberOfLatestSpendings)
+        }
     }
     
     private func setUpNavbar() {
@@ -39,34 +60,80 @@ class HomeViewController: UIViewController, StoryboardAble {
         let nibObject = UINib.init(nibName: ExpenseCell.nibName, bundle: nil)
         mainTableView.register(nibObject, forCellReuseIdentifier: ExpenseCell.cellName)
         
+        let contentLoadingNibObject = UINib.init(nibName: ContentLoadingCell.nibName, bundle: nil)
+        mainTableView.register(contentLoadingNibObject, forCellReuseIdentifier: ContentLoadingCell.cellName)
+        
         mainTableView.delegate = self
         mainTableView.dataSource = self
         mainTableView.backgroundColor = .white
         mainTableView.separatorStyle = .none
+        
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(refreshTableView), for: .valueChanged)
+        mainTableView.addSubview(refreshControl)
     }
     
     @objc func createNewExpense() {
         addNewExpenseClosure?()
+    }
+    
+    @objc func refreshTableView() {
+        shouldLoadContent = true
+        service.fetchRecentExpenses(number: UserDefaults.numberOfLatestSpendings)
+    }
+}
+
+extension HomeViewController: HomeDelegate {
+    
+    func didStartFetchingRecommendations() {
+        startAnimation()
+    }
+    
+    func didFinishFetchingRecommendations(recommendations: [Recommendation], expenses: [Expense]) {
+        viewModel.refreshDataSource(recommendations: recommendations, expenses: expenses)
+        shouldLoadContent = false
+    }
+    
+    func didFailFetchingRecommendations(error: NetworkError) {
+        shouldLoadContent = false
     }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1 + 10
+        if shouldLoadContent {
+            mainTableView.backgroundView = nil
+            return 10
+        } else {
+            if viewModel.isExpensesEmpty {
+                mainTableView.showEmptyTableViewMessage(message: "We couldn't find any expenses to show. Pull to refresh...")
+            } else {
+                mainTableView.backgroundView = nil
+            }
+            return viewModel.numberOfSections
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeRecommendationsTableViewCell.cellID, for: indexPath) as? HomeRecommendationsTableViewCell else { return UITableViewCell() }
+        if shouldLoadContent {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ContentLoadingCell.cellName) as? ContentLoadingCell else { return UITableViewCell() }
             return cell
         } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: ExpenseCell.cellName) as? ExpenseCell else { return UITableViewCell() }
-            return cell
+            if indexPath.section == 0 {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeRecommendationsTableViewCell.cellID, for: indexPath) as? HomeRecommendationsTableViewCell else { return UITableViewCell() }
+                cell.recommendations = viewModel.getRecommendations()
+                cell.recommendationsCollectionView.reloadData()
+                return cell
+            } else {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: ExpenseCell.cellName) as? ExpenseCell else { return UITableViewCell() }
+                cell.currentExpense = viewModel.getExpense(for: indexPath.section - 1)
+                return cell
+            }
         }
     }
     

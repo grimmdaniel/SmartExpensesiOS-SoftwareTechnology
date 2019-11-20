@@ -47,17 +47,21 @@ class SocialViewController: UIViewController, StoryboardAble {
         socialMapView.delegate = self
     }
     
+    @objc func refreshMap() {
+        service.fetchAllExpenseLocations()
+    }
+    
     private func setUpNavbar() {
         navigationController?.navigationBar.barTintColor = ColorTheme.primaryColor
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refreshMap))
     }
     
     private func addPinsToMap() {
         let allAnnotations = self.socialMapView.annotations
         self.socialMapView.removeAnnotations(allAnnotations)
-        for location in viewModel.expenseCoordinates {
-            socialMapView.addAnnotation(location)
-        }
+        self.socialMapView.addAnnotations(viewModel.expenseCoordinates)
     }
     
     private func setUpActivityIndicator() {

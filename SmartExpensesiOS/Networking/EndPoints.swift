@@ -17,4 +17,5 @@ enum EndPoints: String {
     case newExpense = "/expense/add"
     case recommendations = "/expense/recent"
     case deleteExpense = "/expense/delete"
+    case expenseLocations = "/expense/get-locations"
 }

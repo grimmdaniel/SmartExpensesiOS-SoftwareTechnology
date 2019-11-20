@@ -42,7 +42,7 @@ class MyExpensensesService {
         manager.performNetworkRequest(with: httpObject) { [weak self] (result) in
             DispatchQueue.main.async {
                 switch result {
-                case .success(_):
+                case .success:
                     self?.deletionDelegate?.didFinishDeleteExpense(expense: expense)
                 case .failure(let error):
                     self?.deletionDelegate?.didFailDeleteExpense(error: error)

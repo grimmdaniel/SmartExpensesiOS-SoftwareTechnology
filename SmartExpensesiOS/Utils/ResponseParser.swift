@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MapKit
 
 class ResponseParser {
     
@@ -24,6 +25,26 @@ class ResponseParser {
             }
         }
         return expensesToReturn
+    }
+    func parseExpenseLocations(json: [String:Any]) -> [CustomMKAnnotation] {
+        var locations = [CustomMKAnnotation]()
+        let category = Category()
+        if let locationsRaw = json["location"] as? [[String:Any]] {
+            for locationRaw in locationsRaw {
+                if let id = locationRaw["id"] as? Int {
+                    if let title = locationRaw["title"] as? String {
+                        if let latitude = locationRaw["latitude"] as? Double {
+                            if let longitude = locationRaw["longitude"] as? Double {
+                                if let categoryID = locationRaw["categoryID"] as? Int {
+                                    locations.append(CustomMKAnnotation(id: id, title: title, subtitle: category.getCategoryNameByIndex(index: categoryID), coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude)))
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return locations
     }
     
     func parseHomeScreenData(json: [String:Any]) -> ([Recommendation],[Expense]) {

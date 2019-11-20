@@ -85,6 +85,10 @@
 		088E04E22384201E006F3F82 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E04E12384201E006F3F82 /* HomeViewModel.swift */; };
 		088E04E52384271C006F3F82 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 088E04E42384271C006F3F82 /* SDWebImage */; };
 		088E04E823845319006F3F82 /* MyExpensesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E04E723845319006F3F82 /* MyExpensesViewModel.swift */; };
+		088E04EB23855D3D006F3F82 /* SocialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E04EA23855D3D006F3F82 /* SocialViewModel.swift */; };
+		088E04EE23855FFC006F3F82 /* SocialService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E04ED23855FFC006F3F82 /* SocialService.swift */; };
+		088E04F12385601B006F3F82 /* SocialDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E04F02385601B006F3F82 /* SocialDelegate.swift */; };
+		088E04F4238568C4006F3F82 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E04F3238568C4006F3F82 /* Category.swift */; };
 		08AF3C432368841200E5C185 /* ShimmerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3C422368841200E5C185 /* ShimmerAnimation.swift */; };
 		08AF3C47236885AE00E5C185 /* ContentLoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3C45236885AE00E5C185 /* ContentLoadingCell.swift */; };
 		08AF3C48236885AE00E5C185 /* ContentLoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08AF3C46236885AE00E5C185 /* ContentLoadingCell.xib */; };
@@ -186,6 +190,10 @@
 		0889DDCF23507CF000E34AF2 /* WelcomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeModel.swift; sourceTree = "<group>"; };
 		088E04E12384201E006F3F82 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		088E04E723845319006F3F82 /* MyExpensesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExpensesViewModel.swift; sourceTree = "<group>"; };
+		088E04EA23855D3D006F3F82 /* SocialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewModel.swift; sourceTree = "<group>"; };
+		088E04ED23855FFC006F3F82 /* SocialService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialService.swift; sourceTree = "<group>"; };
+		088E04F02385601B006F3F82 /* SocialDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialDelegate.swift; sourceTree = "<group>"; };
+		088E04F3238568C4006F3F82 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		08AF3C422368841200E5C185 /* ShimmerAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerAnimation.swift; sourceTree = "<group>"; };
 		08AF3C45236885AE00E5C185 /* ContentLoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentLoadingCell.swift; sourceTree = "<group>"; };
 		08AF3C46236885AE00E5C185 /* ContentLoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentLoadingCell.xib; sourceTree = "<group>"; };
@@ -667,6 +675,30 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		088E04E923855D23006F3F82 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				088E04EA23855D3D006F3F82 /* SocialViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		088E04EC23855FF0006F3F82 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				088E04ED23855FFC006F3F82 /* SocialService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		088E04EF2385600D006F3F82 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				088E04F02385601B006F3F82 /* SocialDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		08AF3C412368840000E5C185 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -711,6 +743,9 @@
 		08B43654235F39990046F326 /* SocialViewController */ = {
 			isa = PBXGroup;
 			children = (
+				088E04EF2385600D006F3F82 /* Delegate */,
+				088E04EC23855FF0006F3F82 /* Service */,
+				088E04E923855D23006F3F82 /* ViewModel */,
 				083661562365FF0D00A524B8 /* Model */,
 				08B43655235F39AC0046F326 /* View */,
 			);
@@ -798,6 +833,7 @@
 				08B436742361A9110046F326 /* Expense.swift */,
 				08C15357236C7ABF00DA4F60 /* UserCredential.swift */,
 				084A147323841C34009D142C /* Recommendation.swift */,
+				088E04F3238568C4006F3F82 /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -968,9 +1004,11 @@
 				085C609123477E2F00BA038C /* AppDelegate.swift in Sources */,
 				081E29682376CF3400F95CF4 /* LocationManagerProtocol.swift in Sources */,
 				08C1535F236C88B200DA4F60 /* SignUpViewModel.swift in Sources */,
+				088E04EB23855D3D006F3F82 /* SocialViewModel.swift in Sources */,
 				081E297323785E0B00F95CF4 /* AddNewExpenseViewModel.swift in Sources */,
 				084A147423841C34009D142C /* Recommendation.swift in Sources */,
 				082595EB236C9FE900FF9F23 /* NetworkManager.swift in Sources */,
+				088E04F4238568C4006F3F82 /* Category.swift in Sources */,
 				08AF3C47236885AE00E5C185 /* ContentLoadingCell.swift in Sources */,
 				084E3685234DE935008B7801 /* WelcomeCoordinator.swift in Sources */,
 				08C1535A236C80C200DA4F60 /* Regex.swift in Sources */,
@@ -996,6 +1034,7 @@
 				08B43661235F40AC0046F326 /* CurrencyRateViewController.swift in Sources */,
 				08B43657235F39BC0046F326 /* SocialViewController.swift in Sources */,
 				08B43665235F41AF0046F326 /* CurrencyRateCoordinator.swift in Sources */,
+				088E04EE23855FFC006F3F82 /* SocialService.swift in Sources */,
 				084A144C237B10ED009D142C /* AddNewExpenseDelegate.swift in Sources */,
 				08B4367123619CA00046F326 /* ExpenseCell.swift in Sources */,
 				0889DDC7234E7F2400E34AF2 /* SignInViewController.swift in Sources */,
@@ -1021,6 +1060,7 @@
 				082595E9236C9EE600FF9F23 /* HTTPObject.swift in Sources */,
 				0889DDCD23507C3200E34AF2 /* WelcomeViewControllerViewModel.swift in Sources */,
 				08B4364D235F35890046F326 /* ProfileSettingsViewController.swift in Sources */,
+				088E04F12385601B006F3F82 /* SocialDelegate.swift in Sources */,
 				08B436792361C0580046F326 /* NotificationConstants.swift in Sources */,
 				08B436752361A9110046F326 /* Expense.swift in Sources */,
 				084E367F234DE731008B7801 /* Coordinator.swift in Sources */,

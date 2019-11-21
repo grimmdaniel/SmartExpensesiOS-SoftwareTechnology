@@ -14,3 +14,10 @@ protocol MyExpensesDelegate: AnyObject {
     func didFinishFetchingExpenses(expenses: [Expense])
     func didFailFetchingExpenses(error: NetworkError)
 }
+
+protocol MyExpenseDeleteDelegate: AnyObject {
+    
+    func didStartDeleteExpense()
+    func didFinishDeleteExpense(expense: Expense)
+    func didFailDeleteExpense(error: NetworkError)
+}

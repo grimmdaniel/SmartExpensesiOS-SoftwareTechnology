@@ -14,19 +14,9 @@ class SocialViewController: UIViewController, StoryboardAble {
     
     let regionRadius: CLLocationDistance = 10000
     var locationManager = CLLocationManager()
-    
-    let dummyLocations = [
-        CLLocationCoordinate2D(latitude: 47.510843, longitude: 19.056809),
-        CLLocationCoordinate2D(latitude: 47.516612, longitude: 19.060531),
-        CLLocationCoordinate2D(latitude: 47.504205, longitude: 19.061497),
-        CLLocationCoordinate2D(latitude: 47.498718, longitude: 19.065756),
-        CLLocationCoordinate2D(latitude: 47.486829, longitude: 19.058600),
-        CLLocationCoordinate2D(latitude: 47.495840, longitude: 19.058235),
-        CLLocationCoordinate2D(latitude: 47.499587, longitude: 19.047914),
-        CLLocationCoordinate2D(latitude: 47.497007, longitude: 19.049684),
-        CLLocationCoordinate2D(latitude: 47.493912, longitude: 19.050253),
-        CLLocationCoordinate2D(latitude: 47.498834, longitude: 19.059606)
-    ]
+    var activityIndicator = UIActivityIndicatorView()
+    var viewModel: SocialViewModel!
+    var service: SocialService!
     
     @IBOutlet weak var socialMapView: MKMapView!
     @IBOutlet weak var myPositionButton: UIButton!
@@ -44,7 +34,12 @@ class SocialViewController: UIViewController, StoryboardAble {
         setUpNavbar()
         setUpMap()
         setUpLocationManager()
-        addPinsToMap()
+        setUpActivityIndicator()
+        service.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        service.fetchAllExpenseLocations()
     }
     
     private func setUpMap() {
@@ -52,16 +47,28 @@ class SocialViewController: UIViewController, StoryboardAble {
         socialMapView.delegate = self
     }
     
+    @objc func refreshMap() {
+        service.fetchAllExpenseLocations()
+    }
+    
     private func setUpNavbar() {
         navigationController?.navigationBar.barTintColor = ColorTheme.primaryColor
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refreshMap))
     }
     
     private func addPinsToMap() {
-        for coordinate in dummyLocations {
-            let marker = CustomMKAnnotation(title: "Test", subtitle: "subtitle", coordinate: coordinate)
-            socialMapView.addAnnotation(marker)
-        }
+        let allAnnotations = self.socialMapView.annotations
+        self.socialMapView.removeAnnotations(allAnnotations)
+        self.socialMapView.addAnnotations(viewModel.expenseCoordinates)
+    }
+    
+    private func setUpActivityIndicator() {
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.style = UIActivityIndicatorView.Style.gray
+        self.view.addSubview(activityIndicator)
     }
     
     private func setUpLocationManager() {
@@ -85,6 +92,23 @@ class SocialViewController: UIViewController, StoryboardAble {
 }
 
 extension SocialViewController: CLLocationManagerDelegate {}
+
+extension SocialViewController: SocialDelegate {
+    
+    func didStartFetchingExpenseLocations() {
+        activityIndicator.startAnimating()
+    }
+    
+    func didFinishFetchingExpenseLocations(locations: [CustomMKAnnotation]) {
+        viewModel.expenseCoordinates = locations
+        activityIndicator.stopAnimating()
+        addPinsToMap()
+    }
+    
+    func didFailFetchingExpenseLocations(error: NetworkError) {
+        activityIndicator.stopAnimating()
+    }
+}
 
 extension SocialViewController: MKMapViewDelegate {
     

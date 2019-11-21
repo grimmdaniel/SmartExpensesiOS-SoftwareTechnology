@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeRecommendationCollectionViewCell: UICollectionViewCell {
     
@@ -14,6 +15,16 @@ class HomeRecommendationCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var recommendationImageView: UIImageView!
     @IBOutlet weak var shadowView: UIView!
+    
+    var currentRecommendation: Recommendation! {
+        didSet {
+            if let url = URL(string: currentRecommendation.imagePath) {
+                recommendationImageView.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder.png"))
+            } else {
+                recommendationImageView.image = UIImage(named: "placeholder.png")
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

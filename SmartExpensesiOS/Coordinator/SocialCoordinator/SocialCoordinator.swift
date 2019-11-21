@@ -37,6 +37,8 @@ class SocialCoordianator: Coordinator {
     private func showSocialScreen() {
         
         let socialViewController = SocialViewController.instantiate()
+        socialViewController.viewModel = SocialViewModel()
+        socialViewController.service = SocialService()
         navigationController.pushViewController(socialViewController, animated: true)
     }
 }

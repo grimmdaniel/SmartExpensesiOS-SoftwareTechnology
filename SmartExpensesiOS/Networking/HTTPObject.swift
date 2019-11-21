@@ -31,4 +31,11 @@ class HTTPObject {
         self.httpHeader = httpHeader
         self.httpBody = httpBody
     }
+    
+    init(type: HTTPMethod, endpoint: EndPoints, urlParameter: Int, httpHeader: [String:String], httpBody: [String:Any]) {
+        self.type = type
+        self.urlString = HTTPObject.rootURL + endpoint.rawValue + "/\(urlParameter)"
+        self.httpHeader = httpHeader
+        self.httpBody = httpBody
+    }
 }

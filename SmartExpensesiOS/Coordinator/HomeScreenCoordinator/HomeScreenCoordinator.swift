@@ -56,6 +56,10 @@ class HomeScreenCoordinator: Coordinator {
             
             homeViewController.present(addNewExpensesVC, animated: true, completion: nil)
         }
+        
+        homeViewController.viewModel = HomeViewModel()
+        homeViewController.service = HomeViewControllerService()
+        
         navigationController.pushViewController(homeViewController, animated: true)
     }
 }

@@ -58,6 +58,7 @@ public extension UserDefaults {
         
         static let token = "API_KEY"
         static let userName = "USER_EMAIL"
+        static let numberOfLatestSpendings = "NUMBER_OF_LATEST_SPENDINGS"
     }
     
     static var APIKEY: String? {
@@ -77,6 +78,17 @@ public extension UserDefaults {
         }
         set {
             UserDefaults.standard.set(newValue, forKey: Keys.userName)
+        }
+    }
+    
+    static var numberOfLatestSpendings: Int {
+        get {
+            let number = UserDefaults.standard.integer(forKey: Keys.numberOfLatestSpendings)
+            if number <= 10 && number >= 5 { return number }
+            return 5
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Keys.numberOfLatestSpendings)
         }
     }
     

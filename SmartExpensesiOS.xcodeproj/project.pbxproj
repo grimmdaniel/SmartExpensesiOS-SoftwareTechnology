@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		080429482364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080429472364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift */; };
-		080429492364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080429472364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift */; };
 		080D80952372D05A00F7B32A /* LogoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80942372D05A00F7B32A /* LogoutDelegate.swift */; };
 		080D80982372D08200F7B32A /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80972372D08200F7B32A /* LogoutService.swift */; };
 		081E29612374225B00F95CF4 /* AddNewExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */; };
@@ -19,9 +18,7 @@
 		081E296B2376CF4F00F95CF4 /* ExpenseLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E296A2376CF4F00F95CF4 /* ExpenseLocation.swift */; };
 		081E296C2376CF4F00F95CF4 /* ExpenseLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E296A2376CF4F00F95CF4 /* ExpenseLocation.swift */; };
 		081E296F2376E9A600F95CF4 /* SelectExpenseCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E296E2376E9A600F95CF4 /* SelectExpenseCategoryVC.swift */; };
-		081E29702376E9A600F95CF4 /* SelectExpenseCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E296E2376E9A600F95CF4 /* SelectExpenseCategoryVC.swift */; };
 		081E297323785E0B00F95CF4 /* AddNewExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E297223785E0B00F95CF4 /* AddNewExpenseViewModel.swift */; };
-		081E297423785E0B00F95CF4 /* AddNewExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E297223785E0B00F95CF4 /* AddNewExpenseViewModel.swift */; };
 		081E297F23786C6000F95CF4 /* HTTPObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595E8236C9EE600FF9F23 /* HTTPObject.swift */; };
 		081E298023786C6C00F95CF4 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595E2236C9E6600FF9F23 /* HTTPMethod.swift */; };
 		081E298123786C8500F95CF4 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082595E4236C9E7F00FF9F23 /* EndPoints.swift */; };
@@ -64,7 +61,6 @@
 		084A144C237B10ED009D142C /* AddNewExpenseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084A144B237B10ED009D142C /* AddNewExpenseDelegate.swift */; };
 		084A146F238413E7009D142C /* HomeViewControllerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084A146E238413E7009D142C /* HomeViewControllerService.swift */; };
 		084A1472238414E2009D142C /* HomeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084A1471238414E2009D142C /* HomeDelegate.swift */; };
-		084A147423841C34009D142C /* Recommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084A147323841C34009D142C /* Recommendation.swift */; };
 		084E367F234DE731008B7801 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E367E234DE731008B7801 /* Coordinator.swift */; };
 		084E3683234DE90F008B7801 /* StoryboardAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E3682234DE90F008B7801 /* StoryboardAble.swift */; };
 		084E3685234DE935008B7801 /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E3684234DE935008B7801 /* WelcomeCoordinator.swift */; };
@@ -77,7 +73,6 @@
 		0883DEA0236489E600E91AF5 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883DE9F236489E600E91AF5 /* LoginService.swift */; };
 		0883DEA1236489E600E91AF5 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883DE9F236489E600E91AF5 /* LoginService.swift */; };
 		0883DEA4236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883DEA3236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift */; };
-		0883DEA5236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883DEA3236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift */; };
 		0889DDC7234E7F2400E34AF2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889DDC6234E7F2400E34AF2 /* SignInViewController.swift */; };
 		0889DDCA234E87C600E34AF2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889DDC9234E87C600E34AF2 /* SignUpViewController.swift */; };
 		0889DDCD23507C3200E34AF2 /* WelcomeViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0889DDCC23507C3200E34AF2 /* WelcomeViewControllerViewModel.swift */; };
@@ -89,6 +84,8 @@
 		088E04EE23855FFC006F3F82 /* SocialService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E04ED23855FFC006F3F82 /* SocialService.swift */; };
 		088E04F12385601B006F3F82 /* SocialDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E04F02385601B006F3F82 /* SocialDelegate.swift */; };
 		088E04F4238568C4006F3F82 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E04F3238568C4006F3F82 /* Category.swift */; };
+		088E04F62386063B006F3F82 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 088E04F52386063B006F3F82 /* SDWebImage */; };
+		088E04F723860657006F3F82 /* Recommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084A147323841C34009D142C /* Recommendation.swift */; };
 		08AF3C432368841200E5C185 /* ShimmerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3C422368841200E5C185 /* ShimmerAnimation.swift */; };
 		08AF3C47236885AE00E5C185 /* ContentLoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AF3C45236885AE00E5C185 /* ContentLoadingCell.swift */; };
 		08AF3C48236885AE00E5C185 /* ContentLoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08AF3C46236885AE00E5C185 /* ContentLoadingCell.xib */; };
@@ -96,9 +93,7 @@
 		08B4364D235F35890046F326 /* ProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4364C235F35890046F326 /* ProfileSettingsViewController.swift */; };
 		08B43651235F35ED0046F326 /* ProfileSettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B43650235F35ED0046F326 /* ProfileSettingsCoordinator.swift */; };
 		08B43657235F39BC0046F326 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B43656235F39BC0046F326 /* SocialViewController.swift */; };
-		08B43658235F39BC0046F326 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B43656235F39BC0046F326 /* SocialViewController.swift */; };
 		08B4365B235F39F40046F326 /* SocialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4365A235F39F40046F326 /* SocialCoordinator.swift */; };
-		08B4365C235F39F40046F326 /* SocialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4365A235F39F40046F326 /* SocialCoordinator.swift */; };
 		08B43661235F40AC0046F326 /* CurrencyRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B43660235F40AC0046F326 /* CurrencyRateViewController.swift */; };
 		08B43662235F40AC0046F326 /* CurrencyRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B43660235F40AC0046F326 /* CurrencyRateViewController.swift */; };
 		08B43665235F41AF0046F326 /* CurrencyRateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B43664235F41AF0046F326 /* CurrencyRateCoordinator.swift */; };
@@ -237,6 +232,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				088E04F62386063B006F3F82 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -900,6 +896,9 @@
 				085C60A323477E3000BA038C /* PBXTargetDependency */,
 			);
 			name = SmartExpensesiOSTests;
+			packageProductDependencies = (
+				088E04F52386063B006F3F82 /* SDWebImage */,
+			);
 			productName = SmartExpensesiOSTests;
 			productReference = 085C60A123477E3000BA038C /* SmartExpensesiOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -1006,7 +1005,6 @@
 				08C1535F236C88B200DA4F60 /* SignUpViewModel.swift in Sources */,
 				088E04EB23855D3D006F3F82 /* SocialViewModel.swift in Sources */,
 				081E297323785E0B00F95CF4 /* AddNewExpenseViewModel.swift in Sources */,
-				084A147423841C34009D142C /* Recommendation.swift in Sources */,
 				082595EB236C9FE900FF9F23 /* NetworkManager.swift in Sources */,
 				088E04F4238568C4006F3F82 /* Category.swift in Sources */,
 				08AF3C47236885AE00E5C185 /* ContentLoadingCell.swift in Sources */,
@@ -1018,6 +1016,7 @@
 				08AF3C432368841200E5C185 /* ShimmerAnimation.swift in Sources */,
 				088E04E823845319006F3F82 /* MyExpensesViewModel.swift in Sources */,
 				084E3689234DEB10008B7801 /* WelcomeViewController.swift in Sources */,
+				088E04F723860657006F3F82 /* Recommendation.swift in Sources */,
 				0889DDD023507CF000E34AF2 /* WelcomeModel.swift in Sources */,
 				081E296B2376CF4F00F95CF4 /* ExpenseLocation.swift in Sources */,
 				08B43651235F35ED0046F326 /* ProfileSettingsCoordinator.swift in Sources */,
@@ -1078,18 +1077,12 @@
 				082595F5236F11F300FF9F23 /* TestSignInViewController.swift in Sources */,
 				081E2966237575E700F95CF4 /* LocationManager.swift in Sources */,
 				081E298B23786E9D00F95CF4 /* ShimmerAnimation.swift in Sources */,
-				081E297423785E0B00F95CF4 /* AddNewExpenseViewModel.swift in Sources */,
-				08B4365C235F39F40046F326 /* SocialCoordinator.swift in Sources */,
 				082595FA236F196900FF9F23 /* ColorTheme.swift in Sources */,
-				08B43658235F39BC0046F326 /* SocialViewController.swift in Sources */,
 				08B4367A2361C0580046F326 /* NotificationConstants.swift in Sources */,
 				081E296C2376CF4F00F95CF4 /* ExpenseLocation.swift in Sources */,
 				081E299123786EDF00F95CF4 /* WelcomeImageCell.swift in Sources */,
-				080429492364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift in Sources */,
-				081E29702376E9A600F95CF4 /* SelectExpenseCategoryVC.swift in Sources */,
 				08B43666235F41AF0046F326 /* CurrencyRateCoordinator.swift in Sources */,
 				081E29692376CF3400F95CF4 /* LocationManagerProtocol.swift in Sources */,
-				0883DEA5236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift in Sources */,
 				082595F9236F195A00FF9F23 /* ContentLoadingCell.swift in Sources */,
 				081E298A23786E6A00F95CF4 /* FakeLoginService.swift in Sources */,
 				082595F8236F194A00FF9F23 /* StoryboardAble.swift in Sources */,
@@ -1399,6 +1392,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		088E04E42384271C006F3F82 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 088E04E32384271C006F3F82 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		088E04F52386063B006F3F82 /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 088E04E32384271C006F3F82 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;

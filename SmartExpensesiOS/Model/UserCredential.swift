@@ -12,10 +12,10 @@ struct UserCredential {
     
     let email: String
     private let password: String
+    private let encriptor: EncodablePass = SHA256Encoder()
     
     var encodedPassword: String {
-        //TODO
-        return password
+        return encriptor.encodePass(password: password)
     }
     
     init(email: String, password: String) {

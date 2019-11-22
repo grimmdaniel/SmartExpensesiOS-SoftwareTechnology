@@ -10,8 +10,6 @@ import Foundation
 
 class SignUpViewModel {
     
-    private let encriptor: EncodablePass = SHA256Encoder()
-    
     func validateEmailAddress(email: String) -> String? {
         let trimmedEmail = email.trimmed
         if trimmedEmail == "" { return nil }
@@ -26,9 +24,4 @@ class SignUpViewModel {
         if Regex.isValidPassword(password: password) { return trimmedPassword }
         return nil
     }
-    
-    func encryptPass(pass: String) -> String {
-        return encriptor.encodePass(password: pass)
-    }
-    
 }

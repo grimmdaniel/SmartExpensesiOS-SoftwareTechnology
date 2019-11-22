@@ -51,7 +51,8 @@ class HomeScreenCoordinator: Coordinator {
             
             addNewExpensesVC.newExpenseCreated = { (expense) in
                 homeViewController.dismiss(animated: true)
-                //TODO fixing expense 
+                homeViewController.viewModel.addNewExpense(expense: expense)
+                homeViewController.mainTableView.reloadData()
             }
             
             homeViewController.present(addNewExpensesVC, animated: true, completion: nil)

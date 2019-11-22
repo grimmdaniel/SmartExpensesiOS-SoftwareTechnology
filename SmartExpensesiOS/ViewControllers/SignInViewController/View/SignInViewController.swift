@@ -98,8 +98,8 @@ class SignInViewController: UIViewController, StoryboardAble {
             showErrorPopUp(title: "Warning", message: "Password has to contain at least 8 characters, with one capitalized letter, and a number.")
             return nil
         }
-        
-        return UserCredential(email: email,password: password)
+        let encryptedPassword = viewModel.encryptPass(pass: password)
+        return UserCredential(email: email,password: encryptedPassword)
     }
     
     @IBAction func closeScreenButtonPressed(_ sender: UIButton) {

@@ -25,6 +25,7 @@ class ExpenseCell: UITableViewCell {
             expenseNameLabel.text = currentExpense.title
             expensePlaceLabel.text = currentExpense.location.address
             expensePriceLabel.text = currentExpense.currency.formattedPrice
+            expenseCategoryLogo.image = Category().getCategoryImageByIndex(index: currentExpense.categoryID)
         }
     }
     

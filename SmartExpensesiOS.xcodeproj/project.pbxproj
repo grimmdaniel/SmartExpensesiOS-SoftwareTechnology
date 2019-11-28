@@ -10,6 +10,7 @@
 		080429482364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080429472364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift */; };
 		0809A8D02387DB21000BD7B4 /* EncodeAblePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8CF2387DB21000BD7B4 /* EncodeAblePass.swift */; };
 		0809A8D22387DB95000BD7B4 /* SHA256Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8D12387DB95000BD7B4 /* SHA256Encoder.swift */; };
+		0809A8D6238FC227000BD7B4 /* DetailedExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8D5238FC227000BD7B4 /* DetailedExpenseViewController.swift */; };
 		080D80952372D05A00F7B32A /* LogoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80942372D05A00F7B32A /* LogoutDelegate.swift */; };
 		080D80982372D08200F7B32A /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80972372D08200F7B32A /* LogoutService.swift */; };
 		081E29612374225B00F95CF4 /* AddNewExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */; };
@@ -131,6 +132,7 @@
 		080429472364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendationCollectionViewCell.swift; sourceTree = "<group>"; };
 		0809A8CF2387DB21000BD7B4 /* EncodeAblePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodeAblePass.swift; sourceTree = "<group>"; };
 		0809A8D12387DB95000BD7B4 /* SHA256Encoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA256Encoder.swift; sourceTree = "<group>"; };
+		0809A8D5238FC227000BD7B4 /* DetailedExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedExpenseViewController.swift; sourceTree = "<group>"; };
 		080D80942372D05A00F7B32A /* LogoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutDelegate.swift; sourceTree = "<group>"; };
 		080D80972372D08200F7B32A /* LogoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutService.swift; sourceTree = "<group>"; };
 		081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewExpenseViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +252,22 @@
 				0809A8D12387DB95000BD7B4 /* SHA256Encoder.swift */,
 			);
 			path = Security;
+			sourceTree = "<group>";
+		};
+		0809A8D3238FC1F6000BD7B4 /* DetailedExpenseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0809A8D4238FC209000BD7B4 /* View */,
+			);
+			path = DetailedExpenseViewController;
+			sourceTree = "<group>";
+		};
+		0809A8D4238FC209000BD7B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0809A8D5238FC227000BD7B4 /* DetailedExpenseViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		081E295E2374223700F95CF4 /* AddNewExpenseViewController */ = {
@@ -514,6 +532,7 @@
 		084E3686234DEAF1008B7801 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0809A8D3238FC1F6000BD7B4 /* DetailedExpenseViewController */,
 				081E295E2374223700F95CF4 /* AddNewExpenseViewController */,
 				08FC1ADA23590AFB00C988AA /* TabbarController */,
 				08B4365E235F3E750046F326 /* CurrencyRateViewController */,
@@ -1014,6 +1033,7 @@
 				084A143F237ACF7F009D142C /* MyExpensensesService.swift in Sources */,
 				083661582365FF2700A524B8 /* CustomMKAnnotation.swift in Sources */,
 				081E29612374225B00F95CF4 /* AddNewExpenseViewController.swift in Sources */,
+				0809A8D6238FC227000BD7B4 /* DetailedExpenseViewController.swift in Sources */,
 				085C609123477E2F00BA038C /* AppDelegate.swift in Sources */,
 				081E29682376CF3400F95CF4 /* LocationManagerProtocol.swift in Sources */,
 				08C1535F236C88B200DA4F60 /* SignUpViewModel.swift in Sources */,

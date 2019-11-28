@@ -40,6 +40,12 @@ class MyExpensesCoordinator: Coordinator {
         myExpensesViewController.service = MyExpensensesService()
         myExpensesViewController.viewModel = MyExpensesViewModel()
         
+        myExpensesViewController.openDetailedViewClosure = { [weak self] (expense) in
+            let detailedExpenseVC = DetailedExpenseViewController.instantiate()
+            detailedExpenseVC.currentExpense = expense
+            self?.navigationController.pushViewController(detailedExpenseVC, animated: true)
+        }
+        
         myExpensesViewController.addNewExpenseClosure = {
             let addNewExpensesVC = AddNewExpenseViewController.instantiate()
             addNewExpensesVC.locationManager = LocationManager()

@@ -12,6 +12,7 @@ class MyExpensesViewController: UIViewController, StoryboardAble, AnimatableVC {
     
     @IBOutlet weak var myExpensesTableView: UITableView!
     var addNewExpenseClosure: (() -> Void)?
+    var openDetailedViewClosure: ((Expense) -> Void)?
     var refreshControl = UIRefreshControl()
     var activityIndicator = UIActivityIndicatorView()
     var service: MyExpensensesService!
@@ -160,6 +161,11 @@ extension MyExpensesViewController: UITableViewDelegate, UITableViewDataSource {
             cell.currentExpense = viewModel.getElement(for: indexPath.section)
             return cell
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedExpense = viewModel.getElement(for: indexPath.section)
+        openDetailedViewClosure?(selectedExpense)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -927,7 +927,7 @@
                                         </constraints>
                                     </view>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Nd-ms-U8s">
-                                        <rect key="frame" x="38" y="100" width="300" height="467"/>
+                                        <rect key="frame" x="37.5" y="100" width="300" height="467"/>
                                     </containerView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1142,7 +1142,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWX-vw-MB1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2901" y="689"/>
+            <point key="canvasLocation" x="3564" y="690"/>
+        </scene>
+        <!--Detailed Expense View Controller-->
+        <scene sceneID="Nm7-F2-BLI">
+            <objects>
+                <viewController storyboardIdentifier="DetailedExpenseViewController" id="D9H-iE-YwU" customClass="DetailedExpenseViewController" customModule="SmartExpensesiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cGq-ij-KAT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8e-FH-id6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="m8e-FH-id6" firstAttribute="top" secondItem="XCc-ZQ-B1G" secondAttribute="top" id="O9G-OW-GAv"/>
+                            <constraint firstItem="m8e-FH-id6" firstAttribute="leading" secondItem="XCc-ZQ-B1G" secondAttribute="leading" id="fcm-G2-xnv"/>
+                            <constraint firstItem="m8e-FH-id6" firstAttribute="trailing" secondItem="XCc-ZQ-B1G" secondAttribute="trailing" id="lxw-cp-LiE"/>
+                            <constraint firstItem="m8e-FH-id6" firstAttribute="bottom" secondItem="XCc-ZQ-B1G" secondAttribute="bottom" id="pfz-Ib-WKw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XCc-ZQ-B1G"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailedExpenseMapView" destination="m8e-FH-id6" id="u42-Cq-6p2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TXg-ct-f2r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2901.5999999999999" y="689.5052473763119"/>
         </scene>
         <!--My Expenses View Controller-->
         <scene sceneID="kMc-i0-0OB">
@@ -1268,6 +1297,7 @@
                             <constraint firstAttribute="trailing" secondItem="XmK-0M-cjC" secondAttribute="trailing" id="taI-ty-GYv"/>
                             <constraint firstItem="XmK-0M-cjC" firstAttribute="top" secondItem="8n1-Ki-nhI" secondAttribute="top" id="uVT-Q7-k8I"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="2uC-rB-tgj"/>
                     </view>
                     <connections>
                         <outlet property="categoryTableView" destination="cCa-ap-EkI" id="k5T-Hm-kGV"/>

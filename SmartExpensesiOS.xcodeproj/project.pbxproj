@@ -11,6 +11,8 @@
 		0809A8D02387DB21000BD7B4 /* EncodeAblePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8CF2387DB21000BD7B4 /* EncodeAblePass.swift */; };
 		0809A8D22387DB95000BD7B4 /* SHA256Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8D12387DB95000BD7B4 /* SHA256Encoder.swift */; };
 		0809A8D6238FC227000BD7B4 /* DetailedExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8D5238FC227000BD7B4 /* DetailedExpenseViewController.swift */; };
+		0809A8DA238FCE1C000BD7B4 /* SlideUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8D8238FCE1C000BD7B4 /* SlideUpVC.swift */; };
+		0809A8DB238FCE1C000BD7B4 /* SlideUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0809A8D9238FCE1C000BD7B4 /* SlideUpVC.xib */; };
 		080D80952372D05A00F7B32A /* LogoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80942372D05A00F7B32A /* LogoutDelegate.swift */; };
 		080D80982372D08200F7B32A /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80972372D08200F7B32A /* LogoutService.swift */; };
 		081E29612374225B00F95CF4 /* AddNewExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */; };
@@ -133,6 +135,8 @@
 		0809A8CF2387DB21000BD7B4 /* EncodeAblePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodeAblePass.swift; sourceTree = "<group>"; };
 		0809A8D12387DB95000BD7B4 /* SHA256Encoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA256Encoder.swift; sourceTree = "<group>"; };
 		0809A8D5238FC227000BD7B4 /* DetailedExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedExpenseViewController.swift; sourceTree = "<group>"; };
+		0809A8D8238FCE1C000BD7B4 /* SlideUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpVC.swift; sourceTree = "<group>"; };
+		0809A8D9238FCE1C000BD7B4 /* SlideUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideUpVC.xib; sourceTree = "<group>"; };
 		080D80942372D05A00F7B32A /* LogoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutDelegate.swift; sourceTree = "<group>"; };
 		080D80972372D08200F7B32A /* LogoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutService.swift; sourceTree = "<group>"; };
 		081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewExpenseViewController.swift; sourceTree = "<group>"; };
@@ -265,9 +269,19 @@
 		0809A8D4238FC209000BD7B4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0809A8D7238FCDFA000BD7B4 /* SlideUpVC */,
 				0809A8D5238FC227000BD7B4 /* DetailedExpenseViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0809A8D7238FCDFA000BD7B4 /* SlideUpVC */ = {
+			isa = PBXGroup;
+			children = (
+				0809A8D8238FCE1C000BD7B4 /* SlideUpVC.swift */,
+				0809A8D9238FCE1C000BD7B4 /* SlideUpVC.xib */,
+			);
+			path = SlideUpVC;
 			sourceTree = "<group>";
 		};
 		081E295E2374223700F95CF4 /* AddNewExpenseViewController */ = {
@@ -989,6 +1003,7 @@
 				08D5244A23539D5D001BB6FF /* Localizable.strings in Resources */,
 				085C609823477E3000BA038C /* Assets.xcassets in Resources */,
 				08B4366D23619C3E0046F326 /* ExpenseCell.xib in Resources */,
+				0809A8DB238FCE1C000BD7B4 /* SlideUpVC.xib in Resources */,
 				085C609623477E2F00BA038C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1054,6 +1069,7 @@
 				0889DDD023507CF000E34AF2 /* WelcomeModel.swift in Sources */,
 				081E296B2376CF4F00F95CF4 /* ExpenseLocation.swift in Sources */,
 				08B43651235F35ED0046F326 /* ProfileSettingsCoordinator.swift in Sources */,
+				0809A8DA238FCE1C000BD7B4 /* SlideUpVC.swift in Sources */,
 				080D80952372D05A00F7B32A /* LogoutDelegate.swift in Sources */,
 				084A1449237B0F4A009D142C /* AddNewExpenseService.swift in Sources */,
 				082595F0236D90DF00FF9F23 /* SignInViewModel.swift in Sources */,

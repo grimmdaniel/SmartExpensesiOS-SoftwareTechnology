@@ -10,7 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SlideUpVC" customModule="SmartExpensesiOS" customModuleProvider="target">
             <connections>
+                <outlet property="dataTableView" destination="tNa-sd-RIC" id="CK3-rt-yot"/>
                 <outlet property="handleView" destination="mPc-dO-9qg" id="VXC-Zx-FSD"/>
+                <outlet property="titleLabel" destination="cYj-lk-IAT" id="c4d-DV-2fh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -40,7 +42,52 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tj-DJ-eb3">
                     <rect key="frame" x="0.0" y="60" width="375" height="390"/>
-                    <color key="backgroundColor" red="0.14117647059999999" green="0.66666666669999997" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Yd-xo-BcS">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                            <color key="backgroundColor" red="0.85490196080000003" green="0.87450980389999999" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="EKz-4U-GtE"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7OD-B9-BsT">
+                            <rect key="frame" x="0.0" y="71" width="375" height="319"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tNa-sd-RIC">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="319"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </tableView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="tNa-sd-RIC" secondAttribute="trailing" id="2Wc-7X-sGT"/>
+                                <constraint firstItem="tNa-sd-RIC" firstAttribute="top" secondItem="7OD-B9-BsT" secondAttribute="top" id="UHP-Zs-MAe"/>
+                                <constraint firstItem="tNa-sd-RIC" firstAttribute="leading" secondItem="7OD-B9-BsT" secondAttribute="leading" id="cTP-Xn-MgL"/>
+                                <constraint firstAttribute="bottom" secondItem="tNa-sd-RIC" secondAttribute="bottom" id="mQS-HH-Ifj"/>
+                            </constraints>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYj-lk-IAT">
+                            <rect key="frame" x="0.0" y="1" width="375" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="hJj-U6-4cE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="9Yd-xo-BcS" secondAttribute="trailing" id="3C5-zw-bSt"/>
+                        <constraint firstItem="cYj-lk-IAT" firstAttribute="top" secondItem="9Yd-xo-BcS" secondAttribute="bottom" id="DGI-Rp-LWb"/>
+                        <constraint firstAttribute="bottom" secondItem="7OD-B9-BsT" secondAttribute="bottom" id="GR2-vG-bsz"/>
+                        <constraint firstItem="9Yd-xo-BcS" firstAttribute="leading" secondItem="3tj-DJ-eb3" secondAttribute="leading" id="Inf-Im-q3G"/>
+                        <constraint firstItem="9Yd-xo-BcS" firstAttribute="top" secondItem="3tj-DJ-eb3" secondAttribute="top" id="aNo-Je-vt0"/>
+                        <constraint firstItem="cYj-lk-IAT" firstAttribute="leading" secondItem="3tj-DJ-eb3" secondAttribute="leading" id="brO-F8-dbS"/>
+                        <constraint firstAttribute="trailing" secondItem="cYj-lk-IAT" secondAttribute="trailing" id="dfp-4L-Ene"/>
+                        <constraint firstAttribute="trailing" secondItem="7OD-B9-BsT" secondAttribute="trailing" id="pAl-TE-dL1"/>
+                        <constraint firstItem="7OD-B9-BsT" firstAttribute="leading" secondItem="3tj-DJ-eb3" secondAttribute="leading" id="tVn-x2-1hS"/>
+                        <constraint firstItem="7OD-B9-BsT" firstAttribute="top" secondItem="cYj-lk-IAT" secondAttribute="bottom" id="wX1-v6-OnT"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

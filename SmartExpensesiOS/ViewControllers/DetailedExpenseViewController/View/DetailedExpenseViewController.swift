@@ -28,7 +28,7 @@ class DetailedExpenseViewController: UIViewController, StoryboardAble {
     var cardViewController: SlideUpVC!
     
     // Variable for effects visual effect view
-    var visualEffectView:UIVisualEffectView!
+    var visualEffectView: UIVisualEffectView!
     
     // Starting and end card heights will be determined later
     var endCardHeight: CGFloat = 0
@@ -39,7 +39,7 @@ class DetailedExpenseViewController: UIViewController, StoryboardAble {
 
     // Empty property animator array
     var runningAnimations = [UIViewPropertyAnimator]()
-    var animationProgressWhenInterrupted:CGFloat = 0
+    var animationProgressWhenInterrupted: CGFloat = 0
     
     @IBOutlet weak var detailedExpenseMapView: MKMapView!
 
@@ -65,6 +65,7 @@ class DetailedExpenseViewController: UIViewController, StoryboardAble {
 
         // Add CardViewController xib to the bottom of the screen, clipping bounds so that the corners can be rounded
         cardViewController = SlideUpVC(nibName:"SlideUpVC", bundle:nil)
+        cardViewController.currentExpense = currentExpense
         self.view.addSubview(cardViewController.view)
         cardViewController.view.frame = CGRect(x: 0, y: self.view.frame.height - startCardHeight, width: self.view.bounds.width, height: endCardHeight)
         cardViewController.view.clipsToBounds = true
@@ -132,8 +133,8 @@ class DetailedExpenseViewController: UIViewController, StoryboardAble {
              
              // Complete animation frame
              frameAnimator.addCompletion { _ in
-                 self.cardVisible = !self.cardVisible
-                 self.runningAnimations.removeAll()
+                self.cardVisible = !self.cardVisible
+                self.runningAnimations.removeAll()
              }
              
              // Start animation

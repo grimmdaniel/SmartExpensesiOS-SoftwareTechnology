@@ -13,6 +13,8 @@
 		0809A8D6238FC227000BD7B4 /* DetailedExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8D5238FC227000BD7B4 /* DetailedExpenseViewController.swift */; };
 		0809A8DA238FCE1C000BD7B4 /* SlideUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8D8238FCE1C000BD7B4 /* SlideUpVC.swift */; };
 		0809A8DB238FCE1C000BD7B4 /* SlideUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0809A8D9238FCE1C000BD7B4 /* SlideUpVC.xib */; };
+		0809A8DE238FDB95000BD7B4 /* DetailedExpenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8DD238FDB95000BD7B4 /* DetailedExpenseCell.swift */; };
+		0809A8E0238FDBAE000BD7B4 /* DetailedExpenseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0809A8DF238FDBAE000BD7B4 /* DetailedExpenseCell.xib */; };
 		080D80952372D05A00F7B32A /* LogoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80942372D05A00F7B32A /* LogoutDelegate.swift */; };
 		080D80982372D08200F7B32A /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80972372D08200F7B32A /* LogoutService.swift */; };
 		081E29612374225B00F95CF4 /* AddNewExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */; };
@@ -137,6 +139,8 @@
 		0809A8D5238FC227000BD7B4 /* DetailedExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedExpenseViewController.swift; sourceTree = "<group>"; };
 		0809A8D8238FCE1C000BD7B4 /* SlideUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpVC.swift; sourceTree = "<group>"; };
 		0809A8D9238FCE1C000BD7B4 /* SlideUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideUpVC.xib; sourceTree = "<group>"; };
+		0809A8DD238FDB95000BD7B4 /* DetailedExpenseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedExpenseCell.swift; sourceTree = "<group>"; };
+		0809A8DF238FDBAE000BD7B4 /* DetailedExpenseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailedExpenseCell.xib; sourceTree = "<group>"; };
 		080D80942372D05A00F7B32A /* LogoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutDelegate.swift; sourceTree = "<group>"; };
 		080D80972372D08200F7B32A /* LogoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutService.swift; sourceTree = "<group>"; };
 		081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewExpenseViewController.swift; sourceTree = "<group>"; };
@@ -278,10 +282,20 @@
 		0809A8D7238FCDFA000BD7B4 /* SlideUpVC */ = {
 			isa = PBXGroup;
 			children = (
+				0809A8DC238FDA73000BD7B4 /* Cell */,
 				0809A8D8238FCE1C000BD7B4 /* SlideUpVC.swift */,
 				0809A8D9238FCE1C000BD7B4 /* SlideUpVC.xib */,
 			);
 			path = SlideUpVC;
+			sourceTree = "<group>";
+		};
+		0809A8DC238FDA73000BD7B4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0809A8DD238FDB95000BD7B4 /* DetailedExpenseCell.swift */,
+				0809A8DF238FDBAE000BD7B4 /* DetailedExpenseCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		081E295E2374223700F95CF4 /* AddNewExpenseViewController */ = {
@@ -1002,6 +1016,7 @@
 				085C609B23477E3000BA038C /* LaunchScreen.storyboard in Resources */,
 				08D5244A23539D5D001BB6FF /* Localizable.strings in Resources */,
 				085C609823477E3000BA038C /* Assets.xcassets in Resources */,
+				0809A8E0238FDBAE000BD7B4 /* DetailedExpenseCell.xib in Resources */,
 				08B4366D23619C3E0046F326 /* ExpenseCell.xib in Resources */,
 				0809A8DB238FCE1C000BD7B4 /* SlideUpVC.xib in Resources */,
 				085C609623477E2F00BA038C /* Main.storyboard in Resources */,
@@ -1057,6 +1072,7 @@
 				082595EB236C9FE900FF9F23 /* NetworkManager.swift in Sources */,
 				088E04F4238568C4006F3F82 /* Category.swift in Sources */,
 				08AF3C47236885AE00E5C185 /* ContentLoadingCell.swift in Sources */,
+				0809A8DE238FDB95000BD7B4 /* DetailedExpenseCell.swift in Sources */,
 				084E3685234DE935008B7801 /* WelcomeCoordinator.swift in Sources */,
 				08C1535A236C80C200DA4F60 /* Regex.swift in Sources */,
 				0830B68E23589C1D00A3AE9A /* HomeScreenCoordinator.swift in Sources */,

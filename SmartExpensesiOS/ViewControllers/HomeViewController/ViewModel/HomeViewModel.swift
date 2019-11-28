@@ -33,6 +33,14 @@ class HomeViewModel {
         return expenses[index]
     }
     
+    func addNewExpense(expense: Expense) {
+        let maximumNumberOfExpenses = UserDefaults.numberOfLatestSpendings
+        if expenses.count >= maximumNumberOfExpenses {
+            expenses.remove(at: expenses.count - 1)
+        }
+        expenses.insert(expense, at: 0)
+    }
+    
     func refreshDataSource(recommendations: [Recommendation], expenses: [Expense]) {
         self.recommendations = recommendations
         self.expenses = expenses

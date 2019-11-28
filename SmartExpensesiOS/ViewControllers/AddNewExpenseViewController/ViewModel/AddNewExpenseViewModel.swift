@@ -24,7 +24,8 @@ class AddNewExpenseViewModel {
             "latitude" : location.latitude,
             "longitude" : location.longitude,
             "address" : location.address,
-            "categoryID" : category.categoryID
+            "categoryID" : category.categoryID,
+            "date" : round(Date().timeIntervalSince1970)
         ]
     }
 }

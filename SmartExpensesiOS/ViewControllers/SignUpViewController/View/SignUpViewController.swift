@@ -104,7 +104,6 @@ class SignUpViewController: UIViewController, StoryboardAble {
             showErrorPopUp(title: "Warning", message: "Password has to contain at least 8 characters, with one capitalized letter, and a number. Password and password confirmation must be the same.")
             return nil
         }
-        
         return UserCredential(email: email,password: password)
     }
     

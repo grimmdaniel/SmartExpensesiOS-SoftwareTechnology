@@ -16,7 +16,18 @@ struct Expense {
     let categoryID: Int
     let isPrivate: Bool
     let title: String
-    let date: String
+    let date: Double
+    
+    var dateInString: String {
+        return Expense.convertTimeStampToDate(from: date)
+    }
+    
+    private static func convertTimeStampToDate(from timeStamp: Double) -> String {
+        let date = Date(timeIntervalSince1970: timeStamp)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY. MMM d, HH:mm"
+        return dateFormatter.string(from: date)
+    }
 }
 
 extension Expense: Equatable {

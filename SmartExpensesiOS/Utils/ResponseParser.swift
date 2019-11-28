@@ -85,7 +85,7 @@ class ResponseParser {
                 let isPrivate = expense["private"] as? Bool ?? true
                 let currency = parseExpenseCurrency(json: expense)
                 let location = parseExpenseLocation(json: expense)
-                let date = expense["date"] as? String ?? "1970-01-01 00:00:01"
+                let date = expense["date"] as? Double ?? 0.0
                 let newExpense = Expense(id: expenseID, location: location, currency: currency, categoryID: categoryID, isPrivate: isPrivate, title: title, date: date)
                 return newExpense
             }

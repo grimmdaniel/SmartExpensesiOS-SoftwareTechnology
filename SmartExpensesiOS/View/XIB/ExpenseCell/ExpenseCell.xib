@@ -40,7 +40,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uLD-Ro-9hK">
                                             <rect key="frame" x="310.5" y="0.0" width="34.5" height="35"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="categoryType" translatesAutoresizingMaskIntoConstraints="NO" id="Ncd-85-80q">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ncd-85-80q">
                                                     <rect key="frame" x="0.0" y="0.0" width="34.5" height="35"/>
                                                 </imageView>
                                             </subviews>
@@ -148,7 +148,6 @@
         </view>
     </objects>
     <resources>
-        <image name="categoryType" width="50" height="50"/>
         <image name="placeLogo" width="30" height="38"/>
     </resources>
 </document>

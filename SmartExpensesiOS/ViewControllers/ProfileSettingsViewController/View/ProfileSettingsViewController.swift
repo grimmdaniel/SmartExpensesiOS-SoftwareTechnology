@@ -147,7 +147,9 @@ extension ProfileSettingsViewController: UIImagePickerControllerDelegate & UINav
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-            currentProfileImage = pickedImage
+            let resizedImage = pickedImage.resizeImage(newWidth: 300)
+            currentProfileImage = resizedImage
+            let base64EncodedImage = resizedImage.encodeImageToBase64()
         }
         
         dismiss(animated: true, completion: nil)

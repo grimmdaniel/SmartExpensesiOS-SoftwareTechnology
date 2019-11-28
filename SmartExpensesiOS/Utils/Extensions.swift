@@ -43,6 +43,27 @@ extension UITableView {
     }
 }
 
+extension UIImage {
+    
+    func resizeImage(newWidth: CGFloat) -> UIImage {
+
+        let scale = newWidth / self.size.width
+        let newHeight = self.size.height * scale
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        self.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return newImage ?? self
+    }
+    
+    func encodeImageToBase64() -> String {
+        let imageData: NSData = NSData(data: self.pngData()!)
+        let strBase64Image = imageData.base64EncodedString(options: .lineLength64Characters)
+        return strBase64Image
+    }
+}
+
 extension UIViewController {
     
     func showErrorPopUp(title: String, message: String) {

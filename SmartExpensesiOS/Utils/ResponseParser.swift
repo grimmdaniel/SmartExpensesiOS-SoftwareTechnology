@@ -78,6 +78,15 @@ class ResponseParser {
         return nil
     }
     
+    //TODO remove
+    func parseExpense2(json: [String:Any]) -> Expense? {
+        if let expenseRaw = json["expenses"] as? [String:Any] {
+            let expense = parseExpenseRaw(expense: expenseRaw)
+            return expense
+        }
+        return nil
+    }
+    
     func parseExpenseRaw(expense: [String:Any]) -> Expense? {
         if let expenseID = expense["id"] as? Int {
             if let categoryID = expense["categoryID"] as? Int {

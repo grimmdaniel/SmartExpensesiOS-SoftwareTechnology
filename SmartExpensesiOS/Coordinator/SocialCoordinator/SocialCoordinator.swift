@@ -39,6 +39,13 @@ class SocialCoordianator: Coordinator {
         let socialViewController = SocialViewController.instantiate()
         socialViewController.viewModel = SocialViewModel()
         socialViewController.service = SocialService()
+        
+        socialViewController.openDetailedViewClosure = { [weak self] (expense) in
+            let detailedExpenseVC = DetailedExpenseViewController.instantiate()
+            detailedExpenseVC.currentExpense = expense
+            self?.navigationController.pushViewController(detailedExpenseVC, animated: true)
+        }
+        
         navigationController.pushViewController(socialViewController, animated: true)
     }
 }

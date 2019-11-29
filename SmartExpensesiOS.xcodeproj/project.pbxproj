@@ -15,6 +15,7 @@
 		0809A8DB238FCE1C000BD7B4 /* SlideUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0809A8D9238FCE1C000BD7B4 /* SlideUpVC.xib */; };
 		0809A8DE238FDB95000BD7B4 /* DetailedExpenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8DD238FDB95000BD7B4 /* DetailedExpenseCell.swift */; };
 		0809A8E0238FDBAE000BD7B4 /* DetailedExpenseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0809A8DF238FDBAE000BD7B4 /* DetailedExpenseCell.xib */; };
+		0809A8E2239157A0000BD7B4 /* SocialExpenseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8E1239157A0000BD7B4 /* SocialExpenseDelegate.swift */; };
 		080D80952372D05A00F7B32A /* LogoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80942372D05A00F7B32A /* LogoutDelegate.swift */; };
 		080D80982372D08200F7B32A /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80972372D08200F7B32A /* LogoutService.swift */; };
 		081E29612374225B00F95CF4 /* AddNewExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */; };
@@ -141,6 +142,7 @@
 		0809A8D9238FCE1C000BD7B4 /* SlideUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideUpVC.xib; sourceTree = "<group>"; };
 		0809A8DD238FDB95000BD7B4 /* DetailedExpenseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedExpenseCell.swift; sourceTree = "<group>"; };
 		0809A8DF238FDBAE000BD7B4 /* DetailedExpenseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailedExpenseCell.xib; sourceTree = "<group>"; };
+		0809A8E1239157A0000BD7B4 /* SocialExpenseDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialExpenseDelegate.swift; sourceTree = "<group>"; };
 		080D80942372D05A00F7B32A /* LogoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutDelegate.swift; sourceTree = "<group>"; };
 		080D80972372D08200F7B32A /* LogoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutService.swift; sourceTree = "<group>"; };
 		081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewExpenseViewController.swift; sourceTree = "<group>"; };
@@ -752,6 +754,7 @@
 			isa = PBXGroup;
 			children = (
 				088E04F02385601B006F3F82 /* SocialDelegate.swift */,
+				0809A8E1239157A0000BD7B4 /* SocialExpenseDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -1091,6 +1094,7 @@
 				082595F0236D90DF00FF9F23 /* SignInViewModel.swift in Sources */,
 				081E296F2376E9A600F95CF4 /* SelectExpenseCategoryVC.swift in Sources */,
 				082595ED236D8AE800FF9F23 /* AuthorizationDelegate.swift in Sources */,
+				0809A8E2239157A0000BD7B4 /* SocialExpenseDelegate.swift in Sources */,
 				080429482364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift in Sources */,
 				0883DEA4236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift in Sources */,
 				082595E7236C9EA900FF9F23 /* NetworkError.swift in Sources */,

@@ -15,6 +15,7 @@ class SocialViewController: UIViewController, StoryboardAble {
     let regionRadius: CLLocationDistance = 10000
     var locationManager = CLLocationManager()
     var activityIndicator = UIActivityIndicatorView()
+    var openDetailedViewClosure: ((Expense) -> Void)?
     var viewModel: SocialViewModel!
     var service: SocialService!
     
@@ -36,6 +37,7 @@ class SocialViewController: UIViewController, StoryboardAble {
         setUpLocationManager()
         setUpActivityIndicator()
         service.delegate = self
+        service.fetchDelegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -93,6 +95,22 @@ class SocialViewController: UIViewController, StoryboardAble {
 
 extension SocialViewController: CLLocationManagerDelegate {}
 
+extension SocialViewController: SocialExpenseDelegate {
+    
+    func didStartFetchExpense() {
+        activityIndicator.startAnimating()
+    }
+    
+    func didFinishFetchExpense(expense: Expense) {
+        activityIndicator.stopAnimating()
+        openDetailedViewClosure?(expense)
+    }
+    
+    func didFailFetchExpense(error: NetworkError) {
+        activityIndicator.stopAnimating()
+    }
+}
+
 extension SocialViewController: SocialDelegate {
     
     func didStartFetchingExpenseLocations() {
@@ -123,5 +141,12 @@ extension SocialViewController: MKMapViewDelegate {
             return annotationView
         }
         return nil
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if let annotation = view.annotation as? CustomMKAnnotation {
+            let id = annotation.id
+            service.getExpense(with: id)
+        }
     }
 }

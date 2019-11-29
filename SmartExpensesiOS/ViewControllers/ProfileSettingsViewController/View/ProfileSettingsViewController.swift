@@ -150,6 +150,7 @@ extension ProfileSettingsViewController: UIImagePickerControllerDelegate & UINav
             let resizedImage = pickedImage.resizeImage(newWidth: 300)
             currentProfileImage = resizedImage
             let base64EncodedImage = resizedImage.encodeImageToBase64()
+            print(base64EncodedImage)
         }
         
         dismiss(animated: true, completion: nil)

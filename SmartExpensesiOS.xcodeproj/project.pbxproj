@@ -19,6 +19,8 @@
 		0809A8E523916C96000BD7B4 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8E423916C96000BD7B4 /* ProfileService.swift */; };
 		0809A8E823916D35000BD7B4 /* ProfileDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8E723916D35000BD7B4 /* ProfileDataDelegate.swift */; };
 		0809A8EA23916E01000BD7B4 /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8E923916E01000BD7B4 /* ProfileData.swift */; };
+		0809A8EC23942EEC000BD7B4 /* ColorWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8EB23942EEB000BD7B4 /* ColorWheel.swift */; };
+		0809A8F023944606000BD7B4 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8EF23944606000BD7B4 /* ColorPickerViewController.swift */; };
 		080D80952372D05A00F7B32A /* LogoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80942372D05A00F7B32A /* LogoutDelegate.swift */; };
 		080D80982372D08200F7B32A /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80972372D08200F7B32A /* LogoutService.swift */; };
 		081E29612374225B00F95CF4 /* AddNewExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */; };
@@ -149,6 +151,8 @@
 		0809A8E423916C96000BD7B4 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 		0809A8E723916D35000BD7B4 /* ProfileDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataDelegate.swift; sourceTree = "<group>"; };
 		0809A8E923916E01000BD7B4 /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
+		0809A8EB23942EEB000BD7B4 /* ColorWheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorWheel.swift; sourceTree = "<group>"; };
+		0809A8EF23944606000BD7B4 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		080D80942372D05A00F7B32A /* LogoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutDelegate.swift; sourceTree = "<group>"; };
 		080D80972372D08200F7B32A /* LogoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutService.swift; sourceTree = "<group>"; };
 		081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewExpenseViewController.swift; sourceTree = "<group>"; };
@@ -320,6 +324,22 @@
 				0809A8E723916D35000BD7B4 /* ProfileDataDelegate.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		0809A8ED239445E3000BD7B4 /* ColorPickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0809A8EE239445F1000BD7B4 /* View */,
+			);
+			path = ColorPickerViewController;
+			sourceTree = "<group>";
+		};
+		0809A8EE239445F1000BD7B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0809A8EF23944606000BD7B4 /* ColorPickerViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		081E295E2374223700F95CF4 /* AddNewExpenseViewController */ = {
@@ -497,6 +517,7 @@
 				08B436782361C0580046F326 /* NotificationConstants.swift */,
 				08C15359236C80C200DA4F60 /* Regex.swift */,
 				084A1443237AD81C009D142C /* ResponseParser.swift */,
+				0809A8EB23942EEB000BD7B4 /* ColorWheel.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -584,6 +605,7 @@
 		084E3686234DEAF1008B7801 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0809A8ED239445E3000BD7B4 /* ColorPickerViewController */,
 				0809A8D3238FC1F6000BD7B4 /* DetailedExpenseViewController */,
 				081E295E2374223700F95CF4 /* AddNewExpenseViewController */,
 				08FC1ADA23590AFB00C988AA /* TabbarController */,
@@ -1089,6 +1111,7 @@
 			files = (
 				084E3683234DE90F008B7801 /* StoryboardAble.swift in Sources */,
 				084A143F237ACF7F009D142C /* MyExpensensesService.swift in Sources */,
+				0809A8F023944606000BD7B4 /* ColorPickerViewController.swift in Sources */,
 				083661582365FF2700A524B8 /* CustomMKAnnotation.swift in Sources */,
 				081E29612374225B00F95CF4 /* AddNewExpenseViewController.swift in Sources */,
 				0809A8D6238FC227000BD7B4 /* DetailedExpenseViewController.swift in Sources */,
@@ -1122,6 +1145,7 @@
 				0809A8E2239157A0000BD7B4 /* SocialExpenseDelegate.swift in Sources */,
 				080429482364BD9F004656E0 /* HomeRecommendationCollectionViewCell.swift in Sources */,
 				0883DEA4236495AB00E91AF5 /* HomeRecommendationsTableViewCell.swift in Sources */,
+				0809A8EC23942EEC000BD7B4 /* ColorWheel.swift in Sources */,
 				082595E7236C9EA900FF9F23 /* NetworkError.swift in Sources */,
 				08FC1ADC23590B1C00C988AA /* TabbarController.swift in Sources */,
 				0809A8D02387DB21000BD7B4 /* EncodeAblePass.swift in Sources */,

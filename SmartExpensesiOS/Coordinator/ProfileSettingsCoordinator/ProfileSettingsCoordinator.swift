@@ -42,6 +42,17 @@ class ProfileSettingsCoordinator: Coordinator {
             NotificationCenter.default.post(name: NSNotification.Name(NotificationConstants.logOutNotification), object: nil)
         }
         
+        profileSettingsViewController.colorPickerClosure = { [weak self] in
+            let colorPickerVC = ColorPickerViewController.instantiate()
+            
+            colorPickerVC.colorSelectedClosure = { [weak self] (colorCode) in
+                profileSettingsViewController.currentColorCode = colorCode
+                self?.navigationController.popViewController(animated: true)
+            }
+            
+            self?.navigationController.pushViewController(colorPickerVC, animated: true)
+        }
+        
         profileSettingsViewController.service = LogoutService()
         profileSettingsViewController.profileService = ProfileService()
         navigationController.pushViewController(profileSettingsViewController, animated: true)

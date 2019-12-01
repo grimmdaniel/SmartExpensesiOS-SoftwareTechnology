@@ -22,6 +22,12 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
         }
     }
     
+    var currentColorCode: String! {
+        didSet {
+            profileRingView.backgroundColor = UIColor.hexStringToUIColor(hexCode: currentColorCode)
+        }
+    }
+    
     var currentProfile: ProfileData? {
         didSet {
             if let data = currentProfile {
@@ -39,6 +45,7 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
     }
     
     var logOutClosure: (() -> Void)?
+    var colorPickerClosure: (() -> Void)?
     var activityIndicator = UIActivityIndicatorView()
     var service: LogoutService!
     var profileService: ProfileService!
@@ -228,6 +235,12 @@ extension ProfileSettingsViewController: UITableViewDelegate, UITableViewDataSou
             let view = UIView()
             view.backgroundColor = .white
             return view
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            colorPickerClosure?()
         }
     }
     

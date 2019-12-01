@@ -26,6 +26,28 @@ class ResponseParser {
         }
         return expensesToReturn
     }
+    
+    func parseProfileData(json: [String:Any]) -> ProfileData? {
+        if let usersRaw = (json["profile"] as? [[String:Any]])?.first {
+            if let userID = usersRaw["user_id"] as? Int {
+                let totalSpendings = usersRaw["total_spendings"] as? Double ?? 0.0
+                let colour = usersRaw["color"] as? String ?? "#24AA7B"
+                let numberOfLatestSpendings = usersRaw["num_latest_spendings"] as? Int ?? 0
+                let profileImage = usersRaw["profile_image"] as? String ?? ""
+                let privacyURL = usersRaw["privacy_url"] as? String ?? "https://google.com"
+                let termsURL = usersRaw["terms_and_conditions_url"] as? String ?? "https://google.com"
+                return ProfileData(
+                    userID: userID,
+                    totalSpendings: totalSpendings,
+                    numberOfLatestSpendings: numberOfLatestSpendings,
+                    colour: colour, profileImage: UIImage.decodeFromBase64(base64String: profileImage),
+                    termsURL: termsURL,
+                    privacyURL: privacyURL)
+            }
+        }
+        return nil
+    }
+    
     func parseExpenseLocations(json: [String:Any]) -> [CustomMKAnnotation] {
         var locations = [CustomMKAnnotation]()
         let category = Category()
@@ -72,15 +94,6 @@ class ResponseParser {
     
     func parseExpense(json: [String:Any]) -> Expense? {
         if let expenseRaw = json["expense"] as? [String:Any] {
-            let expense = parseExpenseRaw(expense: expenseRaw)
-            return expense
-        }
-        return nil
-    }
-    
-    //TODO remove
-    func parseExpense2(json: [String:Any]) -> Expense? {
-        if let expenseRaw = json["expenses"] as? [String:Any] {
             let expense = parseExpenseRaw(expense: expenseRaw)
             return expense
         }

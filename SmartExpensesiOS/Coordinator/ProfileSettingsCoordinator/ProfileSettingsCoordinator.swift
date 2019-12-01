@@ -43,6 +43,7 @@ class ProfileSettingsCoordinator: Coordinator {
         }
         
         profileSettingsViewController.service = LogoutService()
+        profileSettingsViewController.profileService = ProfileService()
         navigationController.pushViewController(profileSettingsViewController, animated: true)
     }
 }

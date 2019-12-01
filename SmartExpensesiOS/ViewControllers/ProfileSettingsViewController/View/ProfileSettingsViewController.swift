@@ -10,7 +10,6 @@ import UIKit
 
 class ProfileSettingsViewController: UIViewController, StoryboardAble {
 
-    @IBOutlet weak var editProfileButton: UIButton!
     @IBOutlet weak var profileRingView: UIView!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var profileNameLabel: UILabel!
@@ -20,6 +19,15 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
     var currentProfileImage: UIImage! {
         didSet {
             profileImageView.image = currentProfileImage
+        }
+    }
+    
+    var currentProfile: ProfileData? {
+        didSet {
+            if let data = currentProfile {
+                print(data)
+                currentProfileImage = data.profileImage
+            }
         }
     }
     
@@ -33,12 +41,15 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
     var logOutClosure: (() -> Void)?
     var activityIndicator = UIActivityIndicatorView()
     var service: LogoutService!
-    let menuPoints = ["Notifications","Select profile colour","Number of latest spendings","Privacy","Terms & Conditions"]
+    var profileService: ProfileService!
+    
+    let menuPoints = ["Select profile colour","Number of latest spendings","Privacy","Terms & Conditions"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         service.delegate = self
+        profileService.delegate = self
         setUpNavbar()
         setUpTableView()
         profileNameLabel.text = UserDefaults.USERNAME ?? "N/A"
@@ -47,6 +58,9 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
     
     override func viewDidAppear(_ animated: Bool) {
         setUpUI()
+        if self.isBeingPresented || self.isMovingToParent {
+            profileService.fetchProfileData()
+        }
     }
     
     private func setUpTableView() {
@@ -67,6 +81,11 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(logOut))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refresh))
+    }
+    
+    @objc func refresh() {
+        profileService.fetchProfileData()
     }
     
     private func setUpUI() {
@@ -93,9 +112,6 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
         optionMenu.addAction(createImageAction)
         optionMenu.addAction(cancelAction)
         self.present(optionMenu, animated: true, completion: nil)
-    }
-    
-    @IBAction func editProfileButtonPressed(_ sender: UIButton) {
     }
     
     func addImageFromLibrary() {
@@ -141,6 +157,23 @@ extension ProfileSettingsViewController: LogoutDelegate {
         activityIndicator.stopAnimating()
         showErrorPopUp(title: "Error", message: error.localizedDescription)
     }
+}
+
+extension ProfileSettingsViewController: ProfileDataDelegate {
+    
+    func didStartFetchingProfileData() {
+        activityIndicator.startAnimating()
+    }
+    
+    func didFinishFetchingProfileData(data: ProfileData) {
+        currentProfile = data
+        activityIndicator.stopAnimating()
+    }
+    
+    func didFailToFetchProfileData(error: NetworkError) {
+        activityIndicator.stopAnimating()
+    }
+    
 }
 
 extension ProfileSettingsViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {

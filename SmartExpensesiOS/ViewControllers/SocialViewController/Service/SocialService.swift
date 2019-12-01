@@ -50,7 +50,7 @@ class SocialService {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let json):
-                    if let expense = ResponseParser.shared.parseExpense2(json: json) {
+                    if let expense = ResponseParser.shared.parseExpense(json: json) {
                         self?.fetchDelegate?.didFinishFetchExpense(expense: expense)
                     } else {
                         self?.fetchDelegate?.didFailFetchExpense(error: .JSONFormatError)

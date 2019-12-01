@@ -1036,23 +1036,10 @@
                                                             <constraint firstAttribute="width" secondItem="UH5-Fe-ymb" secondAttribute="height" multiplier="1:1" id="eo6-cT-TvR"/>
                                                         </constraints>
                                                     </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MnW-l4-1GJ">
-                                                        <rect key="frame" x="325" y="30" width="35" height="35"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="35" id="06a-hk-Rij"/>
-                                                            <constraint firstAttribute="width" constant="35" id="cfN-59-BoS"/>
-                                                        </constraints>
-                                                        <state key="normal" image="edit"/>
-                                                        <connections>
-                                                            <action selector="editProfileButtonPressed:" destination="4hM-so-rZg" eventType="touchUpInside" id="7cF-OC-kzj"/>
-                                                        </connections>
-                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstItem="UH5-Fe-ymb" firstAttribute="height" secondItem="biA-ni-wIs" secondAttribute="height" multiplier="0.7" id="2FX-oR-DGY"/>
-                                                    <constraint firstItem="MnW-l4-1GJ" firstAttribute="top" secondItem="biA-ni-wIs" secondAttribute="top" constant="30" id="LrR-oB-2fW"/>
-                                                    <constraint firstAttribute="trailing" secondItem="MnW-l4-1GJ" secondAttribute="trailing" constant="15" id="NJa-XG-Nd0"/>
                                                     <constraint firstItem="UH5-Fe-ymb" firstAttribute="centerX" secondItem="biA-ni-wIs" secondAttribute="centerX" id="VOj-TS-Qup"/>
                                                     <constraint firstItem="UH5-Fe-ymb" firstAttribute="centerY" secondItem="biA-ni-wIs" secondAttribute="centerY" id="mRl-EC-hia"/>
                                                 </constraints>
@@ -1117,7 +1104,6 @@
                         <viewLayoutGuide key="safeArea" id="CKz-4J-1hu"/>
                     </view>
                     <connections>
-                        <outlet property="editProfileButton" destination="MnW-l4-1GJ" id="MUT-6K-H1R"/>
                         <outlet property="profileImageView" destination="8NT-PE-Yq6" id="xJo-YG-Aj4"/>
                         <outlet property="profileNameLabel" destination="icq-mX-7h1" id="VvQ-uA-Sbx"/>
                         <outlet property="profileRingView" destination="UH5-Fe-ymb" id="UT5-4c-kJ8"/>
@@ -1313,7 +1299,6 @@
         <image name="CloseButton" width="50" height="50"/>
         <image name="addNewImage" width="155" height="155"/>
         <image name="dummy0" width="328" height="246"/>
-        <image name="edit" width="32" height="32"/>
         <image name="expand-button" width="100" height="62"/>
         <image name="my_loc" width="128" height="128"/>
     </resources>

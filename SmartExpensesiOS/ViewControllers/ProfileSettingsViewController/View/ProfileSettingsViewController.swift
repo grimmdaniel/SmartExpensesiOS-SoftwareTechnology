@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class ProfileSettingsViewController: UIViewController, StoryboardAble {
 
@@ -100,6 +101,12 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
         profileImageView.asCircle()
         profileImageView.isUserInteractionEnabled = true
         profileImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(addNewImage)))
+    }
+    
+    private func openDocumentsInBrowser(url: String) {
+        guard let url = URL(string: url) else { return }
+        let safariVC = SFSafariViewController(url: url)
+        self.present(safariVC, animated: true, completion: nil)
     }
     
     @objc func logOut() {
@@ -241,6 +248,10 @@ extension ProfileSettingsViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             colorPickerClosure?()
+        } else if indexPath.row == 2 {
+            openDocumentsInBrowser(url: "https://google.com")
+        } else if indexPath.row == 3 {
+            openDocumentsInBrowser(url: "https://google.com")
         }
     }
     

@@ -78,21 +78,19 @@ class DetailedExpenseViewController: UIViewController, StoryboardAble {
         cardViewController.handleView.addGestureRecognizer(panGestureRecognizer)
     }
        
-   // Handle tap gesture recognizer
-   @objc
-   func handleCardTap(recognzier:UITapGestureRecognizer) {
-       switch recognzier.state {
-           // Animate card when tap finishes
-       case .ended:
-           animateTransitionIfNeeded(state: nextState, duration: 0.9)
-       default:
-           break
-       }
-   }
+    // Handle tap gesture recognizer
+    @objc func handleCardTap(recognzier:UITapGestureRecognizer) {
+        switch recognzier.state {
+        // Animate card when tap finishes
+        case .ended:
+            animateTransitionIfNeeded(state: nextState, duration: 0.9)
+        default:
+            break
+        }
+    }
        
    // Handle pan gesture recognizer
-   @objc
-   func handleCardPan (recognizer:UIPanGestureRecognizer) {
+   @objc func handleCardPan (recognizer:UIPanGestureRecognizer) {
        switch recognizer.state {
        case .began:
            // Start animation if pan begins

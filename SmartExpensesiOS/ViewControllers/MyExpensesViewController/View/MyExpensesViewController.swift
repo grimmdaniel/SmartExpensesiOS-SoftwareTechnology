@@ -33,7 +33,7 @@ class MyExpensesViewController: UIViewController, StoryboardAble, AnimatableVC {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
-        title = "MyExpenses"
+        title = "myExpensesScreenTitleLabel".localized
         tabBarItem.image = UIImage(named: "tabbar_1.png")
     }
 
@@ -58,7 +58,7 @@ class MyExpensesViewController: UIViewController, StoryboardAble, AnimatableVC {
         myExpensesTableView.dataSource = self
         myExpensesTableView.backgroundColor = .white
         
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.attributedTitle = NSAttributedString(string: "myExpensesPullToRefresh".localized)
         refreshControl.addTarget(self, action: #selector(refreshTableView), for: .valueChanged)
         myExpensesTableView.addSubview(refreshControl)
     }
@@ -140,7 +140,7 @@ extension MyExpensesViewController: UITableViewDelegate, UITableViewDataSource {
             return 10
         } else {
             if viewModel.isEmptyExpenses {
-                tableView.showEmptyTableViewMessage(message: "We couldn't find any expenses to show. Pull to refresh...")
+                tableView.showEmptyTableViewMessage(message: "myExpensesNoExpensesAvailable".localized)
             } else {
                 tableView.backgroundView = nil
             }

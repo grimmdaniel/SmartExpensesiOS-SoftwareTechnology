@@ -10,10 +10,20 @@ import UIKit
 
 struct Category {
     
-    let categories = ["Restaurant","Tickets","Museum","Hotel","Cash","Shopping","Gas","Travel","Other"]
+    let categories = [
+        "categoryTranslationRestaurant".localized,
+        "categoryTranslationTickets".localized,
+        "categoryTranslationMuseum".localized,
+        "categoryTranslationHotel".localized,
+        "categoryTranslationCash".localized,
+        "categoryTranslationShopping".localized,
+        "categoryTranslationGas".localized,
+        "categoryTranslationTravel".localized,
+        "categoryTranslationOther".localized
+    ]
     
     func getCategoryNameByIndex(index: Int) -> String {
-        if index >= categories.count || index < 0 { return "Others" }
+        if index >= categories.count || index < 0 { return "categoryTranslationOther".localized }
         return categories[index]
     }
     

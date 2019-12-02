@@ -32,7 +32,7 @@ class SelectExpenseCategoryVC: UIViewController, StoryboardAble {
     }
     
     private func setUPNavigationBar() {
-        let navigationItem = UINavigationItem(title: "Categories")
+        let navigationItem = UINavigationItem(title: "categoryTranslationTitle".localized)
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveSelection))
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelSelection))
         customNavigationBar.setItems([navigationItem], animated: false)

@@ -7,10 +7,10 @@
 //
 
 import UIKit
+import SafariServices
 
 class ProfileSettingsViewController: UIViewController, StoryboardAble {
 
-    @IBOutlet weak var editProfileButton: UIButton!
     @IBOutlet weak var profileRingView: UIView!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var profileNameLabel: UILabel!
@@ -23,22 +23,50 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
         }
     }
     
+    var currentColorCode: String! {
+        didSet {
+            profileRingView.backgroundColor = UIColor.hexStringToUIColor(hexCode: currentColorCode)
+        }
+    }
+    
+    var currentNumberOfLatestSpendings = 5
+    
+    var currentProfile: ProfileData? {
+        didSet {
+            if let data = currentProfile {
+                print(data)
+                currentProfileImage = data.profileImage
+            }
+        }
+    }
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
-        title = "My Profile"
-        tabBarItem = UITabBarItem(title: "My Profile", image: UIImage(named: "tabbar_4.png"), tag: 4)
+        title = "profileScreenMyProfileTitle".localized
+        tabBarItem = UITabBarItem(title: "profileScreenMyProfileTitle".localized, image: UIImage(named: "tabbar_4.png"), tag: 4)
     }
     
     var logOutClosure: (() -> Void)?
+    var colorPickerClosure: (() -> Void)?
+    var numberOfLatestSpendingsClosure: ((Int) -> Void)?
     var activityIndicator = UIActivityIndicatorView()
     var service: LogoutService!
-    let menuPoints = ["Notifications","Select profile colour","Number of latest spendings","Privacy","Terms & Conditions"]
+    var profileService: ProfileService!
+    
+    let menuPoints = [
+        "profileScreenSelectProfileColour".localized,
+        "profileScreenNumberOfLatestSpendings".localized,
+        "profileScreenPrivacy".localized,
+        "profileScreenTermsAndConditions".localized
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        totalSpendingsLabel.text = "profileScreenTotalSpendingsLabel".localized + ": " + "\(12000) HUF"
         service.delegate = self
+        profileService.delegate = self
         setUpNavbar()
         setUpTableView()
         profileNameLabel.text = UserDefaults.USERNAME ?? "N/A"
@@ -47,6 +75,9 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
     
     override func viewDidAppear(_ animated: Bool) {
         setUpUI()
+        if self.isBeingPresented || self.isMovingToParent {
+            profileService.fetchProfileData()
+        }
     }
     
     private func setUpTableView() {
@@ -66,7 +97,12 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
         navigationController?.navigationBar.barTintColor = ColorTheme.primaryColor
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.navigationBar.tintColor = UIColor.white
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(logOut))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "profileScreenLogOutButtonNavbar".localized, style: .plain, target: self, action: #selector(logOut))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refresh))
+    }
+    
+    @objc func refresh() {
+        profileService.fetchProfileData()
     }
     
     private func setUpUI() {
@@ -76,26 +112,29 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
         profileImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(addNewImage)))
     }
     
+    private func openDocumentsInBrowser(url: String) {
+        guard let url = URL(string: url) else { return }
+        let safariVC = SFSafariViewController(url: url)
+        self.present(safariVC, animated: true, completion: nil)
+    }
+    
     @objc func logOut() {
         logOutPressed()
     }
     
     @objc func addNewImage() {
-        let optionMenu = UIAlertController(title: nil, message: "Select image", preferredStyle: .actionSheet)
-        let browseAction = UIAlertAction(title: "Browse gallery", style: .default) { [weak self] (_) in
+        let optionMenu = UIAlertController(title: nil, message: "profileScreenImageSelectionLabel".localized, preferredStyle: .actionSheet)
+        let browseAction = UIAlertAction(title: "profileScreenBrowseGalleryLabel".localized, style: .default) { [weak self] (_) in
             self?.addImageFromLibrary()
         }
-        let createImageAction = UIAlertAction(title: "Create new", style: .default) { [weak self] (_) in
+        let createImageAction = UIAlertAction(title: "profileScreenTakeNewPictureLabel".localized, style: .default) { [weak self] (_) in
             self?.createNewPhoto()
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let cancelAction = UIAlertAction(title: "profileScreenCancelNewImage".localized, style: .cancel)
         optionMenu.addAction(browseAction)
         optionMenu.addAction(createImageAction)
         optionMenu.addAction(cancelAction)
         self.present(optionMenu, animated: true, completion: nil)
-    }
-    
-    @IBAction func editProfileButtonPressed(_ sender: UIButton) {
     }
     
     func addImageFromLibrary() {
@@ -116,9 +155,9 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
     
     func logOutPressed() {
         guard let apikey = UserDefaults.APIKEY else { return }
-        let alertVC = UIAlertController(title: "Confirmation", message: "Are you sure want to log out?", preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alertVC.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { [weak self] (_) in
+        let alertVC = UIAlertController(title: "profileScreenLogoutConfirmation".localized, message: "profileScreenLogoutPrompt".localized, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "profileScreenLogoutCancel".localized, style: .cancel, handler: nil))
+        alertVC.addAction(UIAlertAction(title: "profileScreenLogout".localized, style: .destructive, handler: { [weak self] (_) in
             self?.service.logOutUser(apiKey: apikey)
         }))
         present(alertVC, animated: true, completion: nil)
@@ -143,6 +182,23 @@ extension ProfileSettingsViewController: LogoutDelegate {
     }
 }
 
+extension ProfileSettingsViewController: ProfileDataDelegate {
+    
+    func didStartFetchingProfileData() {
+        activityIndicator.startAnimating()
+    }
+    
+    func didFinishFetchingProfileData(data: ProfileData) {
+        currentProfile = data
+        activityIndicator.stopAnimating()
+    }
+    
+    func didFailToFetchProfileData(error: NetworkError) {
+        activityIndicator.stopAnimating()
+    }
+    
+}
+
 extension ProfileSettingsViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -150,6 +206,7 @@ extension ProfileSettingsViewController: UIImagePickerControllerDelegate & UINav
             let resizedImage = pickedImage.resizeImage(newWidth: 300)
             currentProfileImage = resizedImage
             let base64EncodedImage = resizedImage.encodeImageToBase64()
+            print(base64EncodedImage)
         }
         
         dismiss(animated: true, completion: nil)
@@ -183,7 +240,7 @@ extension ProfileSettingsViewController: UITableViewDelegate, UITableViewDataSou
 
             let label = UILabel()
             label.frame = CGRect.init(x: 20, y: 5, width: headerView.frame.width - 10, height: headerView.frame.height - 10)
-            label.text = "Settings"
+            label.text = "profileScreenSettingsHeader".localized
             label.font = UIFont(name: "HelveticaNeue-Medium", size: 25.0)
             label.textColor = ColorTheme.secondaryColor
             label.numberOfLines = 2
@@ -194,6 +251,18 @@ extension ProfileSettingsViewController: UITableViewDelegate, UITableViewDataSou
             let view = UIView()
             view.backgroundColor = .white
             return view
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            colorPickerClosure?()
+        } else if indexPath.row == 1 {
+            numberOfLatestSpendingsClosure?(currentNumberOfLatestSpendings)
+        } else if indexPath.row == 2 {
+            openDocumentsInBrowser(url: "https://google.com")
+        } else if indexPath.row == 3 {
+            openDocumentsInBrowser(url: "https://google.com")
         }
     }
     

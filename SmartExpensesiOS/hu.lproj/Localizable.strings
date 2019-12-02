@@ -35,8 +35,70 @@
 "signInScreenPasswordLabel" = "Jelszó";
 "signInScreenSignInButtonText" = "BEJELENTKEZÉS";
 
+//home screen
+"homeScreenHomeTitle" = "Kezdőlap";
+"homeScreenPullToRefresh" = "Húzd le a frissítéshez...";
+"homeScreenNoExpensesAvailable" = "Nem találtunk költéseket, húzd le a frissítéshez...";
+"homeScreenCheapPlaces" = "Olcsó helyek a közelben";
+"homeScreenLatestSpendings" = "Legutóbbi költések";
+
 //my expenses screen
 "myExpensesDeleteExpensePromptConfirmLabel" = "Megerősítés";
 "myExpensesDeleteExpensePromptCancelLabel" = "Mégsem";
 "myExpensesDeleteExpensePromptDelete" = "Törlés";
 "myExpensesDeleteExpensePromptMessage" = "Biztosan törölni szeretnéd ezt az Expense-t?";
+
+"myExpensesPullToRefresh" = "Húzd le a frissítéshez...";
+"myExpensesNoExpensesAvailable" = "Nem találtunk költéseket, húzd le a frissítéshez...";
+"myExpensesScreenTitleLabel" = "Költéseim";
+
+//add new expense screen
+"addNewExpenseScreenNewName" = "NÉV";
+"addNewExpenseScreenNewAmount" = "ÁR";
+"addNewExpenseScreenNewCategory" = "VÁLASSZ KATEGÓRIÁT";
+
+"addNewExpenseScreenNewNamePlaceholder" = "A költésed neve";
+"addNewExpenseScreenNewAmountPlaceholder" = "pl: 1234";
+"addNewExpenseScreenNewCategoryPlaceholder" = "Válassz a kategóriák közül";
+"addNewExpenseScreenNewSave" = "Létrehozás";
+
+"addNewExpenseErrorGeneral" = "Néhány mező üresen maradt!";
+"addNewExpenseErrorCategory" = "Nem választottál kategóriát!";
+
+//categories
+"categoryTranslationTitle" = "Kategóriák";
+"categoryTranslationRestaurant" = "Étterem";
+"categoryTranslationTickets" = "Jegyek";
+"categoryTranslationMuseum" = "Múzeum";
+"categoryTranslationHotel" = "Hotel";
+"categoryTranslationCash" = "Készpénz";
+"categoryTranslationShopping" = "Bevásárlás";
+"categoryTranslationGas" = "Benzin";
+"categoryTranslationTravel" = "Utazás";
+"categoryTranslationOther" = "Egyéb";
+
+//profile screen
+"profileScreenMyProfileTitle" = "Profilom";
+"profileScreenSettingsHeader" = "Beállítások";
+"profileScreenTotalSpendingsLabel" = "Összes költés";
+"profileScreenSelectProfileColour" = "Profil színválasztás";
+"profileScreenNumberOfLatestSpendings" = "Utolsó n db költés beállítása";
+"profileScreenPrivacy" = "Adatvédelem";
+"profileScreenTermsAndConditions" = "Felhasználási feltételek";
+"profileScreenLogOutButtonNavbar" = "Kijelentkezés";
+
+"profileScreenImageSelectionLabel" = "Kép választása";
+"profileScreenBrowseGalleryLabel" = "Galéria";
+"profileScreenTakeNewPictureLabel" = "Új létrehozása";
+"profileScreenCancelNewImage" = "Mégsem";
+
+"profileScreenLogoutConfirmation" = "Megerősítés";
+"profileScreenLogoutCancel" = "Mégsem";
+"profileScreenLogout" = "Kijelentkezés";
+"profileScreenLogoutPrompt" = "Biztosan ki szeretnél jelentkezni?";
+
+//color selection screen
+"colorSelectionScreenCurrentlySelectedColor" = "Kiválasztott szín:";
+
+//social screen
+"socialScreenMainTitle" = "Közösségi";

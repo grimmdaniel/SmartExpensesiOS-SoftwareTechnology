@@ -35,8 +35,69 @@
 "signInScreenPasswordLabel" = "Palavra-passe";
 "signInScreenSignInButtonText" = "INICIAR SESSÃO";
 
+//home screen
+"homeScreenHomeTitle" = "Página inicial";
+"homeScreenPullToRefresh" = "Puxe para atualizar...";
+"homeScreenNoExpensesAvailable" = "Não conseguimos encontrar gastos para mostrar, puxe para atualizar...";
+"homeScreenCheapPlaces" = "Lugares baratos para explorar nas proximidades...";
+"homeScreenLatestSpendings" = "Gastos mais recentes";
+
 //my expenses screen
 "myExpensesDeleteExpensePromptConfirmLabel" = "Confirmar";
 "myExpensesDeleteExpensePromptCancelLabel" = "Cancelar";
 "myExpensesDeleteExpensePromptDelete" = "Apagar";
 "myExpensesDeleteExpensePromptMessage" = "Tem certeza de que deseja apagar este Expense?";
+
+"myExpensesPullToRefresh" = "Puxe para atualizar...";
+"myExpensesNoExpensesAvailable" = "Não conseguimos encontrar gastos para mostrar, puxe para atualizar...";
+"myExpensesScreenTitleLabel" = "Os meus gastos";
+
+"addNewExpenseScreenNewName" = "NOME";
+"addNewExpenseScreenNewAmount" = "PREÇO";
+"addNewExpenseScreenNewCategory" = "SELECIONE A CATEGORIA";
+
+"addNewExpenseScreenNewNamePlaceholder" = "Nome da sua gasto";
+"addNewExpenseScreenNewAmountPlaceholder" = "por exemplo 1234.";
+"addNewExpenseScreenNewCategoryPlaceholder" = "Selecione entre as categorias";
+"addNewExpenseScreenNewSave" = "Criar";
+
+"addNewExpenseErrorGeneral" = "Faltam alguns campos";
+"addNewExpenseErrorCategory" = "Nenhuma categoria foi selecionada";
+
+//categories
+"categoryTranslationTitle" = "Categorias";
+"categoryTranslationRestaurant" = "Restaurante";
+"categoryTranslationTickets" = "Bilhetes";
+"categoryTranslationMuseum" = "Museu";
+"categoryTranslationHotel" = "Hotel";
+"categoryTranslationCash" = "Dinheiro";
+"categoryTranslationShopping" = "Shopping";
+"categoryTranslationGas" = "Gasoline";
+"categoryTranslationTravel" = "Viagem";
+"categoryTranslationOther" = "Outros";
+
+//profile screen
+"profileScreenMyProfileTitle" = "Meu Perfil";
+"profileScreenSettingsHeader" = "Definições";
+"profileScreenTotalSpendingsLabel" = "Total de gastos";
+"profileScreenSelectProfileColour" = "Selecione a cor do perfil";
+"profileScreenNumberOfLatestSpendings" = "Número de gastos mais recentes";
+"profileScreenPrivacy" = "Política de Privacidade";
+"profileScreenTermsAndConditions" = "Termos de uso e Condições";
+"profileScreenLogOutButtonNavbar" = "Terminar sessão";
+
+"profileScreenImageSelectionLabel" = "Selecione a imagem";
+"profileScreenBrowseGalleryLabel" = "Navegar na galeria";
+"profileScreenTakeNewPictureLabel" = "Crie um novo";
+"profileScreenCancelNewImage" = "Cancelar";
+
+"profileScreenLogoutConfirmation" = "Confirmação";
+"profileScreenLogoutCancel" = "Cancelar";
+"profileScreenLogout" = "Terminar sessão";
+"profileScreenLogoutPrompt" = "Tem certeza de que deseja sair?";
+
+//color selection screen
+"colorSelectionScreenCurrentlySelectedColor" = "Cor selecionada:";
+
+//social screen
+"socialScreenMainTitle" = "Social";

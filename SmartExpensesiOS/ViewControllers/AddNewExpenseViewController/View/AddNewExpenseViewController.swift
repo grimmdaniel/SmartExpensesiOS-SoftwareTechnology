@@ -32,11 +32,16 @@ class AddNewExpenseViewController: UIViewController, StoryboardAble {
     @IBOutlet weak var selectCategoryButton: UIButton!
     @IBOutlet weak var selectCategoryContainerView: UIView!
     
+    @IBOutlet weak var newExpenseNameLabel: UILabel!
+    @IBOutlet weak var newExpenseAmountLabel: UILabel!
+    @IBOutlet weak var newExpenseCategoryLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.modalPresentationCapturesStatusBarAppearance = true
         setUpUI()
+        setUpTranslations()
         
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
         tapGesture.cancelsTouchesInView = false
@@ -49,6 +54,17 @@ class AddNewExpenseViewController: UIViewController, StoryboardAble {
     
     @objc func closeKeyboard() {
         view.endEditing(true)
+    }
+    
+    private func setUpTranslations() {
+        newExpenseNameLabel.text = "addNewExpenseScreenNewName".localized
+        newExpenseAmountLabel.text = "addNewExpenseScreenNewAmount".localized
+        newExpenseCategoryLabel.text = "addNewExpenseScreenNewCategory".localized
+        
+        expenseNameTextField.placeholder = "addNewExpenseScreenNewNamePlaceholder".localized
+        expensePriceTextField.placeholder = "addNewExpenseScreenNewAmountPlaceholder".localized
+        expenseCategoryTextField.placeholder = "addNewExpenseScreenNewCategoryPlaceholder".localized
+        saveButton.setTitle("addNewExpenseScreenNewSave".localized, for: .normal)
     }
     
     private func setUpUI() {
@@ -145,12 +161,12 @@ extension AddNewExpenseViewController: LocationManagerProtocol {
     func didFinishFindLocation(location: ExpenseLocation) {
         viewModel.currentLocation = location
         guard let data = getDataFromTextFields() else {
-            showErrorPopUp(title: "Error", message: "Some fields are missing")
+            showErrorPopUp(title: "Error", message: "addNewExpenseErrorGeneral".localized)
             return
         }
         viewModel.currentData = data
         guard let category = viewModel.currentlySelectedCategory else {
-            showErrorPopUp(title: "Error", message: "No category has been selected")
+            showErrorPopUp(title: "Error", message: "addNewExpenseErrorCategory".localized)
             return
         }
         viewModel.currentlySelectedCategory = category

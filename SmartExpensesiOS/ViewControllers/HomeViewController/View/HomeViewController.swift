@@ -40,7 +40,7 @@ class HomeViewController: UIViewController, StoryboardAble, AnimatableVC {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
-        title = "Home"
+        title = "homeScreenHomeTitle".localized
         tabBarItem.image = UIImage(named: "tabbar_0.png")
     }
     
@@ -69,7 +69,7 @@ class HomeViewController: UIViewController, StoryboardAble, AnimatableVC {
         mainTableView.backgroundColor = .white
         mainTableView.separatorStyle = .none
         
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.attributedTitle = NSAttributedString(string: "homeScreenPullToRefresh".localized)
         refreshControl.addTarget(self, action: #selector(refreshTableView), for: .valueChanged)
         mainTableView.addSubview(refreshControl)
     }
@@ -108,7 +108,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return 10
         } else {
             if viewModel.isExpensesEmpty {
-                mainTableView.showEmptyTableViewMessage(message: "We couldn't find any expenses to show. Pull to refresh...")
+                mainTableView.showEmptyTableViewMessage(message: "homeScreenNoExpensesAvailable".localized)
             } else {
                 mainTableView.backgroundView = nil
             }
@@ -157,9 +157,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             let label = UILabel()
             label.frame = CGRect.init(x: 15, y: 5, width: headerView.frame.width - 10, height: headerView.frame.height - 10)
             if section == 0 {
-                label.text = "Cheap places to explore nearby..."
+                label.text = "homeScreenCheapPlaces".localized
             } else {
-                label.text = "Latest spendings"
+                label.text = "homeScreenLatestSpendings".localized
             }
             label.font = UIFont(name: "HelveticaNeue-Medium", size: 27.0)
             label.textColor = ColorTheme.secondaryColor

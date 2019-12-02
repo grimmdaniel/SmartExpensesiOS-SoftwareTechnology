@@ -40,3 +40,26 @@
 "myExpensesDeleteExpensePromptCancelLabel" = "Cancel";
 "myExpensesDeleteExpensePromptDelete" = "Delete";
 "myExpensesDeleteExpensePromptMessage" = "Are you sure want to delete this Expense?";
+
+//profile screen
+"profileScreenMyProfileTitle" = "My Profile";
+"profileScreenSettingsHeader" = "Settings";
+"profileScreenTotalSpendingsLabel" = "Total spendings";
+"profileScreenSelectProfileColour" = "Select profile color";
+"profileScreenNumberOfLatestSpendings" = "Number of latest spendings";
+"profileScreenPrivacy" = "Privacy";
+"profileScreenTermsAndConditions" = "Terms and Conditions";
+"profileScreenLogOutButtonNavbar" = "Log Out";
+
+"profileScreenImageSelectionLabel" = "Select image";
+"profileScreenBrowseGalleryLabel" = "Browse gallery";
+"profileScreenTakeNewPictureLabel" = "Create new";
+"profileScreenCancelNewImage" = "Cancel";
+
+"profileScreenLogoutConfirmation" = "Confirmation";
+"profileScreenLogoutCancel" = "Cancel";
+"profileScreenLogout" = "Log Out";
+"profileScreenLogoutPrompt" = "Are you sure want to log out?";
+
+//color selection screen
+"colorSelectionScreenCurrentlySelectedColor" = "Selected color:";

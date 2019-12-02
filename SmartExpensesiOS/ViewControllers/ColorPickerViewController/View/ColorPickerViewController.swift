@@ -20,6 +20,7 @@ class ColorPickerViewController: UIViewController, StoryboardAble {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        selectedColorLabel.text = "colorSelectionScreenCurrentlySelectedColor".localized
         colorView.backgroundColor = selectedColor
         colorView.isUserInteractionEnabled = false
         let ges = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(gesture:)))

@@ -43,8 +43,8 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
-        title = "My Profile"
-        tabBarItem = UITabBarItem(title: "My Profile", image: UIImage(named: "tabbar_4.png"), tag: 4)
+        title = "profileScreenMyProfileTitle".localized
+        tabBarItem = UITabBarItem(title: "profileScreenMyProfileTitle".localized, image: UIImage(named: "tabbar_4.png"), tag: 4)
     }
     
     var logOutClosure: (() -> Void)?
@@ -54,11 +54,17 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
     var service: LogoutService!
     var profileService: ProfileService!
     
-    let menuPoints = ["Select profile colour","Number of latest spendings","Privacy","Terms & Conditions"]
+    let menuPoints = [
+        "profileScreenSelectProfileColour".localized,
+        "profileScreenNumberOfLatestSpendings".localized,
+        "profileScreenPrivacy".localized,
+        "profileScreenTermsAndConditions".localized
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        totalSpendingsLabel.text = "profileScreenTotalSpendingsLabel".localized + ": " + "\(12000) HUF"
         service.delegate = self
         profileService.delegate = self
         setUpNavbar()
@@ -91,7 +97,7 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
         navigationController?.navigationBar.barTintColor = ColorTheme.primaryColor
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.navigationBar.tintColor = UIColor.white
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(logOut))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "profileScreenLogOutButtonNavbar".localized, style: .plain, target: self, action: #selector(logOut))
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refresh))
     }
     
@@ -117,14 +123,14 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
     }
     
     @objc func addNewImage() {
-        let optionMenu = UIAlertController(title: nil, message: "Select image", preferredStyle: .actionSheet)
-        let browseAction = UIAlertAction(title: "Browse gallery", style: .default) { [weak self] (_) in
+        let optionMenu = UIAlertController(title: nil, message: "profileScreenImageSelectionLabel".localized, preferredStyle: .actionSheet)
+        let browseAction = UIAlertAction(title: "profileScreenBrowseGalleryLabel".localized, style: .default) { [weak self] (_) in
             self?.addImageFromLibrary()
         }
-        let createImageAction = UIAlertAction(title: "Create new", style: .default) { [weak self] (_) in
+        let createImageAction = UIAlertAction(title: "profileScreenTakeNewPictureLabel".localized, style: .default) { [weak self] (_) in
             self?.createNewPhoto()
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let cancelAction = UIAlertAction(title: "profileScreenCancelNewImage".localized, style: .cancel)
         optionMenu.addAction(browseAction)
         optionMenu.addAction(createImageAction)
         optionMenu.addAction(cancelAction)
@@ -149,9 +155,9 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
     
     func logOutPressed() {
         guard let apikey = UserDefaults.APIKEY else { return }
-        let alertVC = UIAlertController(title: "Confirmation", message: "Are you sure want to log out?", preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alertVC.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { [weak self] (_) in
+        let alertVC = UIAlertController(title: "profileScreenLogoutConfirmation".localized, message: "profileScreenLogoutPrompt".localized, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "profileScreenLogoutCancel".localized, style: .cancel, handler: nil))
+        alertVC.addAction(UIAlertAction(title: "profileScreenLogout".localized, style: .destructive, handler: { [weak self] (_) in
             self?.service.logOutUser(apiKey: apikey)
         }))
         present(alertVC, animated: true, completion: nil)
@@ -234,7 +240,7 @@ extension ProfileSettingsViewController: UITableViewDelegate, UITableViewDataSou
 
             let label = UILabel()
             label.frame = CGRect.init(x: 20, y: 5, width: headerView.frame.width - 10, height: headerView.frame.height - 10)
-            label.text = "Settings"
+            label.text = "profileScreenSettingsHeader".localized
             label.font = UIFont(name: "HelveticaNeue-Medium", size: 25.0)
             label.textColor = ColorTheme.secondaryColor
             label.numberOfLines = 2

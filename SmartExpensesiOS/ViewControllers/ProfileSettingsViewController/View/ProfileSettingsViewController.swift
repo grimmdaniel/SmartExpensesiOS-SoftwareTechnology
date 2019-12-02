@@ -29,6 +29,8 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
         }
     }
     
+    var currentNumberOfLatestSpendings = 5
+    
     var currentProfile: ProfileData? {
         didSet {
             if let data = currentProfile {
@@ -47,6 +49,7 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
     
     var logOutClosure: (() -> Void)?
     var colorPickerClosure: (() -> Void)?
+    var numberOfLatestSpendingsClosure: ((Int) -> Void)?
     var activityIndicator = UIActivityIndicatorView()
     var service: LogoutService!
     var profileService: ProfileService!
@@ -248,6 +251,8 @@ extension ProfileSettingsViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             colorPickerClosure?()
+        } else if indexPath.row == 1 {
+            numberOfLatestSpendingsClosure?(currentNumberOfLatestSpendings)
         } else if indexPath.row == 2 {
             openDocumentsInBrowser(url: "https://google.com")
         } else if indexPath.row == 3 {

@@ -53,6 +53,17 @@ class ProfileSettingsCoordinator: Coordinator {
             self?.navigationController.pushViewController(colorPickerVC, animated: true)
         }
         
+        profileSettingsViewController.numberOfLatestSpendingsClosure = { [weak self] (currentNumber) in
+            let numberSelectionVC = NumberOfVisibleSpendingsVC.instantiate()
+            numberSelectionVC.currentlySelectedIndex = currentNumber - 5
+            numberSelectionVC.numberSelectedClosure = { [weak self] (number) in
+                profileSettingsViewController.currentNumberOfLatestSpendings = number
+                self?.navigationController.popViewController(animated: true)
+            }
+            
+            self?.navigationController.pushViewController(numberSelectionVC, animated: true)
+        }
+        
         profileSettingsViewController.service = LogoutService()
         profileSettingsViewController.profileService = ProfileService()
         navigationController.pushViewController(profileSettingsViewController, animated: true)

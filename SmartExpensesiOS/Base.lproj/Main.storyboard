@@ -1205,6 +1205,55 @@
             </objects>
             <point key="canvasLocation" x="2239.1999999999998" y="1381.2593703148427"/>
         </scene>
+        <!--Number Of Visible SpendingsVC-->
+        <scene sceneID="SWI-II-rFg">
+            <objects>
+                <viewController storyboardIdentifier="NumberOfVisibleSpendingsVC" id="kFi-jD-Jx1" customClass="NumberOfVisibleSpendingsVC" customModule="SmartExpensesiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hIm-fB-5OK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kuo-SF-Vdj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="NumberOfVisibleSpendingsCell" textLabel="xZG-lB-IEd" style="IBUITableViewCellStyleDefault" id="ryX-ul-urx">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ryX-ul-urx" id="OPD-Na-hxl">
+                                            <rect key="frame" x="0.0" y="0.0" width="336" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xZG-lB-IEd">
+                                                    <rect key="frame" x="15" y="0.0" width="313" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Kuo-SF-Vdj" firstAttribute="leading" secondItem="FqU-CV-FDz" secondAttribute="leading" id="Hai-BG-nup"/>
+                            <constraint firstItem="Kuo-SF-Vdj" firstAttribute="trailing" secondItem="FqU-CV-FDz" secondAttribute="trailing" id="T3U-HP-uPs"/>
+                            <constraint firstItem="Kuo-SF-Vdj" firstAttribute="top" secondItem="FqU-CV-FDz" secondAttribute="top" id="Y2h-lg-yBr"/>
+                            <constraint firstItem="Kuo-SF-Vdj" firstAttribute="bottom" secondItem="FqU-CV-FDz" secondAttribute="bottom" id="tzU-Za-Rge"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FqU-CV-FDz"/>
+                    </view>
+                    <connections>
+                        <outlet property="selectionTableView" destination="Kuo-SF-Vdj" id="YJw-p7-AsS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ct4-lY-gJK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2940" y="1380.3598200899551"/>
+        </scene>
         <!--Currency Rate View Controller-->
         <scene sceneID="MEK-uf-DpX">
             <objects>

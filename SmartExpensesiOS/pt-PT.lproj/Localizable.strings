@@ -41,6 +41,34 @@
 "myExpensesDeleteExpensePromptDelete" = "Apagar";
 "myExpensesDeleteExpensePromptMessage" = "Tem certeza de que deseja apagar este Expense?";
 
+"myExpensesPullToRefresh" = "Puxe para atualizar...";
+"myExpensesNoExpensesAvailable" = "Não conseguimos encontrar gastos para mostrar, puxe para atualizar...";
+"myExpensesScreenTitleLabel" = "Os meus gastos";
+
+"addNewExpenseScreenNewName" = "NOME";
+"addNewExpenseScreenNewAmount" = "PREÇO";
+"addNewExpenseScreenNewCategory" = "SELECIONE A CATEGORIA";
+
+"addNewExpenseScreenNewNamePlaceholder" = "Nome da sua gasto";
+"addNewExpenseScreenNewAmountPlaceholder" = "por exemplo 1234.";
+"addNewExpenseScreenNewCategoryPlaceholder" = "Selecione entre as categorias";
+"addNewExpenseScreenNewSave" = "Criar";
+
+"addNewExpenseErrorGeneral" = "Faltam alguns campos";
+"addNewExpenseErrorCategory" = "Nenhuma categoria foi selecionada";
+
+//categories
+"categoryTranslationTitle" = "Categorias";
+"categoryTranslationRestaurant" = "Restaurante";
+"categoryTranslationTickets" = "Bilhetes";
+"categoryTranslationMuseum" = "Museu";
+"categoryTranslationHotel" = "Hotel";
+"categoryTranslationCash" = "Dinheiro";
+"categoryTranslationShopping" = "Shopping";
+"categoryTranslationGas" = "Gasoline";
+"categoryTranslationTravel" = "Viagem";
+"categoryTranslationOther" = "Outros";
+
 //profile screen
 "profileScreenMyProfileTitle" = "Meu Perfil";
 "profileScreenSettingsHeader" = "Definições";
@@ -63,3 +91,6 @@
 
 //color selection screen
 "colorSelectionScreenCurrentlySelectedColor" = "Cor selecionada:";
+
+//social screen
+"socialScreenMainTitle" = "Social";

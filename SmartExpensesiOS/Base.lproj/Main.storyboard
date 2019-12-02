@@ -958,6 +958,9 @@
                         <outlet property="expenseNameTextField" destination="usO-ho-4DD" id="4vR-9y-3T1"/>
                         <outlet property="expensePriceTextField" destination="0EE-Jq-GaW" id="5LQ-wm-oiB"/>
                         <outlet property="mainBackgroundView" destination="IxX-gI-kDn" id="zEZ-yl-NqQ"/>
+                        <outlet property="newExpenseAmountLabel" destination="TX8-R3-RJl" id="Tsp-ch-laD"/>
+                        <outlet property="newExpenseCategoryLabel" destination="GLF-yS-cqW" id="IVO-UM-74h"/>
+                        <outlet property="newExpenseNameLabel" destination="hGO-PS-OS9" id="K5j-l1-DFy"/>
                         <outlet property="saveButton" destination="16M-GU-wwW" id="Et8-Zk-f40"/>
                         <outlet property="selectCategoryButton" destination="QOL-ID-FTg" id="Rx2-Q7-uMu"/>
                         <outlet property="selectCategoryContainerView" destination="5Nd-ms-U8s" id="uvK-Lh-2be"/>

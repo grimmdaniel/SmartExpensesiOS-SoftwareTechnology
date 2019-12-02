@@ -41,6 +41,35 @@
 "myExpensesDeleteExpensePromptDelete" = "Törlés";
 "myExpensesDeleteExpensePromptMessage" = "Biztosan törölni szeretnéd ezt az Expense-t?";
 
+"myExpensesPullToRefresh" = "Húzd le a frissítéshez...";
+"myExpensesNoExpensesAvailable" = "Nem találtunk költéseket, húzd le a frissítéshez...";
+"myExpensesScreenTitleLabel" = "Költéseim";
+
+//add new expense screen
+"addNewExpenseScreenNewName" = "NÉV";
+"addNewExpenseScreenNewAmount" = "ÁR";
+"addNewExpenseScreenNewCategory" = "VÁLASSZ KATEGÓRIÁT";
+
+"addNewExpenseScreenNewNamePlaceholder" = "A költésed neve";
+"addNewExpenseScreenNewAmountPlaceholder" = "pl: 1234";
+"addNewExpenseScreenNewCategoryPlaceholder" = "Válassz a kategóriák közül";
+"addNewExpenseScreenNewSave" = "Létrehozás";
+
+"addNewExpenseErrorGeneral" = "Néhány mező üresen maradt!";
+"addNewExpenseErrorCategory" = "Nem választottál kategóriát!";
+
+//categories
+"categoryTranslationTitle" = "Kategóriák";
+"categoryTranslationRestaurant" = "Étterem";
+"categoryTranslationTickets" = "Jegyek";
+"categoryTranslationMuseum" = "Múzeum";
+"categoryTranslationHotel" = "Hotel";
+"categoryTranslationCash" = "Készpénz";
+"categoryTranslationShopping" = "Bevásárlás";
+"categoryTranslationGas" = "Benzin";
+"categoryTranslationTravel" = "Utazás";
+"categoryTranslationOther" = "Egyéb";
+
 //profile screen
 "profileScreenMyProfileTitle" = "Profilom";
 "profileScreenSettingsHeader" = "Beállítások";
@@ -63,3 +92,6 @@
 
 //color selection screen
 "colorSelectionScreenCurrentlySelectedColor" = "Kiválasztott szín:";
+
+//social screen
+"socialScreenMainTitle" = "Közösségi";

@@ -25,7 +25,7 @@ class SocialViewController: UIViewController, StoryboardAble {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
-        title = "Social"
+        title = "socialScreenMainTitle".localized
         tabBarItem.image = UIImage(named: "tabbar_2.png")
     }
 

@@ -1,0 +1,104 @@
+/* 
+  Localizable.strings
+  SmartExpensesiOS
+
+  Created by Grimm Dániel on 13/10/2019.
+  Copyright © 2019 com.daniel.grimm.smartexpenses. All rights reserved.
+*/
+
+//welcome screen
+"welcomeScreenSignInButtonText" = "登陆"; //"Sign in";
+"welcomeScreenSignUpButtonText" = "注册"; //"Sign up";
+"welcomeScreenDontHaveAnAccountQuestion" = "没有注册账户"; //"Don’t have an account?";
+//  "" ; //
+//sign up screen
+"signUpScreenTitleText" = "注册"; //"Sign Up";
+"signUpScreenWelcomeText" = "用邮箱注册"; //"Register with email";
+"signUpScreenEmailLabel" = "邮箱地址"; //"E-mail address";
+"signUpScreenEmailPlaceholder" = "joe@smartexpenses.com"; //"joe@smartexpenses.com";
+"signUpScreenPasswordLabel" = "创建密码"; //"Create password";
+"signUpScreenPasswordPlaceholder" = "**********" ; //"**********";
+"signUpScreenConfirmPasswordLabel" = "确认密码" ; //"Confirm password";
+"signUpScreenConfirmPasswordPlaceholder" = "**********" ; //"**********";
+"signUpScreenSignUpButtonText" = "现在注册" ; //"REGISTER NOW";
+"signUpScreenTermsAndConditionsLabel" = "我同意其授予Smart Expenses一切权限并通过注册其签署相关协议" ; //"By signing, I agree Smart Expenses'";
+"signUpScreenTermsAndConditionsButton" = "条款及条件" ; //"Terms and Conditions";
+
+//sign in screen
+"signInScreenTitleText" = "登陆" ; //"Sign in";
+"signInScreenForgotPassword" = "忘记密码" ; //"Forgot password?";
+"signInScreenWelcomeLabelText" = "登陆Smart Expenses" ; //"Sign in to Smart Expenses";
+
+"signInScreenEmailLabel" = "电子邮箱" ; //"E-mail address";
+"signInScreenEmailPlaceholder" = "joe@smartexpenses.com" ; //"joe@smartexpenses.com";
+"signInScreenPasswordPlaceholder" = "**********" ; //"**********";
+"signInScreenPasswordLabel" = "密码" ; //"Password";
+"signInScreenSignInButtonText" = "登陆" ; //"SIGN IN";
+
+//home screen
+"homeScreenHomeTitle" = "主页" ; //"Home";
+"homeScreenPullToRefresh" = "刷新" ; //"Pull to refresh...";
+"homeScreenNoExpensesAvailable" = "我们找不到任何可以显示的花费。下拉刷新..." ; //"We could't find any expenses to show. Pull to refresh...";
+"homeScreenCheapPlaces" = "附近可以探索的便宜地点" ; //"Cheap places to explore nearby...";
+"homeScreenLatestSpendings" = "最新的开支" ; //"Latest spendings";
+
+//my expenses screen
+"myExpensesDeleteExpensePromptConfirmLabel" = "确认" ; //"Confirm";
+"myExpensesDeleteExpensePromptCancelLabel" = "取消" ; //"Cancel";
+"myExpensesDeleteExpensePromptDelete" = "删除" ; //"Delete";
+"myExpensesDeleteExpensePromptMessage" = "你确定想删除这项花费记录？" ; //"Are you sure want to delete this Expense?";
+
+"myExpensesPullToRefresh" = "下拉刷新" ; //"Pull to refresh...";
+"myExpensesNoExpensesAvailable" = "我们找不到任何可以显示的花费。下拉刷新..." ; //"We could't find any expenses to show. Pull to refresh...";
+"myExpensesScreenTitleLabel" = "我的花费" ; //"My Expenses";
+
+//add new expense screen        "" ; //
+"addNewExpenseScreenNewName" = "姓名" ; //"NAME";
+"addNewExpenseScreenNewAmount" = "数量" ; //"AMOUNT";
+"addNewExpenseScreenNewCategory" = "选择类别" ; //"SELECT CATEGORY";
+
+"addNewExpenseScreenNewNamePlaceholder" = "花销名" ; //"Name of your expense";
+"addNewExpenseScreenNewAmountPlaceholder" = "e.g 1234." ; //"e.g 1234.";
+"addNewExpenseScreenNewCategoryPlaceholder" = "从类别中选择" ; //"Select from the categories";
+"addNewExpenseScreenNewSave" = "储存" ; //"Save";
+
+"addNewExpenseErrorGeneral" = "有些字段丢失了" ; //"Some fields are missing";
+"addNewExpenseErrorCategory" = "没有能够选择的类别" ; //"No category has been selected";
+
+//categories
+"categoryTranslationTitle" = "类别" ; //"Categories";
+"categoryTranslationRestaurant" = "餐馆" ; //"Restaurant";
+"categoryTranslationTickets" = "票" ; //"Tickets";
+"categoryTranslationMuseum" = "博物馆" ; //"Museum";
+"categoryTranslationHotel" = "酒店" ; //"Hotel";
+"categoryTranslationCash" = "现金" ; //"Cash";
+"categoryTranslationShopping" = "购物" ; //"Shopping";
+"categoryTranslationGas" = "加油站" ; //"Gas";
+"categoryTranslationTravel" = "旅行" ; //"Travel";
+"categoryTranslationOther" = "其他" ; //"Other";
+
+//profile screen
+"profileScreenMyProfileTitle" = "我的资料" ; //"My Profile";
+"profileScreenSettingsHeader" = "设置" ; //"Settings";
+"profileScreenTotalSpendingsLabel" = "总花销" ; //"Total spendings";
+"profileScreenSelectProfileColour" = "选择概要颜色" ; //"Select profile color";
+"profileScreenNumberOfLatestSpendings" = "最近支出的数量" ; //"Number of latest spendings";
+"profileScreenPrivacy" = "隐私" ; //"Privacy";
+"profileScreenTermsAndConditions" = "条款及条件" ; //"Terms and Conditions";
+"profileScreenLogOutButtonNavbar" = "退出登陆" ; //"Log Out";
+
+"profileScreenImageSelectionLabel" = "选择图片" ; //"Select image";
+"profileScreenBrowseGalleryLabel" = "浏览图库" ; //"Browse gallery";
+"profileScreenTakeNewPictureLabel" = "创建新图片" ; //"Create new";
+"profileScreenCancelNewImage" = "取消" ; //"Cancel";
+
+"profileScreenLogoutConfirmation" = "确认" ; //"Confirmation";
+"profileScreenLogoutCancel" = "取消" ; //"Cancel";
+"profileScreenLogout" = "退出" ; //"Log Out";
+"profileScreenLogoutPrompt" = "你确定要退出登陆吗？" ; //"Are you sure want to log out?";
+
+//color selection screen
+"colorSelectionScreenCurrentlySelectedColor" = "选择颜色" ; //"Selected color:";
+
+//social screen
+"socialScreenMainTitle" = "社交" ; //"Social";

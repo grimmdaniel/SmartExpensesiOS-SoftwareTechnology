@@ -23,6 +23,9 @@
 		0809A8F023944606000BD7B4 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8EF23944606000BD7B4 /* ColorPickerViewController.swift */; };
 		0809A8F4239536E7000BD7B4 /* NumberOfVisibleSpendingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8F3239536E7000BD7B4 /* NumberOfVisibleSpendingsVC.swift */; };
 		0809A8F723954CD3000BD7B4 /* TestHttpObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8F623954CD3000BD7B4 /* TestHttpObject.swift */; };
+		0809A8FA239555FF000BD7B4 /* TestSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8F9239555FF000BD7B4 /* TestSecurity.swift */; };
+		0809A8FD2395574F000BD7B4 /* TestSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8FC2395574F000BD7B4 /* TestSignUpViewController.swift */; };
+		0809A8FF23955A76000BD7B4 /* TestSignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8FE23955A76000BD7B4 /* TestSignUpViewModel.swift */; };
 		080D80952372D05A00F7B32A /* LogoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80942372D05A00F7B32A /* LogoutDelegate.swift */; };
 		080D80982372D08200F7B32A /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80972372D08200F7B32A /* LogoutService.swift */; };
 		081E29612374225B00F95CF4 /* AddNewExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */; };
@@ -124,7 +127,6 @@
 		08C1535A236C80C200DA4F60 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C15359236C80C200DA4F60 /* Regex.swift */; };
 		08C1535B236C80C200DA4F60 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C15359236C80C200DA4F60 /* Regex.swift */; };
 		08C1535F236C88B200DA4F60 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C1535E236C88B200DA4F60 /* SignUpViewModel.swift */; };
-		08C15360236C88B200DA4F60 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C1535E236C88B200DA4F60 /* SignUpViewModel.swift */; };
 		08D5244A23539D5D001BB6FF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08D5244C23539D5D001BB6FF /* Localizable.strings */; };
 		08D5245223539EAA001BB6FF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D5245123539EAA001BB6FF /* Extensions.swift */; };
 		08FC1ADC23590B1C00C988AA /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FC1ADB23590B1C00C988AA /* TabbarController.swift */; };
@@ -157,6 +159,9 @@
 		0809A8EF23944606000BD7B4 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		0809A8F3239536E7000BD7B4 /* NumberOfVisibleSpendingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfVisibleSpendingsVC.swift; sourceTree = "<group>"; };
 		0809A8F623954CD3000BD7B4 /* TestHttpObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHttpObject.swift; sourceTree = "<group>"; };
+		0809A8F9239555FF000BD7B4 /* TestSecurity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSecurity.swift; sourceTree = "<group>"; };
+		0809A8FC2395574F000BD7B4 /* TestSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSignUpViewController.swift; sourceTree = "<group>"; };
+		0809A8FE23955A76000BD7B4 /* TestSignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSignUpViewModel.swift; sourceTree = "<group>"; };
 		080D80942372D05A00F7B32A /* LogoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutDelegate.swift; sourceTree = "<group>"; };
 		080D80972372D08200F7B32A /* LogoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutService.swift; sourceTree = "<group>"; };
 		081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewExpenseViewController.swift; sourceTree = "<group>"; };
@@ -370,6 +375,23 @@
 			path = TestUtils;
 			sourceTree = "<group>";
 		};
+		0809A8F8239555EA000BD7B4 /* TestSecurity */ = {
+			isa = PBXGroup;
+			children = (
+				0809A8F9239555FF000BD7B4 /* TestSecurity.swift */,
+			);
+			path = TestSecurity;
+			sourceTree = "<group>";
+		};
+		0809A8FB23955738000BD7B4 /* SignUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0809A8FC2395574F000BD7B4 /* TestSignUpViewController.swift */,
+				0809A8FE23955A76000BD7B4 /* TestSignUpViewModel.swift */,
+			);
+			path = SignUpViewController;
+			sourceTree = "<group>";
+		};
 		081E295E2374223700F95CF4 /* AddNewExpenseViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -450,6 +472,7 @@
 		082595F1236F11C200FF9F23 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0809A8FB23955738000BD7B4 /* SignUpViewController */,
 				082595F2236F11D100FF9F23 /* SignInViewController */,
 			);
 			path = ViewControllers;
@@ -724,6 +747,7 @@
 		085C60A423477E3000BA038C /* SmartExpensesiOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				0809A8F8239555EA000BD7B4 /* TestSecurity */,
 				0809A8F523954CB1000BD7B4 /* TestUtils */,
 				082595F1236F11C200FF9F23 /* ViewControllers */,
 				085C60A723477E3000BA038C /* Info.plist */,
@@ -1228,13 +1252,16 @@
 			files = (
 				0809A8F723954CD3000BD7B4 /* TestHttpObject.swift in Sources */,
 				081E298523786E0800F95CF4 /* FakeFailureLoginService.swift in Sources */,
+				0809A8FF23955A76000BD7B4 /* TestSignUpViewModel.swift in Sources */,
 				0883DEA1236489E600E91AF5 /* LoginService.swift in Sources */,
 				082595F7236F194700FF9F23 /* AnimateAbleVC.swift in Sources */,
 				082595F5236F11F300FF9F23 /* TestSignInViewController.swift in Sources */,
+				0809A8FA239555FF000BD7B4 /* TestSecurity.swift in Sources */,
 				081E2966237575E700F95CF4 /* LocationManager.swift in Sources */,
 				081E298B23786E9D00F95CF4 /* ShimmerAnimation.swift in Sources */,
 				082595FA236F196900FF9F23 /* ColorTheme.swift in Sources */,
 				08B4367A2361C0580046F326 /* NotificationConstants.swift in Sources */,
+				0809A8FD2395574F000BD7B4 /* TestSignUpViewController.swift in Sources */,
 				081E296C2376CF4F00F95CF4 /* ExpenseLocation.swift in Sources */,
 				081E299123786EDF00F95CF4 /* WelcomeImageCell.swift in Sources */,
 				08B43666235F41AF0046F326 /* CurrencyRateCoordinator.swift in Sources */,
@@ -1253,7 +1280,6 @@
 				081E297F23786C6000F95CF4 /* HTTPObject.swift in Sources */,
 				083661592365FF2700A524B8 /* CustomMKAnnotation.swift in Sources */,
 				08B43662235F40AC0046F326 /* CurrencyRateViewController.swift in Sources */,
-				08C15360236C88B200DA4F60 /* SignUpViewModel.swift in Sources */,
 				082595FB236F19D000FF9F23 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

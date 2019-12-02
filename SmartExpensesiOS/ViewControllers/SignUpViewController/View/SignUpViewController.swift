@@ -91,7 +91,7 @@ class SignUpViewController: UIViewController, StoryboardAble {
         }
     }
     
-    private func getCredentialsFromTextFields() -> UserCredential? {
+    internal func getCredentialsFromTextFields() -> UserCredential? {
         guard let emailRaw = emailTextField.text else { return nil }
         guard let email = viewModel.validateEmailAddress(email: emailRaw) else {
             showErrorPopUp(title: "Warning", message: "Email format is not valid.")

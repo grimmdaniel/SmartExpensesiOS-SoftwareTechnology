@@ -35,6 +35,13 @@
 "signInScreenPasswordLabel" = "Palavra-passe";
 "signInScreenSignInButtonText" = "INICIAR SESSÃO";
 
+//home screen
+"homeScreenHomeTitle" = "Página inicial";
+"homeScreenPullToRefresh" = "Puxe para atualizar...";
+"homeScreenNoExpensesAvailable" = "Não conseguimos encontrar gastos para mostrar, puxe para atualizar...";
+"homeScreenCheapPlaces" = "Lugares baratos para explorar nas proximidades...";
+"homeScreenLatestSpendings" = "Gastos mais recentes";
+
 //my expenses screen
 "myExpensesDeleteExpensePromptConfirmLabel" = "Confirmar";
 "myExpensesDeleteExpensePromptCancelLabel" = "Cancelar";

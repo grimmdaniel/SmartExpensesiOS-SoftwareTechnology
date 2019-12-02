@@ -35,6 +35,13 @@
 "signInScreenPasswordLabel" = "Jelszó";
 "signInScreenSignInButtonText" = "BEJELENTKEZÉS";
 
+//home screen
+"homeScreenHomeTitle" = "Kezdőlap";
+"homeScreenPullToRefresh" = "Húzd le a frissítéshez...";
+"homeScreenNoExpensesAvailable" = "Nem találtunk költéseket, húzd le a frissítéshez...";
+"homeScreenCheapPlaces" = "Olcsó helyek a közelben";
+"homeScreenLatestSpendings" = "Legutóbbi költések";
+
 //my expenses screen
 "myExpensesDeleteExpensePromptConfirmLabel" = "Megerősítés";
 "myExpensesDeleteExpensePromptCancelLabel" = "Mégsem";

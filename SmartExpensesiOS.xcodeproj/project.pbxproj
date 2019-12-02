@@ -28,6 +28,8 @@
 		0809A8FF23955A76000BD7B4 /* TestSignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8FE23955A76000BD7B4 /* TestSignUpViewModel.swift */; };
 		0809A90323955DFE000BD7B4 /* TestHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A90223955DFE000BD7B4 /* TestHomeViewController.swift */; };
 		0809A905239564B8000BD7B4 /* TestHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A904239564B8000BD7B4 /* TestHomeViewModel.swift */; };
+		0809A90823956B8A000BD7B4 /* TestMyExpensesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A90723956B8A000BD7B4 /* TestMyExpensesVC.swift */; };
+		0809A90A23956F73000BD7B4 /* TestMyExpensesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A90923956F73000BD7B4 /* TestMyExpensesViewModel.swift */; };
 		080D80952372D05A00F7B32A /* LogoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80942372D05A00F7B32A /* LogoutDelegate.swift */; };
 		080D80982372D08200F7B32A /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80972372D08200F7B32A /* LogoutService.swift */; };
 		081E29612374225B00F95CF4 /* AddNewExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */; };
@@ -163,6 +165,8 @@
 		0809A8FE23955A76000BD7B4 /* TestSignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSignUpViewModel.swift; sourceTree = "<group>"; };
 		0809A90223955DFE000BD7B4 /* TestHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHomeViewController.swift; sourceTree = "<group>"; };
 		0809A904239564B8000BD7B4 /* TestHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHomeViewModel.swift; sourceTree = "<group>"; };
+		0809A90723956B8A000BD7B4 /* TestMyExpensesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMyExpensesVC.swift; sourceTree = "<group>"; };
+		0809A90923956F73000BD7B4 /* TestMyExpensesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMyExpensesViewModel.swift; sourceTree = "<group>"; };
 		080D80942372D05A00F7B32A /* LogoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutDelegate.swift; sourceTree = "<group>"; };
 		080D80972372D08200F7B32A /* LogoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutService.swift; sourceTree = "<group>"; };
 		081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewExpenseViewController.swift; sourceTree = "<group>"; };
@@ -402,6 +406,15 @@
 			path = HomeViewController;
 			sourceTree = "<group>";
 		};
+		0809A90623956B76000BD7B4 /* MyExpensesVC */ = {
+			isa = PBXGroup;
+			children = (
+				0809A90723956B8A000BD7B4 /* TestMyExpensesVC.swift */,
+				0809A90923956F73000BD7B4 /* TestMyExpensesViewModel.swift */,
+			);
+			path = MyExpensesVC;
+			sourceTree = "<group>";
+		};
 		081E295E2374223700F95CF4 /* AddNewExpenseViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,6 +495,7 @@
 		082595F1236F11C200FF9F23 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0809A90623956B76000BD7B4 /* MyExpensesVC */,
 				0809A90123955DE1000BD7B4 /* HomeViewController */,
 				0809A8FB23955738000BD7B4 /* SignUpViewController */,
 				082595F2236F11D100FF9F23 /* SignInViewController */,
@@ -1275,12 +1289,14 @@
 				0809A8FD2395574F000BD7B4 /* TestSignUpViewController.swift in Sources */,
 				081E299123786EDF00F95CF4 /* WelcomeImageCell.swift in Sources */,
 				08B43666235F41AF0046F326 /* CurrencyRateCoordinator.swift in Sources */,
+				0809A90823956B8A000BD7B4 /* TestMyExpensesVC.swift in Sources */,
 				082595F9236F195A00FF9F23 /* ContentLoadingCell.swift in Sources */,
 				081E298A23786E6A00F95CF4 /* FakeLoginService.swift in Sources */,
 				082595F8236F194A00FF9F23 /* StoryboardAble.swift in Sources */,
 				082595F6236F191B00FF9F23 /* Coordinator.swift in Sources */,
 				081E298023786C6C00F95CF4 /* HTTPMethod.swift in Sources */,
 				081E298123786C8500F95CF4 /* EndPoints.swift in Sources */,
+				0809A90A23956F73000BD7B4 /* TestMyExpensesViewModel.swift in Sources */,
 				082595FD236F254B00FF9F23 /* TestSignInViewModel.swift in Sources */,
 				081E298F23786ED700F95CF4 /* WelcomeModel.swift in Sources */,
 				08C1535B236C80C200DA4F60 /* Regex.swift in Sources */,

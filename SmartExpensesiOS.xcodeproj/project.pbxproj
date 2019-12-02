@@ -22,6 +22,7 @@
 		0809A8EC23942EEC000BD7B4 /* ColorWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8EB23942EEB000BD7B4 /* ColorWheel.swift */; };
 		0809A8F023944606000BD7B4 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8EF23944606000BD7B4 /* ColorPickerViewController.swift */; };
 		0809A8F4239536E7000BD7B4 /* NumberOfVisibleSpendingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8F3239536E7000BD7B4 /* NumberOfVisibleSpendingsVC.swift */; };
+		0809A8F723954CD3000BD7B4 /* TestHttpObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0809A8F623954CD3000BD7B4 /* TestHttpObject.swift */; };
 		080D80952372D05A00F7B32A /* LogoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80942372D05A00F7B32A /* LogoutDelegate.swift */; };
 		080D80982372D08200F7B32A /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080D80972372D08200F7B32A /* LogoutService.swift */; };
 		081E29612374225B00F95CF4 /* AddNewExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */; };
@@ -155,6 +156,7 @@
 		0809A8EB23942EEB000BD7B4 /* ColorWheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorWheel.swift; sourceTree = "<group>"; };
 		0809A8EF23944606000BD7B4 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		0809A8F3239536E7000BD7B4 /* NumberOfVisibleSpendingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfVisibleSpendingsVC.swift; sourceTree = "<group>"; };
+		0809A8F623954CD3000BD7B4 /* TestHttpObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHttpObject.swift; sourceTree = "<group>"; };
 		080D80942372D05A00F7B32A /* LogoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutDelegate.swift; sourceTree = "<group>"; };
 		080D80972372D08200F7B32A /* LogoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutService.swift; sourceTree = "<group>"; };
 		081E29602374225B00F95CF4 /* AddNewExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewExpenseViewController.swift; sourceTree = "<group>"; };
@@ -358,6 +360,14 @@
 				0809A8F3239536E7000BD7B4 /* NumberOfVisibleSpendingsVC.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0809A8F523954CB1000BD7B4 /* TestUtils */ = {
+			isa = PBXGroup;
+			children = (
+				0809A8F623954CD3000BD7B4 /* TestHttpObject.swift */,
+			);
+			path = TestUtils;
 			sourceTree = "<group>";
 		};
 		081E295E2374223700F95CF4 /* AddNewExpenseViewController */ = {
@@ -714,6 +724,7 @@
 		085C60A423477E3000BA038C /* SmartExpensesiOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				0809A8F523954CB1000BD7B4 /* TestUtils */,
 				082595F1236F11C200FF9F23 /* ViewControllers */,
 				085C60A723477E3000BA038C /* Info.plist */,
 			);
@@ -1215,6 +1226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0809A8F723954CD3000BD7B4 /* TestHttpObject.swift in Sources */,
 				081E298523786E0800F95CF4 /* FakeFailureLoginService.swift in Sources */,
 				0883DEA1236489E600E91AF5 /* LoginService.swift in Sources */,
 				082595F7236F194700FF9F23 /* AnimateAbleVC.swift in Sources */,

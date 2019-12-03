@@ -81,6 +81,17 @@ extension UIViewController {
 
 public extension UserDefaults {
     
+    static func saveImageToDatabase(image: UIImage, userEmail: String) {
+        let imageData = image.pngData()
+        UserDefaults.standard.set(imageData, forKey: userEmail + "_profile_image")
+    }
+    
+    static func getImageFromDatabase(userEmail: String) -> UIImage {
+        let imageData = UserDefaults.standard.value(forKey: userEmail + "_profile_image") as? Data ?? Data()
+        let image = UIImage.init(data: imageData) ?? UIImage(named: "addNewImage.png")!
+        return image
+    }
+    
     private enum Keys {
         
         static let token = "API_KEY"

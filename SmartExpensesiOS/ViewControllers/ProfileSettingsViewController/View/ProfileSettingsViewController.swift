@@ -34,7 +34,7 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
     var currentProfile: ProfileData? {
         didSet {
             if let data = currentProfile {
-                currentProfileImage = data.profileImage
+//                currentProfileImage = data.profileImage
                 totalSpendingsLabel.text = "profileScreenTotalSpendingsLabel".localized + ": " + "\(data.totalSpendings) HUF"
                 currentNumberOfLatestSpendings = data.numberOfLatestSpendings
                 currentColorCode = data.colour
@@ -66,13 +66,14 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        totalSpendingsLabel.text = "profileScreenTotalSpendingsLabel".localized + ": " + "\(12000) HUF"
+        totalSpendingsLabel.text = "profileScreenTotalSpendingsLabel".localized + ": " + "\(currentProfile?.totalSpendings ?? 0) HUF"
         service.delegate = self
         profileService.delegate = self
         setUpNavbar()
         setUpTableView()
         profileNameLabel.text = UserDefaults.USERNAME ?? "N/A"
         setUpActivityIndicator()
+        currentProfileImage = UserDefaults.getImageFromDatabase(userEmail: UserDefaults.USERNAME ?? "N/A")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -207,9 +208,9 @@ extension ProfileSettingsViewController: UIImagePickerControllerDelegate & UINav
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             let resizedImage = pickedImage.resizeImage(newWidth: 300)
+            UserDefaults.saveImageToDatabase(image: resizedImage, userEmail: UserDefaults.USERNAME ?? "N/A")
             currentProfileImage = resizedImage
-            let base64EncodedImage = resizedImage.encodeImageToBase64()
-            print(base64EncodedImage)
+//            let base64EncodedImage = resizedImage.encodeImageToBase64()
         }
         
         dismiss(animated: true, completion: nil)

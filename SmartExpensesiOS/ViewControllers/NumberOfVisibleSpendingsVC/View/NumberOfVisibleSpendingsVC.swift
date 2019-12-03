@@ -15,6 +15,7 @@ class NumberOfVisibleSpendingsVC: UIViewController, StoryboardAble {
     var numberSelectedClosure: ((Int) -> Void)?
     
     let elements = [5,6,7,8,9,10]
+    var selectedColor: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,7 @@ class NumberOfVisibleSpendingsVC: UIViewController, StoryboardAble {
     }
     
     @objc func saveSelection() {
-        numberSelectedClosure?(elements[currentlySelectedIndex])
+        updateUserData(data: ["color":selectedColor ?? "#ffffff" ,"num_latest_spendings": self.elements[self.currentlySelectedIndex]])
     }
 
 }
@@ -51,5 +52,32 @@ extension NumberOfVisibleSpendingsVC: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         currentlySelectedIndex = indexPath.row
         tableView.reloadData()
+    }
+}
+
+extension NumberOfVisibleSpendingsVC {
+    
+    func updateUserData(data: [String:Any]) {
+        let manager = NetworkManager()
+        guard let apiKey = UserDefaults.APIKEY else { return }
+        let httpObject = HTTPObject(
+            type: .PUT,
+            endpoint: .updateProfile,
+            httpHeader: HTTPObject.createHeaderWithAuthentication(apiKey: apiKey),
+            httpBody: data
+        )
+        
+        manager.performNetworkRequest(with: httpObject) { [weak self] (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let json):
+                    print(json)
+                    guard let self = self else { return }
+                    self.numberSelectedClosure?(self.elements[self.currentlySelectedIndex])
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
     }
 }

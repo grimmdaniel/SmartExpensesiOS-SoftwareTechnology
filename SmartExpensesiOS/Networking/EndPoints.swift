@@ -20,4 +20,5 @@ enum EndPoints: String {
     case expenseLocations = "/expense/get-locations"
     case oneExpense = "/expense"
     case profile = "/user/profile"
+    case updateProfile = "/user/profile/update"
 }

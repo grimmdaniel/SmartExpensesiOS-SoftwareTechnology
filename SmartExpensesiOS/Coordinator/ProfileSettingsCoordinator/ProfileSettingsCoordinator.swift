@@ -45,6 +45,8 @@ class ProfileSettingsCoordinator: Coordinator {
         profileSettingsViewController.colorPickerClosure = { [weak self] in
             let colorPickerVC = ColorPickerViewController.instantiate()
             
+            colorPickerVC.numberOfLatestSpendings = profileSettingsViewController.currentNumberOfLatestSpendings
+            
             colorPickerVC.colorSelectedClosure = { [weak self] (colorCode) in
                 profileSettingsViewController.currentColorCode = colorCode
                 self?.navigationController.popViewController(animated: true)
@@ -55,6 +57,7 @@ class ProfileSettingsCoordinator: Coordinator {
         
         profileSettingsViewController.numberOfLatestSpendingsClosure = { [weak self] (currentNumber) in
             let numberSelectionVC = NumberOfVisibleSpendingsVC.instantiate()
+            numberSelectionVC.selectedColor = profileSettingsViewController.currentColorCode
             numberSelectionVC.currentlySelectedIndex = currentNumber - 5
             numberSelectionVC.numberSelectedClosure = { [weak self] (number) in
                 profileSettingsViewController.currentNumberOfLatestSpendings = number

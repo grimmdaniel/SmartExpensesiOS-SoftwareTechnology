@@ -11,6 +11,7 @@ import UIKit
 class ColorPickerViewController: UIViewController, StoryboardAble {
     
     var selectedColor = ColorTheme.primaryColor
+    var numberOfLatestSpendings: Int!
     var colorSelectedClosure: ((String) -> Void)?
     
     @IBOutlet weak var colorWheel: ColorWheel!
@@ -31,7 +32,7 @@ class ColorPickerViewController: UIViewController, StoryboardAble {
     }
     
     @objc func colorSelected() {
-        colorSelectedClosure?(self.selectedColor.toHexString())
+        updateUserData(data: ["color":selectedColor.toHexString(),"num_latest_spendings":numberOfLatestSpendings!])
     }
     
     @objc func handleTapGesture(gesture: UITapGestureRecognizer) {
@@ -42,6 +43,33 @@ class ColorPickerViewController: UIViewController, StoryboardAble {
             colorView.backgroundColor = selectedColor
             self.selectedColor = selectedColor
             print(colorCode)
+        }
+    }
+}
+
+extension ColorPickerViewController {
+    
+    func updateUserData(data: [String:Any]) {
+        let manager = NetworkManager()
+        guard let apiKey = UserDefaults.APIKEY else { return }
+        let httpObject = HTTPObject(
+            type: .PUT,
+            endpoint: .updateProfile,
+            httpHeader: HTTPObject.createHeaderWithAuthentication(apiKey: apiKey),
+            httpBody: data
+        )
+        
+        manager.performNetworkRequest(with: httpObject) { [weak self] (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let json):
+                    print(json)
+                    guard let self = self else { return }
+                    self.colorSelectedClosure?(self.selectedColor.toHexString())
+                case .failure(let error):
+                    print(error)
+                }
+            }
         }
     }
 }

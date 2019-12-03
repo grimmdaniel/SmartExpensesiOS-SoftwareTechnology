@@ -20,7 +20,7 @@ class NetworkManager {
         urlRequest.httpMethod = httpObject.type.rawValue
         urlRequest.allHTTPHeaderFields = httpObject.httpHeader
         
-        if httpObject.type == .POST {
+        if httpObject.type == .POST || httpObject.type == .PUT {
             urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: httpObject.httpBody, options: [])
         }
         

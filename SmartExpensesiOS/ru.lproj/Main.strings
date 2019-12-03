@@ -1,0 +1,117 @@
+
+/* Class = "UITextField"; placeholder = "e.g. 1234"; ObjectID = "0EE-Jq-GaW"; */
+"0EE-Jq-GaW.placeholder" = "e.g. 1234";
+
+/* Class = "UIButton"; normalTitle = "Sign in"; ObjectID = "0WR-d0-P39"; */
+"0WR-d0-P39.normalTitle" = "Sign in";
+
+/* Class = "UIButton"; normalTitle = "SAVE"; ObjectID = "16M-GU-wwW"; */
+"16M-GU-wwW.normalTitle" = "SAVE";
+
+/* Class = "UITextField"; placeholder = "Enter your password"; ObjectID = "1te-Ew-biw"; */
+"1te-Ew-biw.placeholder" = "Enter your password";
+
+/* Class = "UILabel"; text = "Total spendings: 17650 HUF"; ObjectID = "2sL-b3-Wp6"; */
+"2sL-b3-Wp6.text" = "Total spendings: 17650 HUF";
+
+/* Class = "UITextField"; placeholder = "Enter your password"; ObjectID = "2uQ-hz-Ynz"; */
+"2uQ-hz-Ynz.placeholder" = "Enter your password";
+
+/* Class = "UILabel"; text = "Follow expenses"; ObjectID = "4S6-8z-x0c"; */
+"4S6-8z-x0c.text" = "Follow expenses";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "4UE-9z-d4u"; */
+"4UE-9z-d4u.text" = "Title";
+
+/* Class = "UILabel"; text = "SIGN UP"; ObjectID = "5sg-k5-bfz"; */
+"5sg-k5-bfz.text" = "SIGN UP";
+
+/* Class = "UILabel"; text = "Email address"; ObjectID = "Akd-ne-1PG"; */
+"Akd-ne-1PG.text" = "Email address";
+
+/* Class = "UIButton"; normalTitle = "REGISTER NOW"; ObjectID = "BPW-hJ-pCN"; */
+"BPW-hJ-pCN.normalTitle" = "REGISTER NOW";
+
+/* Class = "UILabel"; text = "from anywhere"; ObjectID = "ByF-UE-L7n"; */
+"ByF-UE-L7n.text" = "from anywhere";
+
+/* Class = "UILabel"; text = "Confirm password"; ObjectID = "EYZ-Wx-V4s"; */
+"EYZ-Wx-V4s.text" = "Confirm password";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "FqO-nq-T9u"; */
+"FqO-nq-T9u.text" = "Password";
+
+/* Class = "UILabel"; text = "SELECT CATEGORY"; ObjectID = "GLF-yS-cqW"; */
+"GLF-yS-cqW.text" = "SELECT CATEGORY";
+
+/* Class = "UILabel"; text = "HUF"; ObjectID = "GwF-Xu-4Hc"; */
+"GwF-Xu-4Hc.text" = "HUF";
+
+/* Class = "UIButton"; normalTitle = "SIGN IN"; ObjectID = "Kfo-5M-FXL"; */
+"Kfo-5M-FXL.normalTitle" = "SIGN IN";
+
+/* Class = "UITextField"; placeholder = "Enter your password"; ObjectID = "Khw-zy-Sv7"; */
+"Khw-zy-Sv7.placeholder" = "Enter your password";
+
+/* Class = "UILabel"; text = "Don’t have an account?"; ObjectID = "LXN-C6-hpG"; */
+"LXN-C6-hpG.text" = "Don’t have an account?";
+
+/* Class = "UILabel"; text = "Email address"; ObjectID = "N2t-B6-Nzx"; */
+"N2t-B6-Nzx.text" = "Email address";
+
+/* Class = "UILabel"; text = "AMOUNT"; ObjectID = "TX8-R3-RJl"; */
+"TX8-R3-RJl.text" = "AMOUNT";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "YON-BR-IvC"; */
+"YON-BR-IvC.text" = "Title";
+
+/* Class = "UILabel"; text = "Sign in to Smart Expenses"; ObjectID = "YVt-MJ-6fe"; */
+"YVt-MJ-6fe.text" = "Sign in to Smart Expenses";
+
+/* Class = "UIButton"; normalTitle = "Terms and Conditions"; ObjectID = "ZKA-eh-5Pa"; */
+"ZKA-eh-5Pa.normalTitle" = "Terms and Conditions";
+
+/* Class = "UILabel"; text = "NAME"; ObjectID = "hGO-PS-OS9"; */
+"hGO-PS-OS9.text" = "NAME";
+
+/* Class = "UILabel"; text = "Dummy Name"; ObjectID = "icq-mX-7h1"; */
+"icq-mX-7h1.text" = "Dummy Name";
+
+/* Class = "UITextField"; placeholder = "joe@smartexpenses.com"; ObjectID = "l3Y-KW-RJW"; */
+"l3Y-KW-RJW.placeholder" = "joe@smartexpenses.com";
+
+/* Class = "UILabel"; text = "Get started..."; ObjectID = "lie-vU-mbv"; */
+"lie-vU-mbv.text" = "Get started...";
+
+/* Class = "UIButton"; normalTitle = "Sign up"; ObjectID = "mXx-cY-Gsv"; */
+"mXx-cY-Gsv.normalTitle" = "Sign up";
+
+/* Class = "UITextField"; placeholder = "Select from the categories"; ObjectID = "o9h-Gv-XGy"; */
+"o9h-Gv-XGy.placeholder" = "Select from the categories";
+
+/* Class = "UILabel"; text = "Selected color:"; ObjectID = "oU5-WV-meU"; */
+"oU5-WV-meU.text" = "Selected color:";
+
+/* Class = "UILabel"; text = "By signing up, I agree Smart Expenses'"; ObjectID = "p2Z-2K-1MP"; */
+"p2Z-2K-1MP.text" = "By signing up, I agree Smart Expenses'";
+
+/* Class = "UINavigationItem"; title = "Select category"; ObjectID = "tPB-H7-bMm"; */
+"tPB-H7-bMm.title" = "Select category";
+
+/* Class = "UITextField"; placeholder = "joe@smartexpenses.com"; ObjectID = "tRi-Bb-j8H"; */
+"tRi-Bb-j8H.placeholder" = "joe@smartexpenses.com";
+
+/* Class = "UILabel"; text = "Forgot password?"; ObjectID = "tjG-oN-ZaF"; */
+"tjG-oN-ZaF.text" = "Forgot password?";
+
+/* Class = "UITextField"; placeholder = "Name of your expense"; ObjectID = "usO-ho-4DD"; */
+"usO-ho-4DD.placeholder" = "Name of your expense";
+
+/* Class = "UILabel"; text = "SIGN IN"; ObjectID = "wIZ-yx-GBf"; */
+"wIZ-yx-GBf.text" = "SIGN IN";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "xZG-lB-IEd"; */
+"xZG-lB-IEd.text" = "Title";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "zvU-ej-cvN"; */
+"zvU-ej-cvN.text" = "Password";

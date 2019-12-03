@@ -1,0 +1,104 @@
+/* 
+  Localizable.strings
+  SmartExpensesiOS
+
+  Created by Grimm Dániel on 13/10/2019.
+  Copyright © 2019 com.daniel.grimm.smartexpenses. All rights reserved.
+*/
+
+//welcome screen
+"welcomeScreenSignInButtonText" = "Вход";
+"welcomeScreenSignUpButtonText" = "Регистрация";
+"welcomeScreenDontHaveAnAccountQuestion" = "Есть учетный запись?";
+
+//sign up screen
+"signUpScreenTitleText" = "Регистрация";
+"signUpScreenWelcomeText" = "Регистрация с e-mail";
+"signUpScreenEmailLabel" = "E-mail адрес";
+"signUpScreenEmailPlaceholder" = "joe@smartexpenses.com";
+"signUpScreenPasswordLabel" = "Создать пароль";
+"signUpScreenPasswordPlaceholder" = "**********";
+"signUpScreenConfirmPasswordLabel" = "Подтвердить пароль";
+"signUpScreenConfirmPasswordPlaceholder" = "**********";
+"signUpScreenSignUpButtonText" = "РЕГИСТРИРОВАТЬСЯ СЕЙЧАС";
+"signUpScreenTermsAndConditionsLabel" = "Регистрируясь Вы соглашаетесь с правилами Smart Expenses'";
+"signUpScreenTermsAndConditionsButton" = "Правила";
+
+//sign in screen
+"signInScreenTitleText" = "Войти";
+"signInScreenForgotPassword" = "Забыли пароль?";
+"signInScreenWelcomeLabelText" = "Войти в SmartExpenses";
+
+"signInScreenEmailLabel" = "E-mail адрес";
+"signInScreenEmailPlaceholder" = "joe@smartexpenses.com";
+"signInScreenPasswordPlaceholder" = "**********";
+"signInScreenPasswordLabel" = "Пароль";
+"signInScreenSignInButtonText" = "ВОЙТИ";
+
+//home screen
+"homeScreenHomeTitle" = "Главная";
+"homeScreenPullToRefresh" = "Тяните вниз чтобы обновить...";
+"homeScreenNoExpensesAvailable" = "Расходы не найдены. Тяните вниз чтобы обновить...";
+"homeScreenCheapPlaces" = "Доступные места поблизости...";
+"homeScreenLatestSpendings" = "Последные расходы";
+
+//my expenses screen
+"myExpensesDeleteExpensePromptConfirmLabel" = "Подтвердить";
+"myExpensesDeleteExpensePromptCancelLabel" = "Отмена";
+"myExpensesDeleteExpensePromptDelete" = "Удалить";
+"myExpensesDeleteExpensePromptMessage" = "Вы уверены удалить расход?";
+
+"myExpensesPullToRefresh" = "Тянуть чтобы обновить...";
+"myExpensesNoExpensesAvailable" = "Расходы не найдены. Тяните чтобы обновить...";
+"myExpensesScreenTitleLabel" = "Мои расходы";
+
+//add new expense screen
+"addNewExpenseScreenNewName" = "НАЗВАНИЕ";
+"addNewExpenseScreenNewAmount" = "КОЛИЧЕСТВО";
+"addNewExpenseScreenNewCategory" = "ВЫБЕРИТЕ КАТЕГОРИЮ";
+
+"addNewExpenseScreenNewNamePlaceholder" = "Название расхода";
+"addNewExpenseScreenNewAmountPlaceholder" = "н.п. 1234.";
+"addNewExpenseScreenNewCategoryPlaceholder" = "Выберите из категорий";
+"addNewExpenseScreenNewSave" = "Сохранить";
+
+"addNewExpenseErrorGeneral" = "Некоторые поля отсуствуют";
+"addNewExpenseErrorCategory" = "Ни один из категорий не выбрано";
+
+//categories
+"categoryTranslationTitle" = "Категории";
+"categoryTranslationRestaurant" = "Ресторан";
+"categoryTranslationTickets" = "Билеты";
+"categoryTranslationMuseum" = "Музей";
+"categoryTranslationHotel" = "Отель";
+"categoryTranslationCash" = "Наличные";
+"categoryTranslationShopping" = "Покупки";
+"categoryTranslationGas" = "Топливо";
+"categoryTranslationTravel" = "Путешествие";
+"categoryTranslationOther" = "Другие";
+
+//profile screen
+"profileScreenMyProfileTitle" = "Мой профиль";
+"profileScreenSettingsHeader" = "Настройки";
+"profileScreenTotalSpendingsLabel" = "Все расходы";
+"profileScreenSelectProfileColour" = "Выберите свет профиля";
+"profileScreenNumberOfLatestSpendings" = "Количество последных расходов";
+"profileScreenPrivacy" = "Приватность";
+"profileScreenTermsAndConditions" = "Правила";
+"profileScreenLogOutButtonNavbar" = "Выйти";
+
+"profileScreenImageSelectionLabel" = "Выбирать изображение";
+"profileScreenBrowseGalleryLabel" = "Открыть галерею";
+"profileScreenTakeNewPictureLabel" = "Создать новую";
+"profileScreenCancelNewImage" = "Отмена";
+
+"profileScreenLogoutConfirmation" = "Подтверждение";
+"profileScreenLogoutCancel" = "Отмена";
+"profileScreenLogout" = "Выйти";
+"profileScreenLogoutPrompt" = "Вы действительно хотите выйти?";
+
+//color selection screen
+"colorSelectionScreenCurrentlySelectedColor" = "Выберите свет:";
+
+//social screen
+"socialScreenMainTitle" = "Социальный";

@@ -262,6 +262,9 @@
 		08D524532353A0E8001BB6FF /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Main.strings"; sourceTree = "<group>"; };
 		08D524542353A0E8001BB6FF /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		08D524552353A0E8001BB6FF /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		08E45F8F2396B3280032D211 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		08E45F902396B3290032D211 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		08E45F912396B3290032D211 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		08FC1ADB23590B1C00C988AA /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1147,6 +1150,7 @@
 				hu,
 				"pt-PT",
 				"zh-Hans",
+				ru,
 			);
 			mainGroup = 085C608423477E2F00BA038C;
 			packageReferences = (
@@ -1356,6 +1360,7 @@
 				08D5244D23539D79001BB6FF /* hu */,
 				08D524532353A0E8001BB6FF /* pt-PT */,
 				0809A9132395BC42000BD7B4 /* zh-Hans */,
+				08E45F8F2396B3280032D211 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1367,6 +1372,7 @@
 				08D5244E23539D7A001BB6FF /* hu */,
 				08D524542353A0E8001BB6FF /* pt-PT */,
 				0809A9142395BC42000BD7B4 /* zh-Hans */,
+				08E45F902396B3290032D211 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1378,6 +1384,7 @@
 				08D5244F23539D7A001BB6FF /* hu */,
 				08D524552353A0E8001BB6FF /* pt-PT */,
 				0809A9152395BC42000BD7B4 /* zh-Hans */,
+				08E45F912396B3290032D211 /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

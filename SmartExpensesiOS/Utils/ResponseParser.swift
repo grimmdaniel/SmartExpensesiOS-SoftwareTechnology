@@ -28,7 +28,7 @@ class ResponseParser {
     }
     
     func parseProfileData(json: [String:Any]) -> ProfileData? {
-        if let usersRaw = (json["profile"] as? [[String:Any]])?.first {
+        if let usersRaw = json["profile"] as? [String:Any] {
             if let userID = usersRaw["user_id"] as? Int {
                 let totalSpendings = usersRaw["total_spendings"] as? Double ?? 0.0
                 let colour = usersRaw["color"] as? String ?? "#24AA7B"
@@ -40,7 +40,7 @@ class ResponseParser {
                     userID: userID,
                     totalSpendings: totalSpendings,
                     numberOfLatestSpendings: numberOfLatestSpendings,
-                    colour: colour, profileImage: UIImage.decodeFromBase64(base64String: profileImage),
+                    colour: colour, profileImage: UIImage.decodeFromBase64(base64String: profileImage) ?? UIImage(named: "addNewImage.png")!,
                     termsURL: termsURL,
                     privacyURL: privacyURL)
             }

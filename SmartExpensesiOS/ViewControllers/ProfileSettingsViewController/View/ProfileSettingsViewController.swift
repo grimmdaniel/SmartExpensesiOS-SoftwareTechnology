@@ -34,8 +34,10 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
     var currentProfile: ProfileData? {
         didSet {
             if let data = currentProfile {
-                print(data)
                 currentProfileImage = data.profileImage
+                totalSpendingsLabel.text = "profileScreenTotalSpendingsLabel".localized + ": " + "\(data.totalSpendings) HUF"
+                currentNumberOfLatestSpendings = data.numberOfLatestSpendings
+                currentColorCode = data.colour
             }
         }
     }
@@ -113,7 +115,8 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
     }
     
     private func openDocumentsInBrowser(url: String) {
-        guard let url = URL(string: url) else { return }
+        let choppedURL = url.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard let url = URL(string: choppedURL) else { return }
         let safariVC = SFSafariViewController(url: url)
         self.present(safariVC, animated: true, completion: nil)
     }
@@ -260,9 +263,11 @@ extension ProfileSettingsViewController: UITableViewDelegate, UITableViewDataSou
         } else if indexPath.row == 1 {
             numberOfLatestSpendingsClosure?(currentNumberOfLatestSpendings)
         } else if indexPath.row == 2 {
-            openDocumentsInBrowser(url: "https://google.com")
+            guard let urlString = currentProfile?.privacyURL else { return }
+            openDocumentsInBrowser(url: urlString)
         } else if indexPath.row == 3 {
-            openDocumentsInBrowser(url: "https://google.com")
+            guard let urlString = currentProfile?.termsURL else { return }
+            openDocumentsInBrowser(url: urlString)
         }
     }
     

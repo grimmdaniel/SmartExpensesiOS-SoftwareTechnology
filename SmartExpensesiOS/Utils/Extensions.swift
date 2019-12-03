@@ -63,9 +63,9 @@ extension UIImage {
         return strBase64Image
     }
     
-    static func decodeFromBase64(base64String: String) -> UIImage {
+    static func decodeFromBase64(base64String: String) -> UIImage? {
         let data = Data(base64Encoded: base64String, options: []) ?? Data()
-        let decodedimage: UIImage = UIImage(data: data) ?? UIImage()
+        let decodedimage = UIImage(data: data)
         return decodedimage
     }
 }

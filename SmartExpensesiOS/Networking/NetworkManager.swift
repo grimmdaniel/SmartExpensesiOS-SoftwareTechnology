@@ -10,7 +10,10 @@ import Foundation
 
 class NetworkManager {
     
-    func performNetworkRequest(with httpObject: HTTPObject, completionHandler: @escaping (Result<Response,NetworkError>) -> Void) {
+    func performNetworkRequest(with httpObject: HTTPObject, numberOfRemainingTries: Int = 5 , completionHandler: @escaping (Result<Response,NetworkError>) -> Void) {
+        
+        if numberOfRemainingTries <= 0 { return }
+        
         guard let url = URL(string: httpObject.urlString) else {
             completionHandler(.failure(.badURL))
             return
@@ -20,11 +23,11 @@ class NetworkManager {
         urlRequest.httpMethod = httpObject.type.rawValue
         urlRequest.allHTTPHeaderFields = httpObject.httpHeader
         
-        if httpObject.type == .POST {
+        if httpObject.type == .POST || httpObject.type == .PUT {
             urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: httpObject.httpBody, options: [])
         }
         
-        URLSession.shared.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
+        URLSession.shared.dataTask(with: urlRequest, completionHandler: { [weak self] (data, response, error) in
             guard error == nil else {
                 print(error?.localizedDescription ?? "")
                 completionHandler(.failure(.responseError));return
@@ -36,6 +39,12 @@ class NetworkManager {
             
             guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
                 completionHandler(.failure(.NOStatusCode));return
+            }
+            
+            if statusCode == 500 {
+                print(numberOfRemainingTries)
+                self?.performNetworkRequest(with: httpObject, numberOfRemainingTries: numberOfRemainingTries - 1, completionHandler: completionHandler)
+                return
             }
             
             if (200 ... 299) ~= statusCode {

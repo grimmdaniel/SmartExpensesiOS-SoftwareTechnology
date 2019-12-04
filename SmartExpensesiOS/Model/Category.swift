@@ -28,7 +28,8 @@ struct Category {
     }
     
     func getCategoryImageByIndex(index: Int) -> UIImage {
-        if index >= categories.count || index < 0 { return UIImage(named: "Others.png") ?? UIImage() }
-        return UIImage(named: categories[index]) ?? UIImage()
+        let images = ["Restaurant","Tickets","Museum","Hotel","Cash","Shopping","Gas","Travel","Other"]
+        if index >= images.count || index < 0 { return UIImage(named: "Others.png") ?? UIImage() }
+        return UIImage(named: images[index]) ?? UIImage()
     }
 }

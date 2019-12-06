@@ -29,7 +29,11 @@ class ProfileSettingsViewController: UIViewController, StoryboardAble {
         }
     }
     
-    var currentNumberOfLatestSpendings = 5
+    var currentNumberOfLatestSpendings = 5 {
+        didSet {
+            UserDefaults.numberOfLatestSpendings = currentNumberOfLatestSpendings
+        }
+    }
     
     var currentProfile: ProfileData? {
         didSet {
